@@ -222,21 +222,21 @@
                                     </div>
 
                                     <div class="row col-12 mb-3">
-                                        <div class="col-3">
+                                        <div class="col-4">
                                             <div class="form-group">
                                                 <label for="">Instagram</label>
                                                 <input type="text" name="instagram" class="form-control">
                                             </div>
                                         </div>
 
-                                        <div class="col-3">
+                                        <div class="col-4">
                                             <div class="form-group">
                                                 <label for="">Telegram</label>
                                                 <input type="text" name="telegram" class="form-control">
                                             </div>
                                         </div>
 
-                                        <div class="col-3">
+                                        <div class="col-4">
                                             <div class="form-group">
                                                 <label for="">Facebook</label>
                                                 <input type="text" name="facebook" class="form-control">

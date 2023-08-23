@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 Route::get('/admin', function(){
@@ -24,3 +21,10 @@ Route::get('/admin', function(){
 })->name('admin.index');
 
 Route::resource('about', AboutController::class );
+
+
+// Frontend
+
+Route::get('/', function () {
+    return view('frontend.home.index');
+})->name('home.index');

@@ -31,4 +31,10 @@ class Tour extends Model
     public function category(){
         $this->belongsTo(Category::class);
     }
+
+    const PRICETYPES=[
+        'EUR',
+        'USD',
+        '$',
+    ];
 }

@@ -37,4 +37,8 @@ class Tour extends Model
         'USD',
         '$',
     ];
+    public function images()
+    {
+        return $this->morphMany('App\Models\Image', 'tourtable');
+    }
 }

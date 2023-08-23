@@ -45,7 +45,8 @@
 
                 <li class="sidebar-item {{ request()->is('about*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('about.index') }}">
-                        <i class="fa-solid fa-address-card"></i><span class="align-middle">About</span>
+                        <i class="fa-solid fa-address-card"></i>
+                        <span class="align-middle">About</span>
                     </a>
                 </li>
             </ul>

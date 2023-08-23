@@ -292,8 +292,8 @@
                                             class="menu__link">Hot Tours</a></li>
                                     <li class="menu__item"><a href="{{ route('front.countries.index') }}"
                                             class="menu__link">Countries</a></li>
-                                    <li class="menu__item"><a href="https://kochevnik.kg/oformlenie-viz/"
-                                            class="menu__link">Визы</a></li>
+                                    <li class="menu__item"><a href="{{ route('front.visas.index') }}"
+                                            class="menu__link">Visas</a></li>
                                     <li class="menu__item"><a href="https://kochevnik.kg/aviabilety/"
                                             class="menu__link">Авиабилеты</a></li>
                                     <li class="menu__item"><a href="https://kochevnik.kg/contacts/"

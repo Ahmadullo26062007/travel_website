@@ -47,3 +47,7 @@ Route::get('hot-tours', function(){
 Route::get('country', function(){
     return view('frontend.countries.index');
 })->name('front.countries.index');
+
+Route::get('visas', function(){
+    return view('frontend.visas.index');
+})->name('front.visas.index');

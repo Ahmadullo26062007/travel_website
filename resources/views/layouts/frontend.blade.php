@@ -286,8 +286,8 @@
                         <div id="header-menu" class="header-bottom">
                             <nav class="nav header-nav" role="navigation">
                                 <ul id="menu-glavnoe-menju" class="menu header-menu">
-                                    <li class="menu__item"><a href="https://kochevnik.kg/tours/"
-                                            class="menu__link">Туры</a></li>
+                                    <li class="menu__item"><a href="{{ route('front.tours.index') }}"
+                                            class="menu__link">Tours</a></li>
                                     <li class="menu__item"><a href="https://kochevnik.kg/rest_type/gorjashhie/"
                                             class="menu__link">Горящие туры</a></li>
                                     <li class="menu__item"><a href="https://kochevnik.kg/countries/"

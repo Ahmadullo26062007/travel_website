@@ -35,3 +35,7 @@ Route::resource('avia', \App\Http\Controllers\AviaTicketsController::class );
 Route::get('/', function () {
     return view('frontend.home.index');
 })->name('home.index');
+
+Route::get('/tour', function () {
+    return view('frontend.tours.index');
+})->name('front.tours.index');

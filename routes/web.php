@@ -39,3 +39,7 @@ Route::get('/', function () {
 Route::get('/tour', function () {
     return view('frontend.tours.index');
 })->name('front.tours.index');
+
+Route::get('hot-tours', function(){
+    return view('frontend.hot_tours.index');
+})->name('hot_tours.index');

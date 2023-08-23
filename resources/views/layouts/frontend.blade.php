@@ -288,8 +288,8 @@
                                 <ul id="menu-glavnoe-menju" class="menu header-menu">
                                     <li class="menu__item"><a href="{{ route('front.tours.index') }}"
                                             class="menu__link">Tours</a></li>
-                                    <li class="menu__item"><a href="https://kochevnik.kg/rest_type/gorjashhie/"
-                                            class="menu__link">Горящие туры</a></li>
+                                    <li class="menu__item"><a href="{{ route('hot_tours.index') }}"
+                                            class="menu__link">Hot Tours</a></li>
                                     <li class="menu__item"><a href="https://kochevnik.kg/countries/"
                                             class="menu__link">Страны</a></li>
                                     <li class="menu__item"><a href="https://kochevnik.kg/oformlenie-viz/"

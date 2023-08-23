@@ -42,4 +42,8 @@ Route::get('/tour', function () {
 
 Route::get('hot-tours', function(){
     return view('frontend.hot_tours.index');
-})->name('hot_tours.index');
+})->name('front.hot_tours.index');
+
+Route::get('country', function(){
+    return view('frontend.countries.index');
+})->name('front.countries.index');

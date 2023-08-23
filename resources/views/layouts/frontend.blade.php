@@ -288,10 +288,10 @@
                                 <ul id="menu-glavnoe-menju" class="menu header-menu">
                                     <li class="menu__item"><a href="{{ route('front.tours.index') }}"
                                             class="menu__link">Tours</a></li>
-                                    <li class="menu__item"><a href="{{ route('hot_tours.index') }}"
+                                    <li class="menu__item"><a href="{{ route('front.hot_tours.index') }}"
                                             class="menu__link">Hot Tours</a></li>
-                                    <li class="menu__item"><a href="https://kochevnik.kg/countries/"
-                                            class="menu__link">Страны</a></li>
+                                    <li class="menu__item"><a href="{{ route('front.countries.index') }}"
+                                            class="menu__link">Countries</a></li>
                                     <li class="menu__item"><a href="https://kochevnik.kg/oformlenie-viz/"
                                             class="menu__link">Визы</a></li>
                                     <li class="menu__item"><a href="https://kochevnik.kg/aviabilety/"

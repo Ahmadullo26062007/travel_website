@@ -55,3 +55,7 @@ Route::get('visas', function(){
 Route::get('tickets', function(){
     return view('frontend.tickets.index');
 })->name('front.tickets.index');
+
+Route::get('contact', function(){
+    return view('frontend.contact.index');
+})->name('front.contact.index');

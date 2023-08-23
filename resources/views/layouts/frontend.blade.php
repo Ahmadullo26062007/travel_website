@@ -296,8 +296,8 @@
                                             class="menu__link">Visas</a></li>
                                     <li class="menu__item"><a href="{{ route('front.tickets.index') }}"
                                             class="menu__link">Tickets</a></li>
-                                    <li class="menu__item"><a href="https://kochevnik.kg/contacts/"
-                                            class="menu__link">Контакты</a></li>
+                                    <li class="menu__item"><a href="{{ route('front.contact.index') }}"
+                                            class="menu__link">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>

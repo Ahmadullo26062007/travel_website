@@ -51,3 +51,7 @@ Route::get('country', function(){
 Route::get('visas', function(){
     return view('frontend.visas.index');
 })->name('front.visas.index');
+
+Route::get('tickets', function(){
+    return view('frontend.tickets.index');
+})->name('front.tickets.index');

@@ -31,4 +31,14 @@ class Tour extends Model
     public function category(){
         $this->belongsTo(Category::class);
     }
+
+    const PRICETYPES=[
+        'EUR',
+        'USD',
+        '$',
+    ];
+    public function images()
+    {
+        return $this->morphMany('App\Models\Image', 'tourtable');
+    }
 }

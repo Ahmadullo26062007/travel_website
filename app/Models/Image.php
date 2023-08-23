@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     use HasFactory;
+    protected $fillable=[
+      'name'
+    ];
+    public function tourtable()
+    {
+        return $this->morphTo();
+    }
 }

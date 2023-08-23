@@ -12,7 +12,8 @@ class AboutController extends Controller
      */
     public function index()
     {
-        return view('admin.about.index');
+        $about=About::find(1);
+        return view('admin.about.index',compact('about'));
     }
 
     /**

@@ -20,6 +20,4 @@ class About extends Model
         'description',
     ];
 
-
-    
 }

@@ -58,7 +58,7 @@
                 <li class="sidebar-item {{ request()->is('category*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('category.index') }}">
                         <i class="fa-solid fa-list"></i>
-                        <span class="align-middle">Tour</span>
+                        <span class="align-middle">Category</span>
                     </a>
                 </li>
                 <li class="sidebar-item {{ request()->is('tours*') ? 'active' : '' }}">

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('end_time');
             $table->string('length');
             $table->string('city');
-            $table->integer('bookers');
+            $table->integer('bookers')->default(0);
 
 
             $table->foreign('category_id')->references('id')->on('categories');

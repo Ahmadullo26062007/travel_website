@@ -12,7 +12,7 @@ class VisaController extends Controller
      */
     public function index()
     {
-        //
+        $visas=Visa::with('country')->get();
     }
 
     /**

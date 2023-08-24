@@ -12,7 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="shortcut icon" href="img/icons/icon-48x48.png"/>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="canonical" href="https://demo-basic.adminkit.io/"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
           integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -59,6 +59,12 @@
                     <a class="sidebar-link" href="{{ route('category.index') }}">
                         <i class="fa-solid fa-list"></i>
                         <span class="align-middle">Turlar</span>
+                    </a>
+                </li>
+                <li class="sidebar-item {{ request()->is('tours*') ? 'active' : '' }}">
+                    <a class="sidebar-link" href="{{ route('tours.index') }}">
+                        <i class="fa-solid fa-list"></i>
+                        <span class="align-middle">Sayohatlar</span>
                     </a>
                 </li>
             </ul>

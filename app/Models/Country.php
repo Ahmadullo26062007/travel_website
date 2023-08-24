@@ -14,4 +14,9 @@ class Country extends Model
         'image',
         'flag',
     ];
+
+    public function tours()
+    {
+        return $this->hasMany(Tour::class);
+    }
 }

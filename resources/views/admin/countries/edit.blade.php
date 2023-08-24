@@ -50,13 +50,13 @@
                                 <div class="col-6">
                                     <h5 class="card-title mb-0">Bayrog'i</h5>
                                     <div class="card-body">
-                                        <img width="300px" src="{{asset('countries/'.$country->flag)}}" alt="">
+                                        <img width="300px" src="{{asset('images/'.$country->flag)}}" alt="">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <h5 class="card-title mb-0">Rasim</h5>
                                     <div class="card-body">
-                                        <img width="300px" src="{{asset('countries/'.$country->image)}}" alt="">
+                                        <img width="300px" src="{{asset('images/'.$country->image)}}" alt="">
 
                                     </div>
                                 </div>

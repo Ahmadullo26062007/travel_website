@@ -24,12 +24,12 @@ class Tour extends Model
     ];
 
     public function country(){
-        $this->belongsTo(Country::class);
+       return $this->belongsTo(Country::class);
     }
 
 
     public function category(){
-        $this->belongsTo(Category::class);
+       return $this->belongsTo(Category::class);
     }
 
     const PRICETYPES=[

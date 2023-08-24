@@ -42,11 +42,11 @@ class CountryController extends Controller
         $file = $request->file('flag');
         $image_name = uniqid() . $file->getClientOriginalName();
         $data['flag'] = $image_name;
-        $file->move(public_path('countries/'), $image_name);
+        $file->move(public_path('images/'), $image_name);
         $file = $request->file('image');
         $image_name2 = uniqid() . $file->getClientOriginalName();
         $data['image'] = $image_name2;
-        $file->move(public_path('countries/'), $image_name2);
+        $file->move(public_path('images/'), $image_name2);
         Country::create([
             'name' => $data['name'],
             'flag' => $data['flag'],
@@ -95,7 +95,7 @@ class CountryController extends Controller
                 $file = $request->file('flag');
                 $image_name = uniqid() . $file->getClientOriginalName();
                 $data['flag'] = $image_name;
-                $file->move(public_path('countries/'), $image_name);
+                $file->move(public_path('images/'), $image_name);
                 $country->update([
                     'name' => $data['name'],
                     'flag' => $data['flag']
@@ -105,7 +105,7 @@ class CountryController extends Controller
                 $file2 = $request->file('image');
                 $image_name2 = uniqid() . $file2->getClientOriginalName();
                 $data['image'] = $image_name2;
-                $file2->move(public_path('countries/'), $image_name2);
+                $file2->move(public_path('images/'), $image_name2);
                 $country->update([
                     'name' => $data['name'],
                     'image' => $data['image']

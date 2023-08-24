@@ -9,18 +9,16 @@
                             <h5 class="card-title 0">Categories</h5>
                             <a class="btn btn-primary mb-3" href="{{route('category.create')}}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                     class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                     class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
                                     <path
-                                        d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                                    <path fill-rule="evenodd"
-                                          d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
                                 </svg>
                                 Category qo'shishi
                             </a>
                         </div>
 
 
-                        <table class="table table-hover my-0">
+                        <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
                                 <th>Id</th>

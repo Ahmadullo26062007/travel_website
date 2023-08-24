@@ -62,8 +62,8 @@
                 <label for="">Image</label>
                 {{-- <img src="" alt=""> --}}
                 <input type="file" name="image" wire:model="image" class="form-control" ><br>
-                {{-- <img width="250px" height="300px" src="{{asset("storage/$about->image")}}"> --}}
-                <img width="300px" height="300px" src="{{asset('images/logo.png')}}">
+                 <img width="250px" height="300px" src="{{asset("storage/$about->image")}}">
+{{--                <img width="300px" height="300px" src="{{asset('images/logo.png')}}">--}}
 
             </div>
         </div>

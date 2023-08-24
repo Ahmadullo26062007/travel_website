@@ -16,6 +16,11 @@ class Visa extends Model
         'price_type',
     ];
 
+    const PRICETYPES=[
+        'EUR',
+        'USD',
+        '$',
+    ];
     public function country(){
         return $this->belongsTo(Country::class);
     }

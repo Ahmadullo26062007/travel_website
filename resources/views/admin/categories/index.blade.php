@@ -13,7 +13,7 @@
                                     <path
                                         d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
                                 </svg>
-                                Category qo'shishi
+                                Create Category
                             </a>
                         </div>
 
@@ -22,7 +22,7 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Nomi</th>
+                                <th>Title</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -40,7 +40,7 @@
                                             </svg>
                                         </a>
                                         <form class="d-inline" action="{{ route('category.destroy', $category->id) }}"
-                                              method="post" onsubmit="return confirm('{{ trans('Ochirish') }}');">
+                                              method="post" onsubmit="return confirm('{{ trans('Are you sure') }}');">
                                             @method('DELETE')
                                             @csrf
                                             <button class="btn btn-danger btn-flat show_confirm" data-toggle="tooltip"

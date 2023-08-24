@@ -46,7 +46,7 @@ class AboutLivewire extends Component
         'description.required' => 'Tavsif Kiritilmadi'
     ];
 
-    public function editabout()
+    public function editabout(Request $request)
     {
         $this->validate();
         if ($this->image){

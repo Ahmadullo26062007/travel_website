@@ -7,57 +7,64 @@
                     <div class="card flex-fill">
                         <div class="card-header">
 
-                            <h5 class="card-title">Update Country</h5>
+                            <h5 class="card-title">Create visa</h5>
                         </div>
 
 
-                        <form action="{{ route('countries_admin.update',[$country->id]) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('visa.store') }}" method="post" enctype="multipart/form-data">
                             @if ($errors->any())
                                 @foreach ($errors->all() as $error)
                                     <div class="alert alert-danger" role="alert">
-                                        {{ $error }}
+                                        <h3 class="text-danger"> {{ $error }} </h3>
                                     </div>
                                 @endforeach
                             @endif
-                            @method('PUT')
+
                             @csrf
                             <div class="row">
-                                <div>
-                                    <h5 class="card-title mb-0">Name</h5>
+                                <div class="col-4 ">
+                                    <h5 class="card-title mb-0">Countries</h5>
                                     <div class="card-body">
-                                        <input type="text" name="name" class="form-control"
-                                               placeholder="Country name" value="{{$country->name}}">
+                                        <select class="form-select" name="country_id" id="">
+                                            <option disabled selected>Select Country</option>
+                                            @foreach($countries as $id=> $r)
+                                                <option value="{{$id}}">{{$r}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
-                            </div>
-                                <div class="row">
-                                <div class="col-6">
-                                    <h5 class="card-title mb-0">Flag choose</h5>
-                                    <div class="card-body">
-                                        <input type="file" name="flag" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <h5 class="card-title mb-0">Image choose</h5>
-                                    <div class="card-body">
-                                        <input type="file" name="image" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                                <div class="row">
-                                <div class="col-6">
-                                    <h5 class="card-title mb-0">Previous Flag</h5>
-                                    <div class="card-body">
-                                        <img width="300px" src="{{asset('images/'.$country->flag)}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <h5 class="card-title mb-0">Previous Image</h5>
-                                    <div class="card-body">
-                                        <img width="300px" src="{{asset('images/'.$country->image)}}" alt="">
 
+                                <div class="col-3">
+
+                                    <h5 class="card-title mb-0">Price type</h5>
+
+                                    <div class="card-body">
+                                        <select class="form-select" name="price_type" id="">
+                                            <option disabled selected>Select price type</option>
+                                            @foreach(\App\Models\Visa::PRICETYPES as $id=> $s)
+                                                <option value="{{$id}}">{{$s}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
+                                <div class="col-3">
+
+                                    <h5 class="card-title mb-0">Price</h5>
+
+                                    <div class="card-body">
+                                        <input type="text" name="price" class="form-control" placeholder="Write price">
+                                    </div>
+                                </div>
+
+                                <div class="col-3">
+
+                                    <h5 class="card-title mb-0">Visa processing Time</h5>
+
+                                    <div class="card-body">
+                                        <input type="number" name="visa_time" class="form-control" placeholder="Write Visa processing Day">
+                                    </div>
+                                </div>
+
                             </div>
                             <button class="btn btn-primary mt-3" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -67,9 +74,9 @@
                                     <path fill-rule="evenodd"
                                           d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                                 </svg>
-                                Update
+                                Create
                             </button>
-                            <a class="btn btn-secondary mt-3" href="{{ route('countries_admin.index') }}">
+                            <a class="btn btn-secondary mt-3" href="{{ route('visa.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-arrow-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"

@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             CountrySeeder::class,
             TourSeeder::class,
+            LenguageSeeder::class
         ]);
     }
 }

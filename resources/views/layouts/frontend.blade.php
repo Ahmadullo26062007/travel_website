@@ -249,7 +249,7 @@
                     <div class="header-left">
                         <div class="logo">
                             <a href="https://kochevnik.kg">
-                                <img src="https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/logo.png"
+                                <img src="{{ asset('images/logo.jpg') }}"
                                     alt="Kochevnik.kg logo" class="logo-img">
                             </a>
                         </div>

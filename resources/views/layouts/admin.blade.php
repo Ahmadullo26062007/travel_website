@@ -49,6 +49,18 @@
                         <span class="align-middle">About</span>
                     </a>
                 </li>
+                <li class="sidebar-item {{ request()->is('countries_admin*') ? 'active' : '' }}">
+                    <a class="sidebar-link" href="{{ route('countries_admin.index') }}">
+                        <i class="fa-solid fa-globe"></i>
+                        <span class="align-middle">Davlatlar</span>
+                    </a>
+                </li>
+                <li class="sidebar-item {{ request()->is('category*') ? 'active' : '' }}">
+                    <a class="sidebar-link" href="{{ route('category.index') }}">
+                        <i class="fa-solid fa-list"></i>
+                        <span class="align-middle">Turlar</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>

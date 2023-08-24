@@ -24,7 +24,7 @@ Route::resource('about', AboutController::class );
 
 
 
-Route::resource('countries', \App\Http\Controllers\CountryController::class );
+Route::resource('countries_admin', \App\Http\Controllers\CountryController::class );
 Route::resource('category', \App\Http\Controllers\CategoryController::class );
 Route::resource('tours', \App\Http\Controllers\TourController::class );
 Route::resource('visa', \App\Http\Controllers\VisaController::class );

@@ -234,6 +234,21 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    <style>
+        .btn {
+            background: #013F6C !important;
+            color: #fff !important;
+        }
+
+        .tour-loop__price {
+            background: #013F6C !important;
+        }
+
+        .icon-link::before {
+            color: #013F6C !important;
+
+        }
+    </style>
 </head>
 
 <body id="body" class="home page-template-default page page-id-22853 kochevnik-kg">
@@ -248,9 +263,9 @@
                 <div class="header-wrap">
                     <div class="header-left">
                         <div class="logo">
-                            <a href="https://kochevnik.kg">
-                                <img src="{{ asset('images/logo.jpg') }}"
-                                    alt="Kochevnik.kg logo" class="logo-img">
+                            <a href="{{ route('home.index') }}">
+                                <img src="{{ asset('images/logo.png') }}" alt="logo" class="logo-img"
+                                    style="width: 300px">
                             </a>
                         </div>
                     </div>
@@ -306,15 +321,14 @@
 
                 <div class="header-mobile">
                     <div class="header-mobile__left">
-                        <a href="https://kochevnik.kg">
-                            <img src="https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/logo.png"
-                                alt="Kochevnik.kg logo" class="logo-img">
+                        <a href="{{ route('home.index') }}">
+                            <img src="{{ asset('images/logo.png') }}" alt=" logo" class="logo-img">
                         </a>
                     </div>
 
                     <div class="header-mobile__center">
                         <div class="header-mobile__contacts">
-                         
+
                             <a rel="nofollow" href="tel:+996700708900"
                                 class="icon-link icon-link__phone h-contacts__item header-mobile__phone">0 (700)
                                 708900</a>
@@ -584,9 +598,8 @@
                         <div class="col-sm-4">
                             <div class="footer-about">
                                 <div class="footer-logo">
-                                    <img class="footer-logo__img"
-                                        src="https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/logo.png"
-                                        alt="Kochevnik.kg logo">
+                                    <img class="footer-logo__img" src="{{ asset('images/logo.png') }}"
+                                        alt="logo">
                                 </div>
 
                                 <p class="footer__about">Kочевник.kg – турагентство, которому доверяют свои путешествия

@@ -7,7 +7,7 @@
                     <div class="card flex-fill">
                         <div class="card-header">
 
-                            <h5 class="card-title">Yangliklar qo'shish</h5>
+                            <h5 class="card-title">Update Category</h5>
                         </div>
 
 
@@ -24,11 +24,11 @@
                             <div class="row">
                                 <div class="col-6 ">
 
-                                    <h5 class="card-title mb-0">Nomi</h5>
+                                    <h5 class="card-title mb-0">Name</h5>
 
                                     <div class="card-body">
                                         <input type="text" name="name" class="form-control"
-                                               placeholder="Kategoriya nomi" value="{{$category->name}}">
+                                               placeholder="Category name" value="{{$category->name}}">
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                                     <path fill-rule="evenodd"
                                           d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                                 </svg>
-                                Yaratish
+                                Update
                             </button>
                             <a class="btn btn-secondary mt-3" href="{{ route('category.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -48,7 +48,7 @@
                                     <path fill-rule="evenodd"
                                           d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
                                 </svg>
-                                Orqaga
+                                Back
                             </a>
                         </form>
                     </div>

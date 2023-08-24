@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Visa;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,7 @@ class VisaController extends Controller
     public function index()
     {
         $visas=Visa::with('country')->get();
+        return view('admin.visa.index',compact('visas'));
     }
 
     /**
@@ -20,7 +22,8 @@ class VisaController extends Controller
      */
     public function create()
     {
-        //
+        $countries=Country::pluck('name','id');
+        return view('admin.visa.create',compact('countries'));
     }
 
     /**
@@ -28,7 +31,14 @@ class VisaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'country_id'=>'required',
+            'price'=>'required',
+            'price_type'=>'required',
+            'visa_time'=>'required',
+        ]);
+        Visa::create($request->all());
+        return redirect()->route('visa.index');
     }
 
     /**
@@ -36,7 +46,6 @@ class VisaController extends Controller
      */
     public function show(Visa $visa)
     {
-        //
     }
 
     /**
@@ -44,7 +53,9 @@ class VisaController extends Controller
      */
     public function edit(Visa $visa)
     {
-        //
+        $countries=Country::pluck('name','id');
+        return view('admin.visa.edit',compact('countries','visa'));
+
     }
 
     /**
@@ -52,7 +63,14 @@ class VisaController extends Controller
      */
     public function update(Request $request, Visa $visa)
     {
-        //
+        $request->validate([
+            'country_id'=>'required',
+            'price'=>'required',
+            'price_type'=>'required',
+            'visa_time'=>'required',
+        ]);
+        $visa->update($request->all());
+        return redirect()->route('visa.index');
     }
 
     /**
@@ -60,6 +78,7 @@ class VisaController extends Controller
      */
     public function destroy(Visa $visa)
     {
-        //
+        $visa->delete();
+        return back();
     }
 }

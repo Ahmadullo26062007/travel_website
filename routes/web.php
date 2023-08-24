@@ -59,3 +59,15 @@ Route::get('tickets', function(){
 Route::get('contact', function(){
     return view('frontend.contact.index');
 })->name('front.contact.index');
+
+
+
+
+
+Route::get('login', function () {
+    return view('admin.login');
+})->name('login');
+Route::get('/logout', function () {
+    Auth::logout();
+    return view('admin.login');
+})->name('logout');

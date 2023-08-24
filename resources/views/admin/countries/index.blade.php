@@ -33,8 +33,8 @@
                                 <tr>
                                     <td>{{$country->id}}</td>
                                     <td>{{$country->name}}</td>
-                                    <td><img width="100px" src="{{asset('countries/'.$country->flag)}}" alt=""></td>
-                                    <td><img width="100px" src="{{asset('countries/'.$country->image)}}" alt=""></td>
+                                    <td><img width="100px" src="{{asset('images/'.$country->flag)}}" alt=""></td>
+                                    <td><img width="100px" src="{{asset('images/'.$country->image)}}" alt=""></td>
                                     <td>
                                         <a href="{{route('countries_admin.edit',[$country->id])}}" class="btn btn-info">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"

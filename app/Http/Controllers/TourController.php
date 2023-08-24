@@ -63,7 +63,7 @@ class TourController extends Controller
             $image_name = uniqid() . $file->getClientOriginalName();
             $i = new Image(['name' => $image_name]);
             $t->images()->save($i);
-            $file->move(public_path('storage'), $image_name);
+            $file->move(public_path('images'), $image_name);
         }
         return redirect()->route('tours.index');
     }
@@ -122,7 +122,7 @@ class TourController extends Controller
                 $image_name = uniqid() . $file->getClientOriginalName();
                 $i = new Image(['name' => $image_name]);
                 $tour->images()->save($i);
-                $file->move(public_path('storage'), $image_name);
+                $file->move(public_path('images'), $image_name);
             }
         }else{
             if ($request->image && !$tour->images){
@@ -131,7 +131,7 @@ class TourController extends Controller
                     $image_name = uniqid() . $file->getClientOriginalName();
                     $i = new Image(['name' => $image_name]);
                     $tour->images()->save($i);
-                    $file->move(public_path('storage'), $image_name);
+                    $file->move(public_path('images'), $image_name);
                 }
             }
         }

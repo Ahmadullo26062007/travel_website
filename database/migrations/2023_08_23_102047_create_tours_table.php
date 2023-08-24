@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('tours', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('image');
             $table->unsignedBigInteger('country_id');
             $table->unsignedBigInteger('category_id');
             $table->string('price');

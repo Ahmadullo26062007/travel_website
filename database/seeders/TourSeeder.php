@@ -17,6 +17,7 @@ class TourSeeder extends Seeder
             [
                 'country_id'=>'1',
                 'category_id'=>1,
+                'image'=>'travel1',
                 'title'=>'Sherwood Dreams Resort 5*',
                 'price'=>'582',
                 'price_type'=>'0',
@@ -30,6 +31,7 @@ class TourSeeder extends Seeder
             [
                 'country_id'=>'1',
                 'category_id'=>1,
+                'image'=>'travel1',
                 'title'=>'Sherwood Dreams Resort 5*',
                 'price'=>'582',
                 'price_type'=>'0',
@@ -43,6 +45,7 @@ class TourSeeder extends Seeder
             [
                 'country_id'=>'1',
                 'category_id'=>1,
+                'image'=>'travel1',
                 'title'=>'Sherwood Dreams Resort 5*',
                 'price'=>'582',
                 'price_type'=>'0',
@@ -56,6 +59,7 @@ class TourSeeder extends Seeder
             [
                 'country_id'=>'1',
                 'category_id'=>1,
+                'image'=>'travel1',
                 'title'=>'Sherwood Dreams Resort 5*',
                 'price'=>'582',
                 'price_type'=>'0',

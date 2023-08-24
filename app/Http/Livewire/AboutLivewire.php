@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Http\Request;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -48,18 +49,30 @@ class AboutLivewire extends Component
     public function editabout()
     {
         $this->validate();
-        $this->image->store('public');
-        $image_name = $this->image->hashName();
-        $this->about->update([
-            'phone_number1' => $this->phone_number1,
-            'phone_number2' => $this->phone_number2,
-            'email' => $this->email,
-            'instagram' => $this->instagram,
-            'telegram' => $this->telegram,
-            'facebook' => $this->facebook,
-            'description' => $this->description,
-            'image' => $image_name,
-        ]);
+        if ($this->image){
+            $this->image->store('public');
+            $image_name = $this->image->hashName();
+            $this->about->update([
+                'phone_number1' => $this->phone_number1,
+                'phone_number2' => $this->phone_number2,
+                'email' => $this->email,
+                'instagram' => $this->instagram,
+                'telegram' => $this->telegram,
+                'facebook' => $this->facebook,
+                'description' => $this->description,
+                'image' => $image_name,
+            ]);
+        }else{
+            $this->about->update([
+                'phone_number1' => $this->phone_number1,
+                'phone_number2' => $this->phone_number2,
+                'email' => $this->email,
+                'instagram' => $this->instagram,
+                'telegram' => $this->telegram,
+                'facebook' => $this->facebook,
+                'description' => $this->description,
+            ]);
+        }
         return redirect()->route('about.index');
     }
 

@@ -52,19 +52,19 @@
                 <li class="sidebar-item {{ request()->is('countries_admin*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('countries_admin.index') }}">
                         <i class="fa-solid fa-globe"></i>
-                        <span class="align-middle">Davlatlar</span>
+                        <span class="align-middle">Countries</span>
                     </a>
                 </li>
                 <li class="sidebar-item {{ request()->is('category*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('category.index') }}">
                         <i class="fa-solid fa-list"></i>
-                        <span class="align-middle">Turlar</span>
+                        <span class="align-middle">Tour</span>
                     </a>
                 </li>
                 <li class="sidebar-item {{ request()->is('tours*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('tours.index') }}">
                         <i class="fa-solid fa-list"></i>
-                        <span class="align-middle">Sayohatlar</span>
+                        <span class="align-middle">Tours</span>
                     </a>
                 </li>
             </ul>

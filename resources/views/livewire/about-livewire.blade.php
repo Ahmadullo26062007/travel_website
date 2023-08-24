@@ -52,7 +52,7 @@
     <div class="row col-12 mb-3">
         <div class="col-4">
             <div class="form-group">
-                <label for="">Tavsif</label>
+                <label for="">Description</label>
                 <textarea name="description" wire:model="description" class="form-control" id="" cols="30" rows="10">{{$about->description}}</textarea>
             </div>
         </div>
@@ -62,7 +62,8 @@
                 <label for="">Image</label>
                 {{-- <img src="" alt=""> --}}
                 <input type="file" name="image" wire:model="image" class="form-control" ><br>
-                <img width="250px" height="300px" src="{{asset("storage/$about->image")}}">
+                {{-- <img width="250px" height="300px" src="{{asset("storage/$about->image")}}"> --}}
+                <img width="300px" height="300px" src="{{asset('images/logo.png')}}">
 
             </div>
         </div>

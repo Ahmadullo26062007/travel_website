@@ -73,6 +73,12 @@
                         <span class="align-middle">Visas</span>
                     </a>
                 </li>
+                <li class="sidebar-item {{ request()->is('ticket*') ? 'active' : '' }}">
+                    <a class="sidebar-link" href="{{ route('ticket.index') }}">
+                        <i class="fa-brands fa-plane-departure"></i>
+                        <span class="align-middle">Tickets</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>

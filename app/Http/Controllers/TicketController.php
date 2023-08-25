@@ -12,7 +12,8 @@ class TicketController extends Controller
      */
     public function index()
     {
-        //
+        $tickets=Ticket::all();
+        return view('admin.tickets.index',compact('tickets'));
     }
 
     /**
@@ -20,7 +21,7 @@ class TicketController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tickets.create');
     }
 
     /**
@@ -28,7 +29,17 @@ class TicketController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'image'=>'required'
+        ]);
+        $data=$request->all();
+        $file = $request->file('image');
+        $image_name2 = uniqid() . $file->getClientOriginalName();
+        $data['image'] = $image_name2;
+        $file->move(public_path('images/'), $image_name2);
+        Ticket::create($data);
+        return redirect()->route('ticket.index');
     }
 
     /**
@@ -44,7 +55,7 @@ class TicketController extends Controller
      */
     public function edit(Ticket $ticket)
     {
-        //
+        return view('admin.tickets.edit',compact('ticket'));
     }
 
     /**
@@ -52,7 +63,19 @@ class TicketController extends Controller
      */
     public function update(Request $request, Ticket $ticket)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+        ]);
+        if ($request->image) {
+            $data = $request->all();
+            $file = $request->file('image');
+            $image_name2 = uniqid() . $file->getClientOriginalName();
+            $data['image'] = $image_name2;
+            $file->move(public_path('images/'), $image_name2);
+            $ticket->update($data);
+        }
+        $ticket->update(['name' => $request->name]);
+        return redirect()->route('ticket.index');
     }
 
     /**
@@ -60,6 +83,7 @@ class TicketController extends Controller
      */
     public function destroy(Ticket $ticket)
     {
-        //
+        $ticket->delete();
+        return back();
     }
 }

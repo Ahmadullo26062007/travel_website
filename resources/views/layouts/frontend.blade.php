@@ -278,15 +278,14 @@
                         <div class="header-right__top">
                             <div class="h-contacts" id="header-contacts">
 
-                                <a rel="nofollow" href="tel:+996700708900"
-                                    class="icon-link icon-link__phone h-contacts__item">0 (700) 708900</a>
-                                <a rel="nofollow" href="tel:+996554993043"
-                                    class="icon-link icon-link__phone h-contacts__item">0 (554) 993043</a>
+                                <a rel="nofollow" href="tel:+{{$a->phone_number1}}"
+                                    class="icon-link icon-link__phone h-contacts__item">{{$a->phone_number1}}</a>
+                                <a rel="nofollow" href="tel:+{{$a->phone_number2}}"
+                                    class="icon-link icon-link__phone h-contacts__item">{{$a->phone_number2}}</a>
 
 
                                 <!-- <button class="h-contacts__item h-contacts__btn js-pop-up-btn" href="#popup-form" data-head="Подбор тура" data-desc="Заполните форму и мы вам перезвоним">Подбор тура</button> -->
                                 <a rel="nofollow" class="btn h-contacts__item h-contacts__btn"
-                                    href="https://api.whatsapp.com/send/?phone=996700708900&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D0%B2%D1%83%D0%B9%D1%82%D0%B5+Kochevnik.kg"
                                     target="_blank">Подбор тура</a>
                             </div>
 
@@ -305,17 +304,19 @@
                         <div id="header-menu" class="header-bottom">
                             <nav class="nav header-nav" role="navigation">
                                 <ul id="menu-glavnoe-menju" class="menu header-menu">
-                                    <li class="menu__item"><a href="{{ route('front.tours.index') }}"
+                                    <li class="menu__item {{ request()->is('/') ? 'active' : '' }}"><a href="{{ route('home.index') }}"
+                                            class="menu__link">Home</a></li>
+                                    <li class="menu__item {{ request()->is('tour') ? 'active' : '' }}"><a href="{{ route('front.tours.index') }}"
                                             class="menu__link">Tours</a></li>
-                                    <li class="menu__item"><a href="{{ route('front.hot_tours.index') }}"
+                                    <li class="menu__item {{ request()->is('hot-tours') ? 'active' : '' }}"><a href="{{ route('front.hot_tours.index') }}"
                                             class="menu__link">Hot Tours</a></li>
-                                    <li class="menu__item"><a href="{{ route('front.countries.index') }}"
+                                    <li class="menu__item {{ request()->is('/country') ? 'active' : '' }}"><a href="{{ route('front.countries.index') }}"
                                             class="menu__link">Countries</a></li>
-                                    <li class="menu__item"><a href="{{ route('front.visas.index') }}"
+                                    <li class="menu__item {{ request()->is('visas') ? 'active' : '' }}"><a href="{{ route('front.visas.index') }}"
                                             class="menu__link">Visas</a></li>
-                                    <li class="menu__item"><a href="{{ route('front.tickets.index') }}"
+                                    <li class="menu__item {{ request()->is('tickets') ? 'active' : '' }}"><a href="{{ route('front.tickets.index') }}"
                                             class="menu__link">Tickets</a></li>
-                                    <li class="menu__item"><a href="{{ route('front.contact.index') }}"
+                                    <li class="menu__item {{ request()->is('contact') ? 'active' : '' }}"><a href="{{ route('front.contact.index') }}"
                                             class="menu__link">Contact</a></li>
                                 </ul>
                             </nav>
@@ -333,12 +334,10 @@
                     <div class="header-mobile__center">
                         <div class="header-mobile__contacts">
 
-                            <a rel="nofollow" href="tel:+996700708900"
-                                class="icon-link icon-link__phone h-contacts__item header-mobile__phone">0 (700)
-                                708900</a>
-                            <a rel="nofollow" href="tel:+996554993043"
-                                class="icon-link icon-link__phone h-contacts__item header-mobile__phone">0 (554)
-                                993043</a>
+                            <a rel="nofollow" href="tel:+{{$a->phone_number1}}"
+                                class="icon-link icon-link__phone h-contacts__item header-mobile__phone">{{$a->phone_number1}}</a>
+                            <a rel="nofollow" href="tel:+{{$a->phone_number2}}"
+                                class="icon-link icon-link__phone h-contacts__item header-mobile__phone">{{$a->phone_number2}}</a>
                         </div>
                     </div>
 
@@ -350,19 +349,18 @@
                         <button
                             class="header-mobile__nav-btn header-mobile__nav-btn--close js-btn-menu-toggle">Закрыть</button>
                         <ul id="menu-menju-dlja-mobilnyh" class="menu mobile-menu">
-                            <li class="menu__item"><a href="https://kochevnik.kg/tours/" class="menu__link">Туры</a>
-                            </li>
-                            <li class="menu__item"><a href="https://kochevnik.kg/countries/"
-                                    class="menu__link">Страны</a></li>
-                            <li class="menu__item"><a href="https://kochevnik.kg/oformlenie-viz/"
-                                    class="menu__link">Оформление виз</a></li>
-                            <li class="menu__item"><a href="https://kochevnik.kg/missija-i-cennosti/"
-                                    class="menu__link">Миссия и ценности</a></li>
-                            <li class="menu__item"><a href="https://kochevnik.kg/reviews/"
-                                    class="menu__link">Отзывы</a>
-                            </li>
-                            <li class="menu__item"><a href="https://kochevnik.kg/contacts/"
-                                    class="menu__link">Контакты</a></li>
+                            <li class="menu__item"><a href="{{ route('front.tours.index') }}"
+                                                      class="menu__link">Tours</a></li>
+                            <li class="menu__item"><a href="{{ route('front.hot_tours.index') }}"
+                                                      class="menu__link">Hot Tours</a></li>
+                            <li class="menu__item"><a href="{{ route('front.countries.index') }}"
+                                                      class="menu__link">Countries</a></li>
+                            <li class="menu__item"><a href="{{ route('front.visas.index') }}"
+                                                      class="menu__link">Visas</a></li>
+                            <li class="menu__item"><a href="{{ route('front.tickets.index') }}"
+                                                      class="menu__link">Tickets</a></li>
+                            <li class="menu__item"><a href="{{ route('front.contact.index') }}"
+                                                      class="menu__link">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -377,9 +375,8 @@
                     <div class="col-sm-6">
                         <div class="row">
                             <div class="col-xs-3">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2018/07/GEN_9425-e1537860321457-150x150.jpg"
+                                <img src="{{asset('images/GEN_9425-e1537860321457-150x150.jpg')}}"
                                     class="form__staff-img wp-post-image" alt=""
-                                    srcset="https://kochevnik.kg/wp-content/uploads/2018/07/GEN_9425-e1537860321457-150x150.jpg 150w, https://kochevnik.kg/wp-content/uploads/2018/07/GEN_9425-e1537860321457-300x300.jpg 300w, https://kochevnik.kg/wp-content/uploads/2018/07/GEN_9425-e1537860321457.jpg 387w"
                                     sizes="(max-width: 150px) 100vw, 150px" />
                             </div>
 
@@ -390,8 +387,8 @@
 
                                 <!-- <button href="#popup-form" class="btn btn-primary js-pop-up-btn" data-head="Заявка на поиск тура" data-desc="Заполните форму и мы вам перезвоним">Оставить заявку на поиск тура</button> -->
                                 <a rel="nofollow"
-                                    href="https://api.whatsapp.com/send/?phone=996700708900&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D0%B2%D1%83%D0%B9%D1%82%D0%B5+Kochevnik.kg"
-                                    class="btn btn-primary" target="_blank">Оставить заявку на поиск тура</a>
+                                   href="{{route('front.tours.index')}}"
+                                      class="btn btn-primary" target="_blank">Оставить заявку на поиск тура</a>
                             </div>
                         </div>
                     </div>
@@ -399,7 +396,7 @@
                     <div class="col-sm-6">
                         <div class="row">
                             <div class="col-xs-3">
-                                <img src="https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/telegram.png"
+                                <img src="{{asset('images/telegram.png')}}"
                                     alt="">
                             </div>
 
@@ -409,7 +406,7 @@
 
                                 <p class="form__cap">раз в день в Telegram</p>
 
-                                <a rel="nofollow" href="https://t.me/kochevnikkg" target="_blank"
+                                <a rel="nofollow" href="{{$a->telegram}}" target="_blank"
                                     class="btn btn--telegram">
                                     Получить доступ <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                                 </a>
@@ -463,7 +460,7 @@
                                         </li>
                                         <li id="menu-item-32999"
                                             class="menu-item menu-item-type-post_type_archive menu-item-object-tours menu-item-32999">
-                                            <a href="https://kochevnik.kg/tours/">Все туры</a>
+                                            <a href="{{route('front.tours.index')}}">Все туры</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -505,7 +502,7 @@
                                         </li>
                                         <li id="menu-item-32991"
                                             class="menu-item menu-item-type-post_type_archive menu-item-object-countries menu-item-32991">
-                                            <a href="https://kochevnik.kg/countries/">Каталог туров</a>
+                                            <a href="{{route('front.countries.index')}}">Каталог туров</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -519,11 +516,11 @@
                                     <ul id="menu-klientam" class="menu">
                                         <li id="menu-item-32943"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32943">
-                                            <a href="https://kochevnik.kg/aviabilety/">Авиабилеты</a>
+                                            <a href="{{route('front.tickets.index')}}">Авиабилеты</a>
                                         </li>
                                         <li id="menu-item-32944"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32944">
-                                            <a href="https://kochevnik.kg/oformlenie-viz/">Оформление виз</a>
+                                            <a href="{{route('front.visas.index')}}">Оформление виз</a>
                                         </li>
                                         <li id="menu-item-32945"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32945">
@@ -588,7 +585,7 @@
                                         </li>
                                         <li id="menu-item-32983"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32983">
-                                            <a href="https://kochevnik.kg/contacts/">Контакты</a>
+                                            <a href="{{route('front.contact.index')}}">Контакты</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -615,25 +612,23 @@
 
                         <div class="col-sm-4">
                             <h3 class="footer-widget__title">Контакты</h3>
-                            <p><small>Email</small><br><i class="fa fa-phone" aria-hidden="true"></i> <a
-                                    rel="nofollow" href="tel:+996550312949">0 (550) 312-949</a></p>
-                            <p><small>Email</small><br><i class="fa fa-envelope" aria-hidden="true"></i>
-                                info@kochevnik.kg</p>
+                            <p><small>Tel</small><br><i class="fa fa-phone" aria-hidden="true"></i> <a
+                                    rel="nofollow" href="tel:+{{$a->phone_number1}}">{{$a->phone_number1}}</a></p>
+                            <p><small>Email</small><br><i class="fa fa-envelope" aria-hidden="true"></i> {{$a->email}}</p>
 
 
                             <p class="footer__social-text">Следите за нами в социальных сетях</p>
 
                             <div class="social-links">
-                                <a rel="nofollow" href="https://www.facebook.com/kochevnik.kg/"
+                                <a rel="nofollow" href="{{$a->facebook}}"
                                     title="Мы на Facebook" target="_blank"
                                     class="icon-link social-link icon-link__facebook">Facebook</a>
-                                <a rel="nofollow" href="https://www.instagram.com/kochevnik.kg/"
+                                <a rel="nofollow" href="{{$a->instagram}}"
                                     title="Мы в Instagram" target="_blank"
                                     class="icon-link social-link icon-link__instagram">Instagram</a>
-                                <a rel="nofollow" href="https://ok.ru/aviakochevnik" title="Мы в Одноклассниках"
-                                    target="_blank" class="icon-link social-link icon-link__ok">Ok</a>
-                                <a rel="nofollow" href="https://vk.com/kochevnik_kg" title="Мы в Контакте"
-                                    target="_blank" class="icon-link social-link icon-link__vk">Vk</a>
+                                <a rel="nofollow" href="{{$a->telegram}}" title="Мы в Одноклассниках"
+                                    target="_blank" class="icon-link social-link icon-link__telegram">Ok</a>
+
                             </div>
                         </div>
 

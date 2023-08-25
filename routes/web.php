@@ -38,6 +38,11 @@ Route::get('/tour', function () {
     return view('frontend.tours.index');
 })->name('front.tours.index');
 
+Route::get('/tour-detail/{id}', function ($id) {
+    $t=\App\Models\Tour::find($id);
+    return view('frontend.tours.detail' ,compact('t') );
+})->name('front.tours.detail');
+
 Route::get('hot-tours', function(){
     return view('frontend.hot_tours.index');
 })->name('front.hot_tours.index');

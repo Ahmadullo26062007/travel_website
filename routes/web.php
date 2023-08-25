@@ -52,6 +52,11 @@ Route::get('country', function(){
     return view('frontend.countries.index',compact('countries'));
 })->name('front.countries.index');
 
+Route::get('/country-detail/{id}', function($id){
+    $country = \App\Models\Country::find($id);
+    return view('frontend.countries.detail', compact('country'));
+})->name('front.country.detail');
+
 Route::get('visas', function(){
     return view('frontend.visas.index');
 })->name('front.visas.index');
@@ -63,7 +68,6 @@ Route::get('tickets', function(){
 Route::get('contact', function(){
     return view('frontend.contact.index');
 })->name('front.contact.index');
-
 
 
 

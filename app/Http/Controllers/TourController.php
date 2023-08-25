@@ -37,6 +37,7 @@ class TourController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'comfor_description' => 'required',
             'city' => 'required',
             'country_id' => 'required',
             'category_id' => 'required',
@@ -56,16 +57,22 @@ class TourController extends Controller
         $t = Tour::create([
             'title' => $request->title,
             'description' => $request->description,
+            'comfor_description' => $request->comfor_description,
             'city' => $request->city,
             'country_id' => $request->country_id,
             'category_id' => $request->category_id,
             'price' => $request->price,
-            'price_type' => $request->price_type,
+            'price_type' => $request->visa_type,
             'start_time' => $request->start_time,
             'end_time' => $request->end_time,
             'length' => $request->length,
             'image' => $data['image']
         ]);
+        if ($request->visa) {
+            $t->update([
+                'visa_type' => $request->visa_type,
+                'visa' => $request->visa,]);
+        }
         foreach ($request->images as $image) {
             $file = $image;
             $image_name = uniqid() . $file->getClientOriginalName();
@@ -102,6 +109,7 @@ class TourController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'comfor_description' => 'required',
             'city' => 'required',
             'country_id' => 'required',
             'category_id' => 'required',
@@ -109,17 +117,12 @@ class TourController extends Controller
             'price_type' => 'required',
             'start_time' => 'required',
             'end_time' => 'required',
-            'images' => 'required',
-            'image' => 'required',
             'length' => 'required',]);
-        $data = $request->all();
-        $file = $request->file('image');
-        $image_name = uniqid() . $file->getClientOriginalName();
-        $data['image'] = $image_name;
-        $file->move(public_path('images/'), $image_name);
+
         $tour->update([
             'title' => $request->title,
             'description' => $request->description,
+            'comfor_description' => $request->comfor_description,
             'city' => $request->city,
             'country_id' => $request->country_id,
             'category_id' => $request->category_id,
@@ -128,8 +131,35 @@ class TourController extends Controller
             'start_time' => $request->start_time,
             'end_time' => $request->end_time,
             'length' => $request->length,
-            'image' => $data['image']
         ]);
+
+        if ($request->visa) {
+            $tour->update([
+                'visa_type' => $request->visa_type,
+                'visa' => $request->visa,]);
+        }
+        if ($request->image && $tour->image) {
+            unlink(public_path("images/$tour->image"));
+            $data = $request->all();
+            $file = $request->file('image');
+            $image_name = uniqid() . $file->getClientOriginalName();
+            $data['image'] = $image_name;
+            $file->move(public_path('images/'), $image_name);
+            $tour->update([
+                'image' => $data['image']
+            ]);
+        }else{
+            if ($request->image && !$tour->image){
+                $data = $request->all();
+                $file = $request->file('image');
+                $image_name = uniqid() . $file->getClientOriginalName();
+                $data['image'] = $image_name;
+                $file->move(public_path('images/'), $image_name);
+                $tour->update([
+                    'image' => $data['image']
+                ]);
+            }
+        }
         if ($request->images && $tour->images) {
             $tour->images()->delete();
             foreach ($request->images as $image) {

@@ -19,7 +19,10 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->string('price');
             $table->integer('price_type');
+            $table->string('visa')->nullable();
+            $table->integer('visa_type')->nullable();
             $table->text('description');
+            $table->text('comfor_description');
             $table->string('start_time');
             $table->string('end_time');
             $table->string('length');

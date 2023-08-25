@@ -25,228 +25,25 @@
                 <h2 class="section__head">Популярные страны</h2>
 
                 <div class="clear">
-
+                     @foreach($countries as $c)
                     <article class="main-country">
-                        <a class="main-country__link" title="Туры в Турцию" href="https://kochevnik.kg/countries/turcija/">
+                        <a class="main-country__link" title="Туры в Турцию" href="">
                             <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/turkey-300x200.jpg"
+                                <img src="{{asset("countries/$c->image")}}"
                                     class="main-country__img wp-post-image" alt="" />
                             </div>
 
 
                             <div class="main-country__content">
                                 <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Turkey-300x199.png"
+                                    src="{{asset("countries/$c->flag")}}"
                                     alt="Туры в Турцию флаг">
 
-                                <h3 class="main-country__title">Турция</h3>
+                                <h3 class="main-country__title">{{$c->name}}</h3>
                             </div>
                         </a>
                     </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры в Египет" href="https://kochevnik.kg/countries/egipet/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/egypt-1-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="Отдых в Египте" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Egypt-300x199.png"
-                                    alt="Туры в Египет флаг">
-
-                                <h3 class="main-country__title">Египет</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры в Таиланд" href="https://kochevnik.kg/countries/tailand/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/thailand-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Thailand-300x198.png"
-                                    alt="Туры в Таиланд флаг">
-
-                                <h3 class="main-country__title">Таиланд</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры в ОАЭ" href="https://kochevnik.kg/countries/oaje/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/uae-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/arab_emirates-300x150.jpg"
-                                    alt="Туры в ОАЭ флаг">
-
-                                <h3 class="main-country__title">ОАЭ</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры в Грузию" href="https://kochevnik.kg/countries/gruzija/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/gruziya-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Georgia-300x223.png"
-                                    alt="Туры в Грузию флаг">
-
-                                <h3 class="main-country__title">Туры в Грузию</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Китай" href="https://kochevnik.kg/countries/kitaj/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2018/05/china-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="Отдых в Китае" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2018/05/082.-Kitaj-300x200.jpg"
-                                    alt="Китай флаг">
-
-                                <h3 class="main-country__title">Китай</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Мальдивы" href="https://kochevnik.kg/countries/maldivy/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/maldives-1-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Maldives-300x198.png"
-                                    alt="Мальдивы флаг">
-
-                                <h3 class="main-country__title">Мальдивы</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Малайзия" href="https://kochevnik.kg/countries/malajzija/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/07/malaiziya-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="Отдых в Малайзии" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Malaysia-300x148.png"
-                                    alt="Малайзия флаг">
-
-                                <h3 class="main-country__title">Малайзия</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры во Вьетнам"
-                            href="https://kochevnik.kg/countries/vetnam/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/vietnam.jpg"
-                                    class="main-country__img wp-post-image" alt=""
-                                    srcset="https://kochevnik.kg/wp-content/uploads/2017/06/vietnam.jpg 3072w, https://kochevnik.kg/wp-content/uploads/2017/06/vietnam-300x200.jpg 300w, https://kochevnik.kg/wp-content/uploads/2017/06/vietnam-768x512.jpg 768w, https://kochevnik.kg/wp-content/uploads/2017/06/vietnam-1024x683.jpg 1024w"
-                                    sizes="(max-width: 300px) 100vw, 300px" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Vietnam-300x198.png"
-                                    alt="Туры во Вьетнам флаг">
-
-                                <h3 class="main-country__title">Вьетнам</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Индия" href="https://kochevnik.kg/countries/indija/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/india-1-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="Отдых в индии" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/India-300x199.png"
-                                    alt="Индия флаг">
-
-                                <h3 class="main-country__title">Индия</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Чехия" href="https://kochevnik.kg/countries/chehija/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya.jpg"
-                                    class="main-country__img wp-post-image" alt=""
-                                    srcset="https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya.jpg 3072w, https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya-300x199.jpg 300w, https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya-768x510.jpg 768w, https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya-1024x680.jpg 1024w"
-                                    sizes="(max-width: 300px) 100vw, 300px" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Czech_Republic-300x196.png"
-                                    alt="Чехия флаг">
-
-                                <h3 class="main-country__title">Чехия</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры на Шри-Ланку"
-                            href="https://kochevnik.kg/countries/shri-lanka/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/sri-lanka-1-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Sri_Lanka-300x143.png"
-                                    alt="Туры на Шри-Ланку флаг">
-
-                                <h3 class="main-country__title">Шри ланка</h3>
-                            </div>
-                        </a>
-                    </article>
+                    @endforeach
                 </div>
             </div>
 
@@ -257,7 +54,7 @@
                 <div class="clear loop-countries">
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Австрия"
-                            href="https://kochevnik.kg/countries/avstrija/">
+                            href="avstrija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -270,7 +67,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Азербайджан"
-                            href="https://kochevnik.kg/countries/azerbajdzhan/">
+                            href="azerbajdzhan/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -283,7 +80,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Англия"
-                            href="https://kochevnik.kg/countries/anglija/">
+                            href="anglija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -296,7 +93,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Болгария"
-                            href="https://kochevnik.kg/countries/bolgarija/">
+                            href="bolgarija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -309,7 +106,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Венгрия"
-                            href="https://kochevnik.kg/countries/vengrija/">
+                            href="vengrija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -322,7 +119,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Греция"
-                            href="https://kochevnik.kg/countries/grecija/">
+                            href="grecija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -335,7 +132,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Доминикана"
-                            href="https://kochevnik.kg/countries/dominikana/">
+                            href="dominikana/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -348,7 +145,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Замбия"
-                            href="https://kochevnik.kg/countries/zambija/">
+                            href="zambija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -361,7 +158,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Индия"
-                            href="https://kochevnik.kg/countries/indija/">
+                            href="indija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -374,7 +171,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Индонезия"
-                            href="https://kochevnik.kg/countries/indonezija/">
+                            href="indonezija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -387,7 +184,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Иордания"
-                            href="https://kochevnik.kg/countries/iordanija/">
+                            href="iordanija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -400,7 +197,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Ирландия"
-                            href="https://kochevnik.kg/countries/irlandija/">
+                            href="irlandija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -413,7 +210,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Испания"
-                            href="https://kochevnik.kg/countries/ispanija/">
+                            href="ispanija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -426,7 +223,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Италия"
-                            href="https://kochevnik.kg/countries/italija/">
+                            href="italija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -439,7 +236,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Казахстан"
-                            href="https://kochevnik.kg/countries/kazahstan/">
+                            href="kazahstan/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -452,7 +249,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Камбоджа"
-                            href="https://kochevnik.kg/countries/kambodzha/">
+                            href="kambodzha/">
 
                             <div class="loop-country__content">
 
@@ -462,7 +259,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Кипр"
-                            href="https://kochevnik.kg/countries/kipr/">
+                            href="kipr/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -475,7 +272,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Китай"
-                            href="https://kochevnik.kg/countries/kitaj/">
+                            href="kitaj/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -488,7 +285,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Куба"
-                            href="https://kochevnik.kg/countries/kuba/">
+                            href="kuba/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -501,7 +298,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Кыргызстан"
-                            href="https://kochevnik.kg/countries/kyrgyzstan/">
+                            href="kyrgyzstan/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -514,7 +311,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Литва"
-                            href="https://kochevnik.kg/countries/litva/">
+                            href="litva/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -527,7 +324,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Маврикий"
-                            href="https://kochevnik.kg/countries/mavrikij/">
+                            href="mavrikij/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -540,7 +337,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Малайзия"
-                            href="https://kochevnik.kg/countries/malajzija/">
+                            href="malajzija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -553,7 +350,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Мальдивы"
-                            href="https://kochevnik.kg/countries/maldivy/">
+                            href="maldivy/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -566,7 +363,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Мальта"
-                            href="https://kochevnik.kg/countries/malta/">
+                            href="malta/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -579,7 +376,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Марокко"
-                            href="https://kochevnik.kg/countries/marokko/">
+                            href="marokko/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -592,7 +389,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Мексика"
-                            href="https://kochevnik.kg/countries/meksika/">
+                            href="meksika/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -605,7 +402,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Монако"
-                            href="https://kochevnik.kg/countries/monako/">
+                            href="monako/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -618,7 +415,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Нидерланды"
-                            href="https://kochevnik.kg/countries/niderlandy/">
+                            href="niderlandy/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -631,7 +428,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Польша"
-                            href="https://kochevnik.kg/countries/polsha/">
+                            href="polsha/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -644,7 +441,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Португалия"
-                            href="https://kochevnik.kg/countries/portugalija/">
+                            href="portugalija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -657,7 +454,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Россия"
-                            href="https://kochevnik.kg/countries/rossija/">
+                            href="rossija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -670,7 +467,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Румыния"
-                            href="https://kochevnik.kg/countries/rumynija/">
+                            href="rumynija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -683,7 +480,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Сейшельские острова"
-                            href="https://kochevnik.kg/countries/sejshelskie-ostrova/">
+                            href="sejshelskie-ostrova/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -696,7 +493,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Словакия"
-                            href="https://kochevnik.kg/countries/slovakija/">
+                            href="slovakija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -709,7 +506,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Танзания"
-                            href="https://kochevnik.kg/countries/tanzanija/">
+                            href="tanzanija/">
 
                             <div class="loop-country__content">
 
@@ -719,7 +516,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Тунис"
-                            href="https://kochevnik.kg/countries/tunis/">
+                            href="tunis/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -732,7 +529,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Туры в Андорру"
-                            href="https://kochevnik.kg/countries/andorra/">
+                            href="andorra/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -745,7 +542,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="туры в германию"
-                            href="https://kochevnik.kg/countries/germanija/">
+                            href="germanija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -758,7 +555,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Туры в Грузию"
-                            href="https://kochevnik.kg/countries/gruzija/">
+                            href="gruzija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -771,7 +568,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Туры в Египет"
-                            href="https://kochevnik.kg/countries/egipet/">
+                            href="egipet/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -784,7 +581,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Туры в ОАЭ"
-                            href="https://kochevnik.kg/countries/oaje/">
+                            href="oaje/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -797,7 +594,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Туры в Таиланд"
-                            href="https://kochevnik.kg/countries/tailand/">
+                            href="tailand/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -810,7 +607,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Туры в Турцию"
-                            href="https://kochevnik.kg/countries/turcija/">
+                            href="turcija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -823,7 +620,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Туры в Узбекистан"
-                            href="https://kochevnik.kg/countries/uzbekistan/">
+                            href="uzbekistan/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -836,7 +633,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Туры во Вьетнам"
-                            href="https://kochevnik.kg/countries/vetnam/">
+                            href="vetnam/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -849,7 +646,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Туры на Шри-Ланку"
-                            href="https://kochevnik.kg/countries/shri-lanka/">
+                            href="shri-lanka/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -862,7 +659,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Украина"
-                            href="https://kochevnik.kg/countries/ukraina/">
+                            href="ukraina/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -875,7 +672,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Финляндия"
-                            href="https://kochevnik.kg/countries/finljandija/">
+                            href="finljandija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -888,7 +685,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Франция"
-                            href="https://kochevnik.kg/countries/francija/">
+                            href="francija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -901,7 +698,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Хорватия"
-                            href="https://kochevnik.kg/countries/horvatija/">
+                            href="horvatija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -914,7 +711,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Черногория"
-                            href="https://kochevnik.kg/countries/chernogorija/">
+                            href="chernogorija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -927,7 +724,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Чехия"
-                            href="https://kochevnik.kg/countries/chehija/">
+                            href="chehija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -940,7 +737,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Швейцария"
-                            href="https://kochevnik.kg/countries/shvejcarija/">
+                            href="shvejcarija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -953,7 +750,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Эстония"
-                            href="https://kochevnik.kg/countries/jestonija/">
+                            href="jestonija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -966,7 +763,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="ЮАР"
-                            href="https://kochevnik.kg/countries/juar/">
+                            href="juar/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"
@@ -979,7 +776,7 @@
                     </article>
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="Япония"
-                            href="https://kochevnik.kg/countries/japonija/">
+                            href="japonija/">
 
                             <div class="loop-country__content">
                                 <img class="loop-country__flag"

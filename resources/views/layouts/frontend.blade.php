@@ -1,3 +1,7 @@
+
+@php
+    $a=\App\Models\About::find(1);
+@endphp
 <!Doctype html>
 <html lang="ru-RU" class="no-js">
 

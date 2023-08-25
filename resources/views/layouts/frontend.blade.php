@@ -760,12 +760,12 @@
     </div>
 
     <div class="fixed-btns">
-        <a target="_blank" rel="nofollow" class="fixed-btns__item fixed-btns__item--wa"
-            href="https://wa.me/996556986545?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5">
+        <a target="_blank" rel="nofollow" class="fixed-btns__item fixed-btns__item--tg"
+            href="https://t.me/+G2_L_AKkBcc2ZWZi">
 
             <span class="fixed-btns__label">
                 <span class="fixed-btns__text">
-                    Написать в Whatsapp
+                    Write on Telegram
                 </span>
             </span>
         </a>

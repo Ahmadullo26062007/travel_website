@@ -118,7 +118,7 @@
 
             <p class="count-tours">Найдено туров: <b>556</b></p>
             <div class="articles-wrap main-tours-wrap">
-                @foreach ($country->tours as $tour)
+                @foreach ($tours as $tour)
                     <article class="tour-loop article-loop main-tour">
                         <div class="tour-loop__top">
                             <div class="tour-loop__img-wrap">

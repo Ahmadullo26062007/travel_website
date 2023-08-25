@@ -16,7 +16,10 @@ class Tour extends Model
         'category_id',
         'price',
         'price_type',
+        'visa',
+        'visa_type',
         'description',
+        'comfor_description',
         'start_time',
         'end_time',
         'length',
@@ -36,7 +39,7 @@ class Tour extends Model
     const PRICETYPES=[
         'EUR',
         'USD',
-        '$',    
+        '$',
     ];
     public function images()
     {

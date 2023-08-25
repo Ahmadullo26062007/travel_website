@@ -27,7 +27,7 @@
                 <div class="clear">
                      @foreach($countries as $c)
                     <article class="main-country">
-                        <a class="main-country__link" title="Туры в Турцию" href="">
+                        <a class="main-country__link" title="Туры в Турцию" href="{{route('front.country.detail',$c->id)}}">
                             <div class="main-country__img-wrap">
                                 <img src="{{asset("countries/$c->image")}}"
                                     class="main-country__img wp-post-image" alt="" />

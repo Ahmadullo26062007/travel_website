@@ -287,14 +287,14 @@
                             </div>
 
                             <div class="header-social-links">
-                                <a rel="nofollow" href="https://www.facebook.com/kochevnik.kg/"
-                                    title="Мы на Facebook" target="_blank"
-                                    class="icon-link social-link icon-link__facebook">Facebook</a>
-                                <a rel="nofollow" href="https://www.instagram.com/kochevnik.kg/"
-                                    title="Мы в Instagram" target="_blank"
-                                    class="icon-link social-link icon-link__instagram">Instagram</a>
-                                <a rel="nofollow" href="https://t.me/kochevnikkg" title="Мы в Telegram"
-                                    target="_blank" class="icon-link social-link icon-link__telegram">Telegram</a>
+                                <a rel="nofollow" href="{{$a->facebook}}"
+                                   title="Мы на Facebook" target="_blank"
+                                   class="icon-link social-link icon-link__facebook">Facebook</a>
+                                <a rel="nofollow" href="{{$a->instagram}}"
+                                   title="Мы в Instagram" target="_blank"
+                                   class="icon-link social-link icon-link__instagram">Instagram</a>
+                                <a rel="nofollow" href="{{$a->telegram}}" title="Мы в Telegram"
+                                   target="_blank" class="icon-link social-link icon-link__telegram">Telegram</a>
                             </div>
                         </div>
 

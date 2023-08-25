@@ -1,7 +1,9 @@
 @extends('layouts.frontend')
 
 @section('content')
-
+ @php
+ $a=\App\Models\About::find(1);
+ @endphp
         <main id="main" class="main" role="main">
             <article id="post-33925" class="page-tour post-33925 tours type-tours status-publish has-post-thumbnail hentry catalog-tanzanija departure_city-bishkek rest_type-molodezhnye-tury rest_type-pljazhnye rest_type-svadebnyj-tur rest_type-semejnye-tury rest_type-stokovyj-tur">
 
@@ -137,7 +139,14 @@ customGoal:BUeeHNSPCaASBaRDSGEXO:2 customGoal:BUeeZdbaBMRbBYWKOBLHXT:2"></p>
 
                                 <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
                                 <script src="https://yastatic.net/share2/share.js"></script>
-                                <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp,telegram"></div>
+                                <a rel="nofollow" href="{{$a->facebook}}"
+                                   title="Мы на Facebook" target="_blank"
+                                   class="icon-link social-link icon-link__facebook">Facebook</a>
+                                <a rel="nofollow" href="{{$a->instagram}}"
+                                   title="Мы в Instagram" target="_blank"
+                                   class="icon-link social-link icon-link__instagram">Instagram</a>
+                                <a rel="nofollow" href="{{$a->telegram}}" title="Мы в Telegram"
+                                   target="_blank" class="icon-link social-link icon-link__telegram">Telegram</a>
                             </div>
 
                             <div class="form form--subscribe page-tour__sidebar-block">

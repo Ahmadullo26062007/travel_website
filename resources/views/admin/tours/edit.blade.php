@@ -127,9 +127,9 @@
 
                                 <div class="col-6 ">
 
-                                    <h5 class="card-title mb-0">Images</h5>
+                                    <h5 class="card-title mb-0">Previous Images</h5>
                                     <div class="card-body">
-                                        <input type="file" name="image[]" multiple class="form-control">
+                                        <input type="file" name="images[]" multiple class="form-control">
                                     </div>
                                 </div>
 
@@ -149,7 +149,21 @@
                                                   rows="10">{{$tour->description}}</textarea>
                                     </div>
                                 </div>
+                                <div class="col-6 ">
 
+                                    <h5 class="card-title mb-0">Image</h5>
+
+                                    <div class="card-body">
+                                        <input type="file" name="image" multiple class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <h5 class="card-title mb-0">Previous Image</h5>
+                                    <div class="card-body">
+                                        <img width="300px" src="{{asset('images/'.$tour->image)}}" alt="">
+                                    </div>
+                                </div>
                             </div>
 
                             <button class="btn btn-primary mt-3" type="submit">

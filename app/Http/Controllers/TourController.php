@@ -15,8 +15,8 @@ class TourController extends Controller
      */
     public function index()
     {
-        $tours=Tour::with('country')->get();
-        return view('admin.tours.index',compact('tours'));
+        $tours = Tour::with('country')->get();
+        return view('admin.tours.index', compact('tours'));
     }
 
     /**
@@ -24,9 +24,9 @@ class TourController extends Controller
      */
     public function create()
     {
-        $countries=Country::pluck('name','id');
-        $categories=Category::pluck('name','id');
-        return view('admin.tours.create',compact('categories','countries'));
+        $countries = Country::pluck('name', 'id');
+        $categories = Category::pluck('name', 'id');
+        return view('admin.tours.create', compact('categories', 'countries'));
     }
 
     /**
@@ -35,30 +35,38 @@ class TourController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'=>'required',
-            'description'=>'required',
-            'city'=>'required',
-            'country_id'=>'required',
-            'category_id'=>'required',
-            'price'=>'required',
-            'price_type'=>'required',
-            'start_time'=>'required',
-            'end_time'=>'required',
-            'image'=>'required',
-        ],[
-            'title.required'=>'Sayohat nomi kiritlmadi',
-            'description.required'=>'Sayohat tavsifi kiritlmadi',
-            'city.required'=>'Sayohat shaxri kiritlmadi',
-            'country_id.required'=>'Sayohat davlati tanlanmadi',
-            'category_id.required'=>'Sayohat turi tanlanmadi',
-            'price.required'=>' Sayohat mabla\'i kiritilmadi',
-            'price_type.required'=>' Mablag\' turi tanlanmadi',
-            'start_time.required'=>'Boshlanish vaqti kiritilmadi',
-            'end_time.required'=>'Tugash vaqti kiritlmadi',
-            'image.required'=>'Rasm kiritlmadi',
+            'title' => 'required',
+            'description' => 'required',
+            'city' => 'required',
+            'country_id' => 'required',
+            'category_id' => 'required',
+            'price' => 'required',
+            'price_type' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'images' => 'required',
+            'image' => 'required',
+            'length' => 'required',
         ]);
-        $t= Tour::create($request->all());
-        foreach ($request->image as $image) {
+        $data = $request->all();
+        $file = $request->file('image');
+        $image_name = uniqid() . $file->getClientOriginalName();
+        $data['image'] = $image_name;
+        $file->move(public_path('images/'), $image_name);
+        $t = Tour::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'city' => $request->city,
+            'country_id' => $request->country_id,
+            'category_id' => $request->category_id,
+            'price' => $request->price,
+            'price_type' => $request->price_type,
+            'start_time' => $request->start_time,
+            'end_time' => $request->end_time,
+            'length' => $request->length,
+            'image' => $data['image']
+        ]);
+        foreach ($request->images as $image) {
             $file = $image;
             $image_name = uniqid() . $file->getClientOriginalName();
             $i = new Image(['name' => $image_name]);
@@ -73,7 +81,7 @@ class TourController extends Controller
      */
     public function show(Tour $tour)
     {
-        return view('admin.tours.show',compact('tour'));
+        return view('admin.tours.show', compact('tour'));
     }
 
     /**
@@ -81,9 +89,9 @@ class TourController extends Controller
      */
     public function edit(Tour $tour)
     {
-        $countries=Country::pluck('name','id');
-        $categories=Category::pluck('name','id');
-        return view('admin.tours.edit',compact('categories','countries','tour'));
+        $countries = Country::pluck('name', 'id');
+        $categories = Category::pluck('name', 'id');
+        return view('admin.tours.edit', compact('categories', 'countries', 'tour'));
     }
 
     /**
@@ -92,41 +100,48 @@ class TourController extends Controller
     public function update(Request $request, Tour $tour)
     {
         $request->validate([
-            'title'=>'required',
-            'description'=>'required',
-            'city'=>'required',
-            'country_id'=>'required',
-            'category_id'=>'required',
-            'price'=>'required',
-            'price_type'=>'required',
-            'start_time'=>'required',
-            'end_time'=>'required',
-            'image'=>'required',
-        ],[
-            'title.required'=>'Sayohat nomi kiritlmadi',
-            'description.required'=>'Sayohat tavsifi kiritlmadi',
-            'city.required'=>'Sayohat shaxri kiritlmadi',
-            'country_id.required'=>'Sayohat davlati tanlanmadi',
-            'category_id.required'=>'Sayohat turi tanlanmadi',
-            'price.required'=>' Sayohat mabla\'i kiritilmadi',
-            'price_type.required'=>' Mablag\' turi tanlanmadi',
-            'start_time.required'=>'Boshlanish vaqti kiritilmadi',
-            'end_time.required'=>'Tugash vaqti kiritlmadi',
-            'image.required'=>'Rasm kiritlmadi',
+            'title' => 'required',
+            'description' => 'required',
+            'city' => 'required',
+            'country_id' => 'required',
+            'category_id' => 'required',
+            'price' => 'required',
+            'price_type' => 'required',
+            'start_time' => 'required',
+            'end_time' => 'required',
+            'images' => 'required',
+            'image' => 'required',
+            'length' => 'required',]);
+        $data = $request->all();
+        $file = $request->file('image');
+        $image_name = uniqid() . $file->getClientOriginalName();
+        $data['image'] = $image_name;
+        $file->move(public_path('images/'), $image_name);
+        $tour->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'city' => $request->city,
+            'country_id' => $request->country_id,
+            'category_id' => $request->category_id,
+            'price' => $request->price,
+            'price_type' => $request->price_type,
+            'start_time' => $request->start_time,
+            'end_time' => $request->end_time,
+            'length' => $request->length,
+            'image' => $data['image']
         ]);
-        $tour->update($request->all());
-        if ($request->image && $tour->images) {
+        if ($request->images && $tour->images) {
             $tour->images()->delete();
-            foreach ($request->image as $image) {
+            foreach ($request->images as $image) {
                 $file = $image;
                 $image_name = uniqid() . $file->getClientOriginalName();
                 $i = new Image(['name' => $image_name]);
                 $tour->images()->save($i);
                 $file->move(public_path('images'), $image_name);
             }
-        }else{
-            if ($request->image && !$tour->images){
-                foreach ($request->image as $image) {
+        } else {
+            if ($request->images && !$tour->images) {
+                foreach ($request->images as $image) {
                     $file = $image;
                     $image_name = uniqid() . $file->getClientOriginalName();
                     $i = new Image(['name' => $image_name]);
@@ -143,10 +158,10 @@ class TourController extends Controller
      */
     public function destroy(Tour $tour)
     {
-        if ($tour->images){
+        if ($tour->images) {
             $tour->images()->delete();
-        }else{
-        $tour->delete();
+        } else {
+            $tour->delete();
         }
         $tour->delete();
         return back();

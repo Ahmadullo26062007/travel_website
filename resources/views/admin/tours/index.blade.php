@@ -26,6 +26,7 @@
                                 <th>Country</th>
                                 <th class="d-none d-xl-table-cell">Category</th>
                                 <th class="d-none d-xl-table-cell">City</th>
+                                <th class="d-none d-xl-table-cell">Image</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -36,7 +37,8 @@
                                         <td>{{$tour->title}}</td>
                                         <td>{{$tour->country->name}}</td>
                                         <td class="d-none d-xl-table-cell">{{$tour->category->name}}</td>
-                                        <td class="d-none d-xl-table-cell"  >{{$tour->city}}</td>
+                                        <td class="d-none d-xl-table-cell">{{$tour->city}}</td>
+                                        <td class="d-none d-xl-table-cell"><img width="100px" src="{{asset('images/'.$tour->image)}}" alt="{{$tour->title}} Image"></td>
 
                                         <td>
 

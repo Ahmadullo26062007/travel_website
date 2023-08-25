@@ -55,7 +55,6 @@
                                     <h5 class="card-title mb-0">Previous Image</h5>
                                     <div class="card-body">
                                         <img width="300px" src="{{asset('images/'.$country->image)}}" alt="">
-
                                     </div>
                                 </div>
                             </div>

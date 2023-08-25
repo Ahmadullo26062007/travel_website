@@ -118,7 +118,7 @@
                                     <h5 class="card-title mb-0">Images</h5>
 
                                     <div class="card-body">
-                                        <input type="file" name="image[]" multiple class="form-control">
+                                        <input type="file" name="images[]" multiple class="form-control">
                                     </div>
                                 </div>
 
@@ -131,7 +131,14 @@
                                                   rows="10"></textarea>
                                     </div>
                                 </div>
+                                <div class="col-6 ">
 
+                                    <h5 class="card-title mb-0">Image</h5>
+
+                                    <div class="card-body">
+                                        <input type="file" name="image" multiple class="form-control">
+                                    </div>
+                                </div>
                             </div>
                             <button class="btn btn-primary mt-3" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

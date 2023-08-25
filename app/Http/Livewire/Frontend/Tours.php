@@ -7,10 +7,19 @@ use App\Models\Tour;
 
 class Tours extends Component
 {
+
+    public $amount = 3;
+    public function viewMore()
+    {
+        $this->amount = $this->amount + 3;
+        $this->render();
+    }
+
+
     public function render()
     {
 
-        $tours = Tour::take(12)->orderByDesc('id')->get();;
+        $tours = Tour::take($this->amount)->orderByDesc('id')->get();;
         return view('livewire.frontend.tours', compact('tours'));
     }
 }

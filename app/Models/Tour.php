@@ -36,7 +36,7 @@ class Tour extends Model
     const PRICETYPES=[
         'EUR',
         'USD',
-        '$',
+        '$',    
     ];
     public function images()
     {

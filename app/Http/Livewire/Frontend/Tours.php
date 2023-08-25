@@ -8,7 +8,7 @@ use App\Models\Tour;
 class Tours extends Component
 {
 
-    public $amount = 3;
+    public $amount = 6;
     public function viewMore()
     {
         $this->amount = $this->amount + 3;

@@ -90,7 +90,7 @@
                                     <h5 class="card-title mb-0">Price</h5>
 
                                     <div class="card-body">
-                                        <input type="text" name="price" class="form-control"
+                                        <input type="number" name="price" class="form-control"
                                                placeholder="Enter the price that will be spent on the travel"
                                                value="{{$tour->price}}">
                                     </div>
@@ -142,11 +142,18 @@
                                         </div>
                                     @endforeach
                                 </div>
-                                <div class="col-12">
+                                <div class="col-6">
                                     <h5 class="card-title mb-0">Description</h5>
                                     <div class="card-body">
                                         <textarea class="form-control" name="description" id="" cols="30"
                                                   rows="10">{{$tour->description}}</textarea>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="card-title mb-0">Comfor Description</h5>
+                                    <div class="card-body">
+                                        <textarea class="form-control" name="comfor_description" id="" cols="30"
+                                                  rows="10">{{$tour->comfor_description}}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-6 ">
@@ -164,6 +171,32 @@
                                         <img width="300px" src="{{asset('images/'.$tour->image)}}" alt="">
                                     </div>
                                 </div>
+
+                                <div class="col-6">
+
+                                    <h5 class="card-title mb-0">Visa type</h5>
+
+                                    <div class="card-body">
+                                        <select class="form-select" name="visa_type" id="">
+                                            <option disabled selected>Select visa type</option>
+                                            @foreach(\App\Models\Tour::PRICETYPES as $id=> $s)
+                                                <option @if($tour->visa_type==$id) selected
+                                                        @endif value="{{$id}}">{{$s}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+
+                                    <h5 class="card-title mb-0">Visa</h5>
+
+                                    <div class="card-body">
+                                        <input type="number" name="visa" class="form-control"
+                                               placeholder="Enter the visa that will be spent on the travel"
+                                               value="{{$tour->visa}}">
+                                    </div>
+                                </div>
+
                             </div>
 
                             <button class="btn btn-primary mt-3" type="submit">

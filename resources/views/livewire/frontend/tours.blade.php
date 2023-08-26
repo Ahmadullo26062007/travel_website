@@ -147,7 +147,6 @@
                     </article>
                 @endforeach
             </div>
-            <button class="btn btn-info " wire:click="viewMore()">Yana</button>
             <span id="load-more-btn" class="load-more-btn">Показать еще больше туров </span>
         </div>
     </div>

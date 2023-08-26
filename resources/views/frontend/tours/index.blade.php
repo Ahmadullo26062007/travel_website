@@ -16,12 +16,11 @@
         </div>
 
         <div class="container">
-             @livewire('frontend.tours')
-{{--            <div class="tv-search-form tv-moduleid-181896"></div>--}}
+            @livewire('frontend.tours')
+            <div class="tv-search-form tv-moduleid-181896"></div>
             <br><br>
 
-            {{-- Mansa shu yerdan yana chiqayotgan ekan --}}
-{{--            <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>--}}
+            <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
 
         </div>
     </main>

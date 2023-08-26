@@ -375,54 +375,11 @@
 
         @yield('content')
 
-        <div class="container">
-            <div class="form form--archive form--footer">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <img src="{{ asset('images/GEN_9425-e1537860321457-150x150.jpg') }}"
-                                    class="form__staff-img wp-post-image" alt=""
-                                    sizes="(max-width: 150px) 100vw, 150px" />
-                            </div>
 
-                            <div class="col-xs-9">
-                                <h3 class="form__head">Find the best tour</h3>
-
-                                <p class="form__cap">Send a request - we will call you back</p>
-
-                                <!-- <button href="#popup-form" class="btn btn-primary js-pop-up-btn" data-head="Заявка на поиск тура" data-desc="Заполните форму и мы вам перезвоним">Оставить заявку на поиск тура</button> -->
-                                <a rel="nofollow" href="{{ route('front.tours.index') }}" class="btn btn-primary"
-                                    target="_blank">Leave a request for a tour</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="row">
-                            <div class="col-xs-3">
-                                <img src="{{ asset('images/telegram.png') }}" alt="">
-                            </div>
-
-                            <div class="col-xs-9">
-                                <h3 class="form__head">Sign up and get free access to low prices and special offers
-                                </h3>
-
-                                <p class="form__cap">once a day in Telegram</p>
-
-                                <a rel="nofollow" href="{{ $a->telegram }}" target="_blank"
-                                    class="btn btn--telegram">
-                                    Get access <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
         <footer class="footer" role="contentinfo">
             <div class="container">
+                <div class="form form--archive form--footer">
+
                 <div class="footer__top">
                     <div class="row">
                         <div class="col-sm-3 col-xs-6 match-height">
@@ -661,6 +618,8 @@
                             сайта TEGAY.NET</a>
                     </p>
                 </div>
+                </div>
+
             </div>
         </footer>
     </div>
@@ -979,7 +938,7 @@
                 }
             });
         });
-    </script> 
+    </script>
 </body>
 
 </html>

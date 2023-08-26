@@ -8,7 +8,7 @@
 
             <div class="article__header page-tour__header">
                 <div class="page-tour__thumb-wrap"
-                    style="background-image: url(https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/tickets-bg.jpg)">
+                    style="background-image: url({{asset('images/tickets-bg.jpg')}})">
                 </div>
 
                 <div class="page-tour__header-cont">
@@ -25,11 +25,11 @@
 
                 <div class="article__whatsapp wa-book">
                     <img class="wa-book__img"
-                        src="https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/wa-ticket-bg.png"
-                        alt="Бронирование билетов по WahtsApp">
+                        src="{{asset('images/4.jpg')}}"
+                        alt="Бронирование билетов по WahtsApp" >
 
                     <div class="wa-book__wrap">
-                        <span class="wa-book__head">24/7 ticket booking via WhatsApp</span>
+                        <span class="wa-book__head text-danger">24/7 ticket booking via WhatsApp</span>
 
                         <span class="wa-book__desc">Write to us in the WhatsApp application to the number <span
                                 class="nowrap"><strong>+{{$a->whats_app}}</strong></span> куда и когда хотите полететь. Мы
@@ -66,13 +66,6 @@
 
                     </ul>
                 </div>
-
-
-                <ul class="link-list">
-                    <li class="link-list__item">
-                        <a class="btn link-list__btn" href="https://kochevnik.kg/subagent/">Стать субагентом</a>
-                    </li>
-                </ul>
             </div>
         </article>
 

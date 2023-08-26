@@ -760,12 +760,12 @@
     </div>
 
     <div class="fixed-btns">
-        <a target="_blank" rel="nofollow" class="fixed-btns__item fixed-btns__item--tg"
+        <a target="_blank" rel="nofollow" class="fixed-btns__item fixed-btns__item--wa"
             href="https://t.me/+G2_L_AKkBcc2ZWZi">
 
             <span class="fixed-btns__label">
                 <span class="fixed-btns__text">
-                    Write on Telegram
+                    Write on Whats up
                 </span>
             </span>
         </a>

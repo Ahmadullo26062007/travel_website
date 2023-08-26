@@ -868,6 +868,8 @@
             cursor: zoom-out
         }
     </style>
+
+
     <script type='text/javascript'>
         /* <![CDATA[ */
         var wpcf7 = {
@@ -892,8 +894,13 @@
         };
         /* ]]> */
     </script>
-    <script type='text/javascript' src='https://kochevnik.kg/wp-content/plugins/td-tours-filter/js/filter_2.0.js?ver=1.0'>
-    </script>
+
+    {{-- Tours search and show more --}}
+    {{-- <script type='text/javascript' src='https://kochevnik.kg/wp-content/plugins/td-tours-filter/js/filter_2.0.js?ver=1.0'>
+    </script> --}}
+
+
+    {{-- No work --}}
     <script type='text/javascript' src='https://kochevnik.kg/wp-content/plugins/td-tours-filter/js/query-object.js?ver=1.0'>
     </script>
     <script type='text/javascript' src='https://kochevnik.kg/wp-includes/js/wp-embed.min.js?ver=5.2.18'></script>
@@ -907,7 +914,7 @@
     <script type='text/javascript'
         src='https://www.google.com/recaptcha/api.js?hl=ru_RU&#038;onload=recaptchaCallback&#038;render=explicit&#038;ver=2.0'>
     </script>
-    <script type="text/javascript">
+     <script type="text/javascript">
         var recaptchaWidgets = [];
         var recaptchaCallback = function() {
             var forms = document.getElementsByTagName('form');
@@ -972,7 +979,7 @@
                 }
             });
         });
-    </script>
+    </script> 
 </body>
 
 </html>

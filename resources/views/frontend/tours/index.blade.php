@@ -17,10 +17,10 @@
 
         <div class="container">
             @livewire('frontend.tours')
-            <div class="tv-search-form tv-moduleid-181896"></div>
+            {{-- <div class="tv-search-form tv-moduleid-181896"></div> --}}
             <br><br>
 
-            <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
+            {{-- <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script> --}}
 
         </div>
     </main>

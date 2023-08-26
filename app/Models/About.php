@@ -18,7 +18,7 @@ class About extends Model
         'facebook',
         'image',
         'description',
-        'whats_up',
+        'whats_app',
     ];
 
 }

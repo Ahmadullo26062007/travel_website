@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('phone_number1');
             $table->string('phone_number2');
-            $table->string('whats_up');
+            $table->string('whats_app');
             $table->string('email')->unique();
             $table->string('instagram');
             $table->string('telegram');

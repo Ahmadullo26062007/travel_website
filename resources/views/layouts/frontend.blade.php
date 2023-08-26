@@ -767,7 +767,7 @@
 
     <div class="fixed-btns">
         <a target="_blank" rel="nofollow" class="fixed-btns__item fixed-btns__item--wa"
-            href="https://api.whatsapp.com/send/?phone=941070524&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5&type=phone_number&app_absent=0">
+            href="https://api.whatsapp.com/send/?phone=996222009155&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5&type=phone_number&app_absent=0">
 
 
             <span class="fixed-btns__label">

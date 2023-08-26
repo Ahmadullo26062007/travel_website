@@ -30,17 +30,29 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
+                                    <h5 class="card-title mb-0">Partner</h5>
+                                    <div class="card-body">
+                                        <select class="form-control" name="general" id="">
+                                            <option disabled selected>Select </option>
+                                            @foreach(\App\Models\Ticket::GENERAL as $id=> $part)
+                                                <option @if($ticket->general==$id) selected @endif value="{{$id}}">{{$part}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
                                     <h5 class="card-title mb-0">Image choose</h5>
                                     <div class="card-body">
                                         <input type="file" name="image" class="form-control">
                                     </div>
                                 </div>
-                                <div>
+                                <div class="col-6">
                                     <h5 class="card-title mb-0">Previous Image</h5>
                                     <div class="card-body">
                                         <img width="300px" src="{{asset('images/'.$ticket->image)}}" alt="">
                                     </div>
                                 </div>
+
                             </div>
                             <button class="btn btn-primary mt-3" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

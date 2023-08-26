@@ -321,7 +321,7 @@
 
                         @foreach ($categories as $category)
                             <li class="cat-list__item">
-                                <a href="" class="cat-list__link">
+                                <a href="{{ route('categories.detail', $category->id) }}" class="cat-list__link">
                                     <span class="cat-list__title">{{ $category->name }}</span>
                                 </a>
                             </li>

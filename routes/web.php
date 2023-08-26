@@ -33,7 +33,7 @@ Route::resource('ticket', \App\Http\Controllers\TicketController::class );
 
 Route::get('/', function () {
     $categories = Category::orderByDesc('id')->get();
-    return view('frontend.home.index');
+    return view('frontend.home.index', compact('categories'));
 })->name('home.index');
 
 Route::get('/tour', function () {
@@ -73,7 +73,12 @@ Route::get('contact', function(){
     return view('frontend.contact.index');
 })->name('front.contact.index');
 
+// Category detail
 
+Route::get('categories/{id}', function($id){
+    $category = Category::find($id);
+    return view('frontend.category.detail', compact('category'));
+})->name('categories.detail');
 
 
 Route::get('login', function () {

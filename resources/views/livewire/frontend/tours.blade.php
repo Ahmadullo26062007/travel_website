@@ -148,6 +148,7 @@
                 @endforeach
             </div>
             <span id="load-more-btn" class="load-more-btn">Показать еще больше туров </span>
+
         </div>
     </div>
 

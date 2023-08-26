@@ -1,6 +1,7 @@
 @extends('layouts.frontend')
 
 @section('content')
+
     <main id="main" class="main" role="main">
         <section class="intro" style="background: #eff4f8">
             <div class="intro__wrap">
@@ -73,6 +74,7 @@
                 </div>
 
                 @livewire('home-tour-livewire')
+
                 <div class="align-center">
                     <a href="{{ route('front.tours.index') }}" class="main-tours-wrap__btn">More Tours</a>
                 </div>

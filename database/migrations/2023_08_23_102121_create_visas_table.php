@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('visa_time');
             $table->string('price');
             $table->integer('price_type');
+            $table->text('description');
 
             $table->foreign('country_id')->references('id')->on('countries');
             $table->timestamps();

@@ -5,7 +5,7 @@
             <div class="form-group">
                 <label for="">Phone number 1</label>
                 <input type="number" wire:model="phone_number1" name="phone_number1" value="{{$about->phone_number1}}"
-                       class="form-control" placeholder="Telefon raqam 1">
+                       class="form-control" placeholder="Telefon raqam 1>
             </div>
         </div>
 

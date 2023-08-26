@@ -36,6 +36,7 @@ class VisaController extends Controller
             'price'=>'required',
             'price_type'=>'required',
             'visa_time'=>'required',
+            'description'=>'required'
         ]);
         Visa::create($request->all());
         return redirect()->route('visa.index');
@@ -46,6 +47,7 @@ class VisaController extends Controller
      */
     public function show(Visa $visa)
     {
+        return view('admin.visa.show',compact('visa'));
     }
 
     /**
@@ -68,6 +70,7 @@ class VisaController extends Controller
             'price'=>'required',
             'price_type'=>'required',
             'visa_time'=>'required',
+            'description'=>'required'
         ]);
         $visa->update($request->all());
         return redirect()->route('visa.index');

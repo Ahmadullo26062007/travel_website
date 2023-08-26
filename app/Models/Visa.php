@@ -14,6 +14,7 @@ class Visa extends Model
         'visa_time',
         'price',
         'price_type',
+        'description'
     ];
 
     const PRICETYPES=[

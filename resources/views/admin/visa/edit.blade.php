@@ -68,6 +68,14 @@
                                     </div>
                                 </div>
 
+                                <div class="col-12">
+
+                                    <h5 class="card-title mb-0">List of required documents</h5>
+
+                                    <div class="card-body">
+                                        <textarea class="form-control" name="description" id="" cols="30" rows="10">{{$visa->description}}</textarea>
+                                    </div>
+                                </div>
                             </div>
 
 

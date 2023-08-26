@@ -58,7 +58,8 @@ Route::get('/country-detail/{id}', function($id){
 })->name('front.country.detail');
 
 Route::get('visas', function(){
-    return view('frontend.visas.index');
+    $visas=\App\Models\Visa::with('country')->get();
+    return view('frontend.visas.index',compact('visas'));
 })->name('front.visas.index');
 
 Route::get('tickets', function(){

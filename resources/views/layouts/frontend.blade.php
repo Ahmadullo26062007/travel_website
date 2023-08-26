@@ -393,14 +393,14 @@
                         </div>
 
                         <div class="col-xs-9">
-                            <h3 class="form__head">Найдем лучший тур</h3>
+                            <h3 class="form__head">Find the best tour</h3>
 
-                            <p class="form__cap">Отправьте заявку - мы перезвоним</p>
+                            <p class="form__cap">Send a request - we will call you back</p>
 
                             <!-- <button href="#popup-form" class="btn btn-primary js-pop-up-btn" data-head="Заявка на поиск тура" data-desc="Заполните форму и мы вам перезвоним">Оставить заявку на поиск тура</button> -->
                             <a rel="nofollow"
                                href="{{route('front.tours.index')}}"
-                               class="btn btn-primary" target="_blank">Оставить заявку на поиск тура</a>
+                               class="btn btn-primary" target="_blank">Leave a request for a tour</a>
                         </div>
                     </div>
                 </div>
@@ -413,14 +413,13 @@
                         </div>
 
                         <div class="col-xs-9">
-                            <h3 class="form__head">Зарегистрируйся и получи бесплатный доступ к низким ценам и
-                                спецпредложениям</h3>
+                            <h3 class="form__head">Sign up and get free access to low prices and special offers</h3>
 
-                            <p class="form__cap">раз в день в Telegram</p>
+                            <p class="form__cap">once a day in Telegram</p>
 
                             <a rel="nofollow" href="{{$a->telegram}}" target="_blank"
                                class="btn btn--telegram">
-                                Получить доступ <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                Get access <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -436,43 +435,39 @@
                     <div class="col-sm-3 col-xs-6 match-height">
                         <div class="footer-widget">
                             <div id="nav_menu-4" class="widget_nav_menu">
-                                <h3 class="footer-widget__title">Туры</h3>
+                                <h3 class="footer-widget__title">Tours</h3>
                                 <ul id="menu-tury" class="menu">
                                     <li id="menu-item-32992"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-rest_type menu-item-32992">
-                                        <a href="https://kochevnik.kg/rest_type/rannee-bronirovanie/">Раннее
-                                            бронирование</a>
+                                        <a href="https://kochevnik.kg/rest_type/rannee-bronirovanie/">Early booking</a>
                                     </li>
                                     <li id="menu-item-32993"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-rest_type menu-item-32993">
-                                        <a href="https://kochevnik.kg/rest_type/semejnye-tury/">Семейные туры</a>
+                                        <a href="https://kochevnik.kg/rest_type/semejnye-tury/">Family tours</a>
                                     </li>
                                     <li id="menu-item-32994"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-rest_type menu-item-32994">
-                                        <a href="https://kochevnik.kg/rest_type/pljazhnye/">Пляжный отдых</a>
+                                        <a href="https://kochevnik.kg/rest_type/pljazhnye/">Beach holiday</a>
                                     </li>
                                     <li id="menu-item-32995"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-rest_type menu-item-32995">
-                                        <a href="https://kochevnik.kg/rest_type/molodezhnye-tury/">Молодежные
-                                            туры</a>
+                                        <a href="https://kochevnik.kg/rest_type/molodezhnye-tury/">Youth tours</a>
                                     </li>
                                     <li id="menu-item-32996"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-rest_type menu-item-32996">
-                                        <a href="https://kochevnik.kg/rest_type/kombinirovannye-tury/">Комбинированные
-                                            туры</a>
+                                        <a href="https://kochevnik.kg/rest_type/kombinirovannye-tury/">Combined tours</a>
                                     </li>
                                     <li id="menu-item-32997"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-rest_type menu-item-32997">
-                                        <a href="https://kochevnik.kg/rest_type/jekskursionnyj-tur/">Экскурсионный
-                                            тур</a>
+                                        <a href="https://kochevnik.kg/rest_type/jekskursionnyj-tur/">Excursion tour</a>
                                     </li>
                                     <li id="menu-item-32998"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-rest_type menu-item-32998">
-                                        <a href="https://kochevnik.kg/rest_type/svadebnyj-tur/">Свадебный тур</a>
+                                        <a href="https://kochevnik.kg/rest_type/svadebnyj-tur/">Wedding tour</a>
                                     </li>
                                     <li id="menu-item-32999"
                                         class="menu-item menu-item-type-post_type_archive menu-item-object-tours menu-item-32999">
-                                        <a href="{{route('front.tours.index')}}">Все туры</a>
+                                        <a href="{{route('front.tours.index')}}">All tours</a>
                                     </li>
                                 </ul>
                             </div>
@@ -482,39 +477,39 @@
                     <div class="col-sm-3 col-xs-6 match-height">
                         <div class="footer-widget">
                             <div id="nav_menu-5" class="widget_nav_menu">
-                                <h3 class="footer-widget__title">Популярные страны</h3>
+                                <h3 class="footer-widget__title">Popular countries</h3>
                                 <ul id="menu-tury-po-stranam" class="menu">
                                     <li id="menu-item-32984"
                                         class="menu-item menu-item-type-post_type menu-item-object-countries menu-item-32984">
-                                        <a href="https://kochevnik.kg/countries/turcija/">Туры в Турцию</a>
+                                        <a href="https://kochevnik.kg/countries/turcija/">Tours to Turkey</a>
                                     </li>
                                     <li id="menu-item-32985"
                                         class="menu-item menu-item-type-post_type menu-item-object-countries menu-item-32985">
-                                        <a href="https://kochevnik.kg/countries/egipet/">Туры в Египет</a>
+                                        <a href="https://kochevnik.kg/countries/egipet/">Tours to Egypt</a>
                                     </li>
                                     <li id="menu-item-32986"
                                         class="menu-item menu-item-type-post_type menu-item-object-countries menu-item-32986">
-                                        <a href="https://kochevnik.kg/countries/tailand/">Туры в Таиланд</a>
+                                        <a href="https://kochevnik.kg/countries/tailand/">Tours to Thailand</a>
                                     </li>
                                     <li id="menu-item-32987"
                                         class="menu-item menu-item-type-post_type menu-item-object-countries menu-item-32987">
-                                        <a href="https://kochevnik.kg/countries/indija/">Туры в Индию</a>
+                                        <a href="https://kochevnik.kg/countries/indija/">Tours to India</a>
                                     </li>
                                     <li id="menu-item-32988"
                                         class="menu-item menu-item-type-post_type menu-item-object-countries menu-item-32988">
-                                        <a href="https://kochevnik.kg/countries/vetnam/">Туры во Вьетнам</a>
+                                        <a href="https://kochevnik.kg/countries/vetnam/">Tours to Vietnam</a>
                                     </li>
                                     <li id="menu-item-32989"
                                         class="menu-item menu-item-type-post_type menu-item-object-countries menu-item-32989">
-                                        <a href="https://kochevnik.kg/countries/oaje/">Туры в ОАЭ</a>
+                                        <a href="https://kochevnik.kg/countries/oaje/">Tours in the UAE</a>
                                     </li>
                                     <li id="menu-item-32990"
                                         class="menu-item menu-item-type-post_type menu-item-object-countries menu-item-32990">
-                                        <a href="https://kochevnik.kg/countries/kitaj/">Китай</a>
+                                        <a href="https://kochevnik.kg/countries/kitaj/">China</a>
                                     </li>
                                     <li id="menu-item-32991"
                                         class="menu-item menu-item-type-post_type_archive menu-item-object-countries menu-item-32991">
-                                        <a href="{{route('front.countries.index')}}">Каталог туров</a>
+                                        <a href="{{route('front.countries.index')}}">Tours catalog</a>
                                     </li>
                                 </ul>
                             </div>
@@ -524,41 +519,39 @@
                     <div class="col-sm-3 col-xs-6 match-height">
                         <div class="footer-widget">
                             <div id="nav_menu-6" class="widget_nav_menu">
-                                <h3 class="footer-widget__title">Клиентам</h3>
+                                <h3 class="footer-widget__title">Clients</h3>
                                 <ul id="menu-klientam" class="menu">
                                     <li id="menu-item-32943"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32943">
-                                        <a href="{{route('front.tickets.index')}}">Авиабилеты</a>
+                                        <a href="{{route('front.tickets.index')}}">Flights</a>
                                     </li>
                                     <li id="menu-item-32944"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32944">
-                                        <a href="{{route('front.visas.index')}}">Оформление виз</a>
+                                        <a href="{{route('front.visas.index')}}">Visa processing</a>
                                     </li>
                                     <li id="menu-item-32945"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32945">
-                                        <a href="https://kochevnik.kg/dopolnitelnye-uslugi/">Дополнительные
-                                            услуги</a>
+                                        <a href="https://kochevnik.kg/dopolnitelnye-uslugi/">Additional services</a>
                                     </li>
                                     <li id="menu-item-32946"
                                         class="menu-item menu-item-type-post_type_archive menu-item-object-hotels menu-item-32946">
-                                        <a href="https://kochevnik.kg/hotels/">Отели</a>
+                                        <a href="https://kochevnik.kg/hotels/">Hotels</a>
                                     </li>
                                     <li id="menu-item-32947"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32947">
-                                        <a href="https://kochevnik.kg/book-m/">Бронирование</a>
+                                        <a href="https://kochevnik.kg/book-m/">Booking</a>
                                     </li>
                                     <li id="menu-item-32948"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32948">
-                                        <a href="https://kochevnik.kg/bonusnye-karty/">Бонусные карты</a>
+                                        <a href="https://kochevnik.kg/bonusnye-karty/">Bonus cards</a>
                                     </li>
                                     <li id="menu-item-32949"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32949">
-                                        <a href="https://kochevnik.kg/promokod/">Использовать промокод</a>
+                                        <a href="https://kochevnik.kg/promokod/">Use promo code</a>
                                     </li>
                                     <li id="menu-item-32950"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32950">
-                                        <a href="https://kochevnik.kg/zhaloby-i-predlozhenija/">Жалобы и
-                                            предложения</a>
+                                        <a href="https://kochevnik.kg/zhaloby-i-predlozhenija/">Complaints and suggestedия</a>
                                     </li>
                                 </ul>
                             </div>
@@ -568,36 +561,35 @@
                     <div class="col-sm-3 col-xs-6 match-height">
                         <div class="footer-widget">
                             <div id="nav_menu-7" class="widget_nav_menu">
-                                <h3 class="footer-widget__title">О компании</h3>
+                                <h3 class="footer-widget__title">About company</h3>
                                 <ul id="menu-o-kompanii" class="menu">
                                     <li id="menu-item-32978"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32978">
-                                        <a href="https://kochevnik.kg/missija-i-cennosti/">Миссия и ценности</a>
+                                        <a href="https://kochevnik.kg/missija-i-cennosti/">Mission and values</a>
                                     </li>
                                     <li id="menu-item-32979"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32979">
-                                        <a href="https://kochevnik.kg/korporativnoe-sotrudnichestvo/">Корпоративное
-                                            сотрудничество</a>
+                                        <a href="https://kochevnik.kg/korporativnoe-sotrudnichestvo/">Corporate cooperation</a>
                                     </li>
                                     <li id="menu-item-32980"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32980">
-                                        <a href="https://kochevnik.kg/subagent/">Стать субагентом Kochevnik.kg</a>
+                                        <a href="https://kochevnik.kg/subagent/">Become a subagent of Kochevnik.kg</a>
                                     </li>
                                     <li id="menu-item-32981"
                                         class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-32981">
-                                        <a href="https://kochevnik.kg/category/blog/">Блог</a>
+                                        <a href="https://kochevnik.kg/category/blog/">Blog</a>
                                     </li>
                                     <li id="menu-item-32982"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32982">
-                                        <a href="https://kochevnik.kg/reviews/">Отзывы</a>
+                                        <a href="https://kochevnik.kg/reviews/">Reviews</a>
                                     </li>
                                     <li id="menu-item-33209"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33209">
-                                        <a href="https://kochevnik.kg/vakansii/">Вакансии</a>
+                                        <a href="https://kochevnik.kg/vakansii/">Jobs</a>
                                     </li>
                                     <li id="menu-item-32983"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32983">
-                                        <a href="{{route('front.contact.index')}}">Контакты</a>
+                                        <a href="{{route('front.contact.index')}}">Contacts</a>
                                     </li>
                                 </ul>
                             </div>
@@ -615,10 +607,10 @@
                                      alt="logo">
                             </div>
 
-                            <p class="footer__about">Kочевник.kg – турагентство, которому доверяют свои путешествия
-                                более 7000 человек в год, из них 1000 постоянных клиентов, поручивших нам заботы о
-                                безопасном и качественном полете, и 6000 человек, которые обязательно к нам
-                                обратятся за планированием своего следующего тура, поездки или путешествия.</p>
+                            <p class="footer__about">Nomad.kg is a travel agency that is trusted with their travels
+                                more than 7,000 people a year, of which 1,000 are regular customers who entrusted us with taking care of
+                                safe and high-quality flight, and 6,000 people who are sure to visit us
+                                will apply for planning their next tour, trip or travel.</p>
                         </div>
                     </div>
 
@@ -629,7 +621,7 @@
                         <p><small>Email</small><br><i class="fa fa-envelope" aria-hidden="true"></i> {{$a->email}}</p>
 
 
-                        <p class="footer__social-text">Следите за нами в социальных сетях</p>
+                        <p class="footer__social-text">Follow us on social networks</p>
 
                         <div class="social-links">
                             <a rel="nofollow" href="{{$a->facebook}}"
@@ -639,16 +631,16 @@
                                title="Мы в Instagram" target="_blank"
                                class="icon-link social-link icon-link__instagram">Instagram</a>
                             <a rel="nofollow" href="{{$a->telegram}}" title="Мы в Одноклассниках"
-                               target="_blank" class="icon-link social-link icon-link__telegram">Ok</a>
+                               target="_blank" class="icon-link social-link icon-link__telegram">Telegram</a>
 
                         </div>
                     </div>
 
                     <div class="col-sm-4">
                         <div class="footer-partner" style="margin-top: 60px;">
-                                <span class="footer-partner__head">Генеральное представительство авиакомпании
-                                    "Уральские
-                                    авиалинии" в Кыргызстане</span>
+                                <span class="footer-partner__head">General representation of the airline
+                                    "Ural
+                                    airlines" in Kyrgyzstan</span>
 
                             <img class="footer-partner__logo"
                                  src="https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/ural_airlines_logo.png"

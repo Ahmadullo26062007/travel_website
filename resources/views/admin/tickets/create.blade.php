@@ -7,7 +7,7 @@
                     <div class="card flex-fill">
                         <div class="card-header">
 
-                            <h5 class="card-title">Create Country</h5>
+                            <h5 class="card-title">Create Ticket</h5>
                         </div>
 
 

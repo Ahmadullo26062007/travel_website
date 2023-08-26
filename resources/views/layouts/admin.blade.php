@@ -75,7 +75,7 @@
                 </li>
                 <li class="sidebar-item {{ request()->is('ticket*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('ticket.index') }}">
-                        <i class="fa-brands fa-plane-departure"></i>
+                        <i class="fa-solid fa-ticket"></i>
                         <span class="align-middle">Tickets</span>
                     </a>
                 </li>

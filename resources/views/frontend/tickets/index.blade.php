@@ -12,7 +12,7 @@
 
                 <div class="page-tour__header-cont">
                     <div class="container">
-                        <h1 class="article__head page-tour__head">Авиабилеты</h1>
+                        <h1 class="article__head page-tour__head">Flights</h1>
                     </div>
                 </div>
             </div>
@@ -28,10 +28,10 @@
                         alt="Бронирование билетов по WahtsApp">
 
                     <div class="wa-book__wrap">
-                        <span class="wa-book__head">Круглосуточное бронирование билетов по WhatsApp</span>
+                        <span class="wa-book__head">24/7 ticket booking via WhatsApp</span>
 
-                        <span class="wa-book__desc">Напишите нам в приложении WhatsApp на номер <span
-                                class="nowrap"><strong>+996 (707) 98 65 45</strong></span> куда и когда хотите полететь. Мы
+                        <span class="wa-book__desc">Write to us in the WhatsApp application to the number <span
+                                class="nowrap"><strong>+{{\App\Models\About::find(1)->phone_number1}}</strong></span> куда и когда хотите полететь. Мы
                             найдем оптимальные маршруты для вас в любое время суток.</span>
 
                         <a target="_blank" class="btn btn--whatsapp"

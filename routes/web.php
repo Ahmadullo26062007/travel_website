@@ -63,6 +63,7 @@ Route::get('visas', function(){
 })->name('front.visas.index');
 
 Route::get('tickets', function(){
+    $tickets=\App\Models\Ticket::all();
     return view('frontend.tickets.index');
 })->name('front.tickets.index');
 

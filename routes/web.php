@@ -77,7 +77,9 @@ Route::get('contact', function(){
 
 Route::get('categories/{id}', function($id){
     $category = Category::find($id);
-    return view('frontend.category.detail', compact('category'));
+    $categories = Category::orderByDesc('id')->get();
+
+    return view('frontend.category.detail', compact('category', 'categories'));
 })->name('categories.detail');
 
 

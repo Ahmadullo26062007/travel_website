@@ -64,98 +64,13 @@
                 <h3 class="section__desc">Типы отдыха</h3>
                 <ul class="cat-list cat-list--rest">
 
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/akvapark/" class="cat-list__link">
-                            <span class="cat-list__title">Аквапарк</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/gorjashhie/" class="cat-list__link">
-                            <img class="cat-list__icon" src="https://kochevnik.kg/wp-content/uploads/2018/09/fire.png"
-                                alt="Иконка - Огонь">
-                            <span class="cat-list__title">Горящие туры</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/kombinirovannye-tury/" class="cat-list__link">
-                            <span class="cat-list__title">Комбинированные туры</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/molodezhnye-tury/" class="cat-list__link">
-                            <span class="cat-list__title">Молодежные туры</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/molodezhnyj-otdyh/" class="cat-list__link">
-                            <span class="cat-list__title">молодежный отдых</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/morskoj-kruiz/" class="cat-list__link">
-                            <span class="cat-list__title">Морские круизы</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/na-prazdnichnye-daty/" class="cat-list__link">
-                            <span class="cat-list__title">На праздничные даты</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/pljazhnye/" class="cat-list__link">
-                            <img class="cat-list__icon"
-                                src="https://kochevnik.kg/wp-content/uploads/2018/09/sun-umbrella.png" alt="Иконка - Пляж">
-                            <span class="cat-list__title">Пляжный отдых</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/rannee-bronirovanie/" class="cat-list__link">
-                            <img class="cat-list__icon" src="https://kochevnik.kg/wp-content/uploads/2018/09/study.png"
-                                alt="Иконка - Читающий человек">
-                            <span class="cat-list__title">Раннее бронирование</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/svadebnyj-tur/" class="cat-list__link">
-                            <span class="cat-list__title">Свадебный тур</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/semejnye-tury/" class="cat-list__link">
-                            <img class="cat-list__icon"
-                                src="https://kochevnik.kg/wp-content/uploads/2018/09/family-of-three.png"
-                                alt="Иконка - Семья">
-                            <span class="cat-list__title">Семейные туры</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/stokovyj-tur/" class="cat-list__link">
-                            <span class="cat-list__title">Стоковый тур</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/shopping-tur/" class="cat-list__link">
-                            <span class="cat-list__title">шоппинг тур</span>
-                        </a>
-                    </li>
-
-                    <li class="cat-list__item">
-                        <a href="https://kochevnik.kg/rest_type/jekskursionnyj-tur/" class="cat-list__link">
-                            <span class="cat-list__title">Экскурсионный тур</span>
-                        </a>
-                    </li>
+                    @foreach ($categories as $category)
+                        <li class="cat-list__item">
+                            <a href="{{ route('categories.detail', $category->id) }}" class="cat-list__link">
+                                <span class="cat-list__title">{{ $category->name }}</span>
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
 

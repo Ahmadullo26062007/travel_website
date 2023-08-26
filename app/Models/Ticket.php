@@ -12,6 +12,11 @@ class Ticket extends Model
     protected $fillable=[
         'id',
         'name',
-        'image'
+        'image',
+        'general',
+    ];
+    const GENERAL=[
+        'Supportive partner',
+        'General partner',
     ];
 }

@@ -7,7 +7,7 @@
                     <div class="card flex-fill">
                         <div class="card-header">
 
-                            <h5 class="card-title">Create Country</h5>
+                            <h5 class="card-title">Create Ticket</h5>
                         </div>
 
 
@@ -35,6 +35,19 @@
 
                                     <div class="card-body">
                                         <input type="file" name="image" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-6">
+                                    <h5 class="card-title mb-0">Partner</h5>
+
+                                    <div class="card-body">
+                                        <select class="form-control" name="general" id="">
+                                            <option disabled selected>Select </option>
+                                            @foreach(\App\Models\Ticket::GENERAL as $id=> $part)
+                                                <option value="{{$id}}">{{$part}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>

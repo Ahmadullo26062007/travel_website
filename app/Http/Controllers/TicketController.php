@@ -31,7 +31,8 @@ class TicketController extends Controller
     {
         $request->validate([
             'name'=>'required',
-            'image'=>'required'
+            'image'=>'required',
+            'general'=>'required',
         ]);
         $data=$request->all();
         $file = $request->file('image');
@@ -73,8 +74,9 @@ class TicketController extends Controller
             $data['image'] = $image_name2;
             $file->move(public_path('images/'), $image_name2);
             $ticket->update($data);
+        }else{
+            $ticket->update($request->all());
         }
-        $ticket->update(['name' => $request->name]);
         return redirect()->route('ticket.index');
     }
 

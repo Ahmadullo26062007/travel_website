@@ -1,19 +1,26 @@
 <form enctype="multipart/form-data">
 
     <div class="row col-12 mb-3">
-        <div class="col-6">
+        <div class="col-4">
             <div class="form-group">
                 <label for="">Phone number 1</label>
                 <input type="number" wire:model="phone_number1" name="phone_number1" value="{{$about->phone_number1}}"
-                       class="form-control" placeholder="Telefon raqam 1>
+                       class="form-control" placeholder="Telefon raqam 1">
             </div>
         </div>
 
-        <div class="col-6">
+        <div class="col-4">
             <div class="form-group">
                 <label for="">Phone number 2</label>
                 <input type="number" wire:model="phone_number2" name="phone_number2" value="{{$about->phone_number2}}"
                        class="form-control" placeholder="Telefon raqam 2">
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label for="">WhatsApp</label>
+                <input type="number" wire:model="whats_app" name="whats_app" value="{{$about->whats_app}}"
+                       class="form-control" placeholder="Write WhatsApp number">
             </div>
         </div>
     </div>

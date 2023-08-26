@@ -71,9 +71,11 @@
                             тура</a>
                     </div>
                 </div>
-                
+
                 @livewire('home-tour-livewire')
-                
+                <div class="align-center">
+                    <a href="{{ route('front.tours.index') }}" class="main-tours-wrap__btn">More Tours</a>
+                </div>
             </div>
         </section>
 
@@ -85,8 +87,7 @@
                 <div class="clear">
 
                     <article class="main-country">
-                        <a class="main-country__link" title="Туры в Турцию"
-                            href="https://kochevnik.kg/countries/turcija/">
+                        <a class="main-country__link" title="Туры в Турцию" href="https://kochevnik.kg/countries/turcija/">
                             <div class="main-country__img-wrap">
                                 <img src="https://kochevnik.kg/wp-content/uploads/2017/06/turkey-300x200.jpg"
                                     class="main-country__img wp-post-image" alt="" />
@@ -104,8 +105,7 @@
                     </article>
 
                     <article class="main-country">
-                        <a class="main-country__link" title="Туры в Египет"
-                            href="https://kochevnik.kg/countries/egipet/">
+                        <a class="main-country__link" title="Туры в Египет" href="https://kochevnik.kg/countries/egipet/">
                             <div class="main-country__img-wrap">
                                 <img src="https://kochevnik.kg/wp-content/uploads/2017/06/egypt-1-300x200.jpg"
                                     class="main-country__img wp-post-image" alt="Отдых в Египте" />
@@ -123,8 +123,7 @@
                     </article>
 
                     <article class="main-country">
-                        <a class="main-country__link" title="Туры в Таиланд"
-                            href="https://kochevnik.kg/countries/tailand/">
+                        <a class="main-country__link" title="Туры в Таиланд" href="https://kochevnik.kg/countries/tailand/">
                             <div class="main-country__img-wrap">
                                 <img src="https://kochevnik.kg/wp-content/uploads/2017/06/thailand-300x200.jpg"
                                     class="main-country__img wp-post-image" alt="" />

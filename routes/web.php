@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,7 @@ Route::resource('ticket', \App\Http\Controllers\TicketController::class );
 // Frontend
 
 Route::get('/', function () {
+    $categories = Category::orderByDesc('id')->get();
     return view('frontend.home.index');
 })->name('home.index');
 

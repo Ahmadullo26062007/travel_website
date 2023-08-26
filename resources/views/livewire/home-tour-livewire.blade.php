@@ -30,7 +30,5 @@
     @endforeach
 
 
-    <div class="align-center">
-        <a href="https://kochevnik.kg/tours/" class="main-tours-wrap__btn">Больше туров</a>
-    </div>
+    
 </div>

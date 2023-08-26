@@ -8,7 +8,7 @@
 
             <div class="article__header page-tour__header">
                 <div class="page-tour__thumb-wrap"
-                    style="background-image: url({{asset('images/tickets-bg.jpg')}})">
+                     style="background-image: url({{asset('images/tickets-bg.jpg')}})">
                 </div>
 
                 <div class="page-tour__header-cont">
@@ -25,8 +25,8 @@
 
                 <div class="article__whatsapp wa-book">
                     <img class="wa-book__img"
-                        src="{{asset('images/4.jpg')}}"
-                        alt="Бронирование билетов по WahtsApp" >
+                         src="{{asset('images/4.jpg')}}"
+                         alt="Бронирование билетов по WahtsApp">
 
                     <div class="wa-book__wrap">
                         <span class="wa-book__head text-danger">24/7 ticket booking via WhatsApp</span>
@@ -36,16 +36,14 @@
                             найдем оптимальные маршруты для вас в любое время суток.</span>
 
                         <a target="_blank" class="btn btn--whatsapp"
-                            href="https://api.whatsapp.com/send?phone={{$a->whats_app}}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight">
+                           href="https://api.whatsapp.com/send?phone={{$a->whats_app}}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight">
                             <span>Написать в WhatsApp +{{$a->whats_app}}</span>
                         </a>
-
-                        <span class="wa-book__desc">Payment can be made in our office or through the ELSOM Electronic Wallet at <strong>0556986545</strong>.</span>
                     </div>
                 </div>
 
                 <div class="article__section">
-                    <h2 class="article__subhead">Flights from partner airlines Travel agency "WONDER WORLD"</h2>
+                    <h2 style="margin-left: 200px;" class="article__subhead">Flights from partner airlines Travel agency "WONDER WORLD"</h2>
 
                     <ul class="avia-partners-list">
                         @foreach($tickets as $ticket)
@@ -57,9 +55,9 @@
                                 </div>
 
                                 <h3 class="avia-partner__name">{{$ticket->name}}</h3>
-@php
-    $partnor=\App\Models\Ticket::GENERAL[$ticket->general]
-@endphp
+                                @php
+                                    $partnor=\App\Models\Ticket::GENERAL[$ticket->general]
+                                @endphp
                                 <span class="avia-partner__status">{{$partnor}}</span>
                             </li>
                         @endforeach

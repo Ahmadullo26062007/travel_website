@@ -14,9 +14,9 @@ class AboutSeeder extends Seeder
     public function run(): void
     {
         About::create([
-            'phone_number1'=>'941070524',
-            'phone_number2'=>'941070524',
-            'whats_app'=>'941070524',
+            'phone_number1'=>'996 222 009 155',
+            'phone_number2'=>'996 222 009 155',
+            'whats_app'=>'996 222 009 155',
             'email'=>'dfada@gmail.com',
             'instagram'=>'afafafaef',
             'facebook'=>'afafafaef',

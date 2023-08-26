@@ -14,8 +14,7 @@ class LenguageSeeder extends Seeder
     public function run(): void
     {
         Lenguage::insert([
-            ['type'=>'1'],
-            ['type'=>'2'],
+            ['type'=>'1']
         ]);
     }
 }

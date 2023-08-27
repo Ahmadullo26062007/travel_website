@@ -15,7 +15,7 @@ class TourController extends Controller
      */
     public function index()
     {
-        $tours = Tour::with('country')->get();
+        $tours = Tour::with('country')->orderByDesc('id')->get();
         return view('admin.tours.index', compact('tours'));
     }
 

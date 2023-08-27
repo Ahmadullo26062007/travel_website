@@ -13,7 +13,7 @@ class VisaController extends Controller
      */
     public function index()
     {
-        $visas=Visa::with('country')->get();
+        $visas=Visa::with('country')->orderByDesc('id')->get();
         return view('admin.visa.index',compact('visas'));
     }
 

@@ -71,17 +71,17 @@
         </div>
 
         <div class="col-4">
+            <label for="">LOGO</label>
             <div class="form-group">
-                <label for="">Image</label>
                 {{-- <img src="" alt=""> --}}
-                <input type="file" name="image" wire:model="image" class="form-control">
+                <img width="300px" src="{{ asset("storage/$about->image") }}">
             </div>
         </div>
         <div class="col-4">
             <div class="form-group">
                 <label for="">Image</label>
                 {{-- <img src="" alt=""> --}}
-                <img width="450px" src="{{ asset("storage/$about->image") }}">
+                <input type="file" name="image" wire:model="image" class="form-control">
             </div>
         </div>
     </div>

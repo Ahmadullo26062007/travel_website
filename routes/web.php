@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('tours', \App\Http\Controllers\TourController::class);
     Route::resource('visa', \App\Http\Controllers\VisaController::class);
     Route::resource('ticket', \App\Http\Controllers\TicketController::class);
+    Route::resource('word', \App\Http\Controllers\WordController::class);
 });
 // Frontend
 

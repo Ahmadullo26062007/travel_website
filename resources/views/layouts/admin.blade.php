@@ -32,51 +32,57 @@
             </a>
 
             <ul class="sidebar-nav">
-                <li class="sidebar-header">
-                    Pages
-                </li>
 
                 <li class="sidebar-item {{ request()->is('admin') ? 'active' : '' }}">
-                    <a class="sidebar-link" href="{{ route('admin.index') }}">
-                        <i class="align-middle" data-feather="sliders"></i>
-                        <span class="align-middle">Dashboard</span>
+                    <a class="sidebar-link" href="{{ route('home.index') }}">
+                        <i class="align-middle" data-feather="home"></i>
+                        <span class="align-middle">Домашняя страница</span>
                     </a>
+                </li>
+                <li class="sidebar-header">
+                    Pages
                 </li>
 
                 <li class="sidebar-item {{ request()->is('about*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('about.index') }}">
                         <i class="fa-solid fa-address-card"></i>
-                        <span class="align-middle">About</span>
+                        <span class="align-middle">О сайте</span>
                     </a>
                 </li>
                 <li class="sidebar-item {{ request()->is('countries_admin*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('countries_admin.index') }}">
                         <i class="fa-solid fa-globe"></i>
-                        <span class="align-middle">Countries</span>
+                        <span class="align-middle">Страны</span>
                     </a>
                 </li>
                 <li class="sidebar-item {{ request()->is('category*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('category.index') }}">
                         <i class="fa-solid fa-list"></i>
-                        <span class="align-middle">Category</span>
+                        <span class="align-middle">Категория</span>
                     </a>
                 </li>
                 <li class="sidebar-item {{ request()->is('tours*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('tours.index') }}">
                         <i class="fa-solid fa-plane-departure"></i>
-                        <span class="align-middle">Tours</span>
+                        <span class="align-middle">Туры</span>
                     </a>
                 </li>
                 <li class="sidebar-item {{ request()->is('visa*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('visa.index') }}">
                         <i class="fa-brands fa-cc-visa"></i>
-                        <span class="align-middle">Visas</span>
+                        <span class="align-middle">Визы</span>
                     </a>
                 </li>
                 <li class="sidebar-item {{ request()->is('ticket*') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('ticket.index') }}">
                         <i class="fa-solid fa-ticket"></i>
-                        <span class="align-middle">Tickets</span>
+                        <span class="align-middle">Билеты</span>
+                    </a>
+                </li>
+                <li class="sidebar-item {{ request()->is('word*') ? 'active' : '' }}">
+                    <a class="sidebar-link" href="{{ route('word.index') }}">
+                        <i class="fa-solid fa-language"></i>
+                        <span class="align-middle">Слова</span>
                     </a>
                 </li>
             </ul>

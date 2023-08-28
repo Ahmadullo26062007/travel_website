@@ -12,7 +12,8 @@ class WordController extends Controller
      */
     public function index()
     {
-        //
+        $words=Word::all();
+        return view('admin.words.index',compact('words'));
     }
 
     /**
@@ -20,7 +21,7 @@ class WordController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.words.create');
     }
 
     /**
@@ -28,7 +29,9 @@ class WordController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['language_1'=>'required','language_2'=>'required']);
+        Word::create($request->all());
+        return redirect()->route('word.index');
     }
 
     /**
@@ -44,7 +47,8 @@ class WordController extends Controller
      */
     public function edit(Word $word)
     {
-        //
+        return view('admin.words.edit',compact('word'));
+
     }
 
     /**
@@ -52,7 +56,10 @@ class WordController extends Controller
      */
     public function update(Request $request, Word $word)
     {
-        //
+        $request->validate(['language_1'=>'required','language_2'=>'required']);
+        $word->update($request->all());
+        return redirect()->route('word.index');
+
     }
 
     /**
@@ -60,6 +67,7 @@ class WordController extends Controller
      */
     public function destroy(Word $word)
     {
-        //
+        $word->delete();
+        return back();
     }
 }

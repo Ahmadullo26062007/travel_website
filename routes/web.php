@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Models\Category;
+use App\Models\Country;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,7 +34,8 @@ Route::resource('ticket', \App\Http\Controllers\TicketController::class );
 
 Route::get('/', function () {
     $categories = Category::orderByDesc('id')->get();
-    return view('frontend.home.index', compact('categories'));
+    $countries = Country::take(12)->get();
+    return view('frontend.home.index', compact('categories', 'countries'));
 })->name('home.index');
 
 Route::get('/tour', function () {

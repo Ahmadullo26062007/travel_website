@@ -1,7 +1,6 @@
 @extends('layouts.frontend')
 
 @section('content')
-
     <main id="main" class="main" role="main">
         <section class="intro" style="background: #eff4f8">
             <div class="intro__wrap">
@@ -67,7 +66,7 @@
                         <!-- <button href="#popup-form" type="button" class="btn js-pop-up-btn btn-primary m-tours__btn" data-head="Заявка на подбор тура" data-desc="Оставьте заявку и мы вам перезвоним">Оставить заявку на подбор тура</button> -->
 
                         <a rel="nofollow"
-                            href="https://api.whatsapp.com/send/?phone=996700708900&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D0%B2%D1%83%D0%B9%D1%82%D0%B5+Kochevnik.kg"
+                            href="https://api.whatsapp.com/send?phone={{ App\Models\About::find(1)->whats_app }}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight"
                             class="btn btn-primary m-tours__btn" target="_blank">Оставить заявку на подбор
                             тура</a>
                     </div>
@@ -88,228 +87,25 @@
                 <h3 class="section__desc">Страны</h3>
                 <div class="clear">
 
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры в Турцию" href="https://kochevnik.kg/countries/turcija/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/turkey-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
+                    @foreach ($countries as $c)
+                        <article class="main-country">
+                            <a class="main-country__link" title="Туры в Турцию"
+                                href="{{ route('front.country.detail', $c->id) }}">
+                                <div class="main-country__img-wrap">
+                                    <img src="{{ asset("countries/$c->image") }}" class="main-country__img wp-post-image"
+                                        alt="" />
+                                </div>
 
 
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Turkey-300x199.png"
-                                    alt="Туры в Турцию флаг">
+                                <div class="main-country__content">
+                                    <img class="main-country__flag" src="{{ asset("countries/$c->flag") }}"
+                                        alt="Туры в Турцию флаг">
 
-                                <h3 class="main-country__title">Турция</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры в Египет" href="https://kochevnik.kg/countries/egipet/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/egypt-1-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="Отдых в Египте" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Egypt-300x199.png"
-                                    alt="Туры в Египет флаг">
-
-                                <h3 class="main-country__title">Египет</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры в Таиланд" href="https://kochevnik.kg/countries/tailand/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/thailand-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Thailand-300x198.png"
-                                    alt="Туры в Таиланд флаг">
-
-                                <h3 class="main-country__title">Таиланд</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры в ОАЭ" href="https://kochevnik.kg/countries/oaje/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/uae-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/arab_emirates-300x150.jpg"
-                                    alt="Туры в ОАЭ флаг">
-
-                                <h3 class="main-country__title">ОАЭ</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры в Грузию"
-                            href="https://kochevnik.kg/countries/gruzija/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/gruziya-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Georgia-300x223.png"
-                                    alt="Туры в Грузию флаг">
-
-                                <h3 class="main-country__title">Туры в Грузию</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Китай" href="https://kochevnik.kg/countries/kitaj/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2018/05/china-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="Отдых в Китае" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2018/05/082.-Kitaj-300x200.jpg"
-                                    alt="Китай флаг">
-
-                                <h3 class="main-country__title">Китай</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Мальдивы" href="https://kochevnik.kg/countries/maldivy/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/maldives-1-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Maldives-300x198.png"
-                                    alt="Мальдивы флаг">
-
-                                <h3 class="main-country__title">Мальдивы</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Малайзия" href="https://kochevnik.kg/countries/malajzija/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/07/malaiziya-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="Отдых в Малайзии" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Malaysia-300x148.png"
-                                    alt="Малайзия флаг">
-
-                                <h3 class="main-country__title">Малайзия</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры во Вьетнам"
-                            href="https://kochevnik.kg/countries/vetnam/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/vietnam.jpg"
-                                    class="main-country__img wp-post-image" alt=""
-                                    srcset="https://kochevnik.kg/wp-content/uploads/2017/06/vietnam.jpg 3072w, https://kochevnik.kg/wp-content/uploads/2017/06/vietnam-300x200.jpg 300w, https://kochevnik.kg/wp-content/uploads/2017/06/vietnam-768x512.jpg 768w, https://kochevnik.kg/wp-content/uploads/2017/06/vietnam-1024x683.jpg 1024w"
-                                    sizes="(max-width: 300px) 100vw, 300px" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Vietnam-300x198.png"
-                                    alt="Туры во Вьетнам флаг">
-
-                                <h3 class="main-country__title">Вьетнам</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Индия" href="https://kochevnik.kg/countries/indija/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/india-1-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="Отдых в индии" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/India-300x199.png"
-                                    alt="Индия флаг">
-
-                                <h3 class="main-country__title">Индия</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Чехия" href="https://kochevnik.kg/countries/chehija/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya.jpg"
-                                    class="main-country__img wp-post-image" alt=""
-                                    srcset="https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya.jpg 3072w, https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya-300x199.jpg 300w, https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya-768x510.jpg 768w, https://kochevnik.kg/wp-content/uploads/2017/06/chekhiya-1024x680.jpg 1024w"
-                                    sizes="(max-width: 300px) 100vw, 300px" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Czech_Republic-300x196.png"
-                                    alt="Чехия флаг">
-
-                                <h3 class="main-country__title">Чехия</h3>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="main-country">
-                        <a class="main-country__link" title="Туры на Шри-Ланку"
-                            href="https://kochevnik.kg/countries/shri-lanka/">
-                            <div class="main-country__img-wrap">
-                                <img src="https://kochevnik.kg/wp-content/uploads/2017/06/sri-lanka-1-300x200.jpg"
-                                    class="main-country__img wp-post-image" alt="" />
-                            </div>
-
-
-                            <div class="main-country__content">
-                                <img class="main-country__flag"
-                                    src="https://kochevnik.kg/wp-content/uploads/2017/07/Sri_Lanka-300x143.png"
-                                    alt="Туры на Шри-Ланку флаг">
-
-                                <h3 class="main-country__title">Шри ланка</h3>
-                            </div>
-                        </a>
-                    </article>
+                                    <h3 class="main-country__title">{{ $c->name }}</h3>
+                                </div>
+                            </a>
+                        </article>
+                    @endforeach
 
                 </div>
 
@@ -337,7 +133,43 @@
         <section class="section">
             <div class="container">
                 <h2 class="section__head">Горящие туры</h2>
-                <div class="tv-hot-tours tv-moduleid-960016"></div>
+                <div class="tv-hot-tours tv-moduleid-960016">
+                    @foreach ($hot_tours as $t)
+                        <article class="tour-loop article-loop main-tour">
+                            <div class="tour-loop__top">
+                                <div class="tour-loop__img-wrap">
+                                    <a href="{{ route('front.tours.detail', $t->id) }}" title="">
+                                        <img src="{{ asset("images/$t->image") }}" class="" alt=""
+                                            srcset="" sizes="(max-width: 900px) 100vw, 900px" /> </a>
+                                </div>
+
+                                <a href="" class="tour-loop__country">
+                                    {{ $t->country->name }} </a>
+                            </div>
+
+                            <h3 class="tour-loop__title main-tour__title match-height">
+                                <a href="{{ route('front.tours.detail', $t->id) }}"
+                                    title="Анталья | Sherwood Dreams Resort 5*">
+                                    {{ $t->country->name }} | {{ $t->title }} </a>
+                            </h3>
+
+                            <div class="tour-loop__price-wrap">
+                                <span class="tour-loop__price">
+                                    <strong>{{ $t->price }}</strong>
+                                    {{ \App\Models\Tour::PRICETYPES[$t->price_type] }}
+                                </span>
+                            </div>
+                        </article>
+                    @endforeach
+                </div>
+
+                <div class="align-center">
+                    <a href="{{ route('front.hot_tours.index') }}" class="main-tours-wrap__btn">More Tours</a>
+                </div>
+
+
+
+
             </div>
         </section>
     </main>

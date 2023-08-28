@@ -288,9 +288,8 @@
                                     class="icon-link icon-link__phone h-contacts__item">{{ $a->phone_number2 }}</a>
 
 
+                                <a rel="nofollow" class="btn h-contacts__item h-contacts__btn" >английский</a>
                                 <!-- <button class="h-contacts__item h-contacts__btn js-pop-up-btn" href="#popup-form" data-head="Подбор тура" data-desc="Заполните форму и мы вам перезвоним">Подбор тура</button> -->
-                                <a rel="nofollow" class="btn h-contacts__item h-contacts__btn" target="_blank">Подбор
-                                    тура</a>
                             </div>
 
                             <div class="header-social-links">

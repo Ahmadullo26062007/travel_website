@@ -66,7 +66,7 @@
                         <!-- <button href="#popup-form" type="button" class="btn js-pop-up-btn btn-primary m-tours__btn" data-head="Заявка на подбор тура" data-desc="Оставьте заявку и мы вам перезвоним">Оставить заявку на подбор тура</button> -->
 
                         <a rel="nofollow"
-                            href="https://api.whatsapp.com/send?phone={{App\Models\About::find(1)->whats_app}}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight"
+                            href="https://api.whatsapp.com/send?phone={{ App\Models\About::find(1)->whats_app }}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight"
                             class="btn btn-primary m-tours__btn" target="_blank">Оставить заявку на подбор
                             тура</a>
                     </div>
@@ -133,7 +133,43 @@
         <section class="section">
             <div class="container">
                 <h2 class="section__head">Горящие туры</h2>
-                <div class="tv-hot-tours tv-moduleid-960016"></div>
+                <div class="tv-hot-tours tv-moduleid-960016">
+                    @foreach ($hot_tours as $t)
+                        <article class="tour-loop article-loop main-tour">
+                            <div class="tour-loop__top">
+                                <div class="tour-loop__img-wrap">
+                                    <a href="{{ route('front.tours.detail', $t->id) }}" title="">
+                                        <img src="{{ asset("images/$t->image") }}" class="" alt=""
+                                            srcset="" sizes="(max-width: 900px) 100vw, 900px" /> </a>
+                                </div>
+
+                                <a href="" class="tour-loop__country">
+                                    {{ $t->country->name }} </a>
+                            </div>
+
+                            <h3 class="tour-loop__title main-tour__title match-height">
+                                <a href="{{ route('front.tours.detail', $t->id) }}"
+                                    title="Анталья | Sherwood Dreams Resort 5*">
+                                    {{ $t->country->name }} | {{ $t->title }} </a>
+                            </h3>
+
+                            <div class="tour-loop__price-wrap">
+                                <span class="tour-loop__price">
+                                    <strong>{{ $t->price }}</strong>
+                                    {{ \App\Models\Tour::PRICETYPES[$t->price_type] }}
+                                </span>
+                            </div>
+                        </article>
+                    @endforeach
+                </div>
+
+                <div class="align-center">
+                    <a href="{{ route('front.hot_tours.index') }}" class="main-tours-wrap__btn">More Tours</a>
+                </div>
+
+
+
+
             </div>
         </section>
     </main>

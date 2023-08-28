@@ -118,6 +118,8 @@
     <link rel='stylesheet' id='contact-form-7-css'
         href='https://kochevnik.kg/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.5'
         media='all' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <style id='contact-form-7-inline-css' type='text/css'>
         .wpcf7 .wpcf7-recaptcha iframe {
             margin-bottom: 0;
@@ -255,6 +257,7 @@
 
         }
     </style>
+    @livewireStyles
 </head>
 
 <body id="body" class="home page-template-default page page-id-22853 kochevnik-kg">
@@ -559,6 +562,7 @@
             </span>
         </a>
     </div>
+    @livewireScripts
     <style type="text/css">
         .fixed-btns {
             position: fixed;

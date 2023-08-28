@@ -8,7 +8,53 @@ use App\Models\Tour;
 class Tours extends Component
 {
 
-    public $amount = 6;
+    public $amount = 6 ,$countries , $categories, $country_id ,$category_id,$tours;
+
+    public function mount($countries,$categories,$tours)
+    {
+        $this->countries=$countries;
+        $this->categories=$categories;
+         $this->tours=$tours;
+    }
+
+    public function UpdatedCountry()
+    {
+        dd(1);
+    }
+    public function search()
+    {
+        if($this->country_id && $this->category_id){
+           $tours=[];
+           foreach (Tour::all() as $t){
+               if ($t->category_id==$this->category_id && $t->country_id==$this->country_id ){
+                   $tours[]=$t;
+               }
+           }
+           $this->tours=$tours;
+        }else{
+            if($this->country_id && !$this->category_id){
+                $tours=[];
+                foreach (Tour::all() as $t){
+                    if ($t->country_id==$this->country_id ){
+                        $tours[]=$t;
+                    }
+                }
+                $this->tours=$tours;
+            }else{
+                if(!$this->country_id && $this->category_id){
+                    $tours=[];
+                    foreach (Tour::all() as $t){
+                        if ($t->category_id==$this->category_id ){
+                            $tours[]=$t;
+                        }
+                    }
+                    $this->tours=$tours;
+                } else{
+
+                }
+            }
+        }
+    }
     public function viewMore()
     {
         $this->amount = $this->amount + 3;
@@ -19,7 +65,6 @@ class Tours extends Component
     public function render()
     {
 
-        $tours = Tour::take($this->amount)->orderByDesc('id')->get();;
-        return view('livewire.frontend.tours', compact('tours'));
+        return view('livewire.frontend.tours');
     }
 }

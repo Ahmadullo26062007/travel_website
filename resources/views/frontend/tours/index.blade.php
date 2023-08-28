@@ -16,7 +16,7 @@
         </div>
 
         <div class="container">
-            @livewire('frontend.tours')
+            @livewire('frontend.tours',['countries'=>\App\Models\Country::pluck('name','id'),'categories'=>\App\Models\Category::pluck('name','id'),'tours'=>\App\Models\Tour::all()])
             {{-- <div class="tv-search-form tv-moduleid-181896"></div> --}}
             <br><br>
 

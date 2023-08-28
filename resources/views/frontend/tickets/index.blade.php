@@ -36,7 +36,7 @@
                             найдем оптимальные маршруты для вас в любое время суток.</span>
 
                         <a target="_blank" class="btn btn--whatsapp"
-                           href="https://api.whatsapp.com/send?phone={{$a->whats_app}}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight">
+                           href="https://api.whatsapp.com/send?phone={{App\Models\About::find(1)->whats_app}}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight">
                             <span>Написать в WhatsApp +{{$a->whats_app}}</span>
                         </a>
                     </div>

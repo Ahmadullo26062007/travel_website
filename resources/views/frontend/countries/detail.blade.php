@@ -87,7 +87,7 @@
                 </button> -->
 
                     <a rel="nofollow"
-                        href="https://api.whatsapp.com/send/?phone=996700708900&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D0%B2%D1%83%D0%B9%D1%82%D0%B5+Kochevnik.kg"
+                        href="https://api.whatsapp.com/send?phone={{App\Models\About::find(1)->whats_app}}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight"
                         target="_blank" class="btn btn-primary">
                         Отправить заявку
                     </a>

@@ -44,7 +44,9 @@ Route::get('/tour', function () {
 
 Route::get('/tour-detail/{id}', function ($id) {
     $t=\App\Models\Tour::find($id);
-    return view('frontend.tours.detail' ,compact('t') );
+    $category = $t->category;
+    $f_t = $category->tours;
+    return view('frontend.tours.detail' ,compact('t', 'f_t') );
 })->name('front.tours.detail');
 
 Route::get('hot-tours', function(){

@@ -137,7 +137,7 @@
                                     <h5 class="card-title mb-0">Images</h5>
                                     @foreach($tour->images as $image)
                                         <div class="card-body">
-                                            <img src="{{asset('images/'.$image->name)}}" width="100px" height="50"
+                                            <img src="{{asset('laravel/public/images/'.$image->name)}}" width="100px" height="50"
                                                  class="img-fluid">
                                         </div>
                                     @endforeach
@@ -168,7 +168,7 @@
                                 <div class="col-6">
                                     <h5 class="card-title mb-0">Previous Image</h5>
                                     <div class="card-body">
-                                        <img width="300px" src="{{asset('images/'.$tour->image)}}" alt="">
+                                        <img width="300px" src="{{asset('laravel/public/images/'.$tour->image)}}" alt="">
                                     </div>
                                 </div>
 

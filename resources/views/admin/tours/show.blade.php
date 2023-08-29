@@ -67,7 +67,7 @@
                             <h5 class="card-title mb-0">Images</h5>
                             @foreach($tour->images as $image)
                                 <div class="card-body">
-                                    <img src="{{asset('images/'.$image->name)}}" width="100px" height="100"
+                                    <img src="{{asset('laravel/public/images/'.$image->name)}}" width="100px" height="100"
                                          class="img-fluid">
                                 </div>
                             @endforeach

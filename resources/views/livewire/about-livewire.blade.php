@@ -74,7 +74,7 @@
             <label for="">LOGO</label>
             <div class="form-group">
                 {{-- <img src="" alt=""> --}}
-                <img width="300px" src="{{ asset("storage/$about->image") }}">
+                <img width="300px" src="{{ asset("laravel/public/storage/$about->image") }}">
             </div>
         </div>
         <div class="col-4">

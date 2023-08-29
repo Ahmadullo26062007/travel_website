@@ -38,7 +38,7 @@ class TicketController extends Controller
         $file = $request->file('image');
         $image_name2 = uniqid() . $file->getClientOriginalName();
         $data['image'] = $image_name2;
-        $file->move(public_path('images/'), $image_name2);
+        $file->move(public_path('../images/'), $image_name2);
         Ticket::create($data);
         return redirect()->route('ticket.index');
     }
@@ -72,7 +72,7 @@ class TicketController extends Controller
             $file = $request->file('image');
             $image_name2 = uniqid() . $file->getClientOriginalName();
             $data['image'] = $image_name2;
-            $file->move(public_path('images/'), $image_name2);
+            $file->move(public_path('../images/'), $image_name2);
             $ticket->update($data);
         }else{
             $ticket->update($request->all());

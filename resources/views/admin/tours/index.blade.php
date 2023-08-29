@@ -38,7 +38,7 @@
                                         <td>{{$tour->country->name}}</td>
                                         <td class="d-none d-xl-table-cell">{{$tour->category->name}}</td>
                                         <td class="d-none d-xl-table-cell">{{$tour->city}}</td>
-                                        <td class="d-none d-xl-table-cell"><img width="100px" src="{{asset('images/'.$tour->image)}}" alt="{{$tour->title}} Image"></td>
+                                        <td class="d-none d-xl-table-cell"><img width="100px" src="{{asset('laravel/public/images/'.$tour->image)}}" alt="{{$tour->title}} Image"></td>
 
                                         <td>
 

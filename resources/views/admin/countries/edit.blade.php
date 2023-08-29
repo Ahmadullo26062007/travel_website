@@ -48,13 +48,13 @@
                                 <div class="col-6">
                                     <h5 class="card-title mb-0">Previous Flag</h5>
                                     <div class="card-body">
-                                        <img width="300px" src="{{asset('images/'.$country->flag)}}" alt="">
+                                        <img width="300px" src="{{asset('laravel/public/countries/'.$country->flag)}}" alt="">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <h5 class="card-title mb-0">Previous Image</h5>
                                     <div class="card-body">
-                                        <img width="300px" src="{{asset('images/'.$country->image)}}" alt="">
+                                        <img width="300px" src="{{asset('laravel/public/countries/'.$country->image)}}" alt="">
                                     </div>
                                 </div>
                             </div>

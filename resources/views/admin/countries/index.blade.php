@@ -33,8 +33,8 @@
                                 <tr>
                                     <td>{{$country->id}}</td>
                                     <td>{{$country->name}}</td>
-                                    <td><img width="100px" src="{{asset('countries/'.$country->flag)}}" alt="{{$country->name}} Flag"></td>
-                                    <td><img width="100px" src="{{asset('countries/'.$country->image)}}" alt="{{$country->name}} Image"></td>
+                                    <td><img width="100px" src="{{asset('laravel/public/countries/'.$country->flag)}}" alt="{{$country->name}} Flag"></td>
+                                    <td><img width="100px" src="{{asset('laravel/public/countries/'.$country->image)}}" alt="{{$country->name}} Image"></td>
                                     <td>
                                         <a href="{{route('countries_admin.edit',[$country->id])}}" class="btn btn-info">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"

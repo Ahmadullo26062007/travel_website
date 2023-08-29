@@ -32,7 +32,7 @@
                                 <tr>
                                     <td>{{$ticket->id}}</td>
                                     <td>{{$ticket->name}}</td>
-                                    <td><img width="100px" src="{{asset('images/'.$ticket->image)}}"
+                                    <td><img width="100px" src="{{asset('laravel/public/images/'.$ticket->image)}}"
                                              alt="{{$ticket->name}} Image"></td>
                                     <td>
                                         <a href="{{route('ticket.edit',[$ticket->id])}}" class="btn btn-info">

@@ -52,7 +52,7 @@ class AboutLivewire extends Component
     public function editabout()
     {
         $this->validate();
-        if ($this->image!==$this->about->image){
+        if ($this->image!=$this->about->image){
             $this->image->store('public');
             $image_name = $this->image->hashName();
             $this->about->update([

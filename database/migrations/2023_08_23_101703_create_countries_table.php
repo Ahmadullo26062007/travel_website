@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('image');
             $table->string('flag');
+            $table->enum('type',[0,1])->default(0);
 
             $table->timestamps();
         });

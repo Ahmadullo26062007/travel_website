@@ -26,6 +26,7 @@
 
                 <div class="clear">
                      @foreach($countries as $c)
+                         @if($c->type==1)
                     <article class="main-country">
                         <a class="main-country__link" title="{{$c->name}}" href="{{route('front.country.detail',$c->id)}}">
                             <div class="main-country__img-wrap">
@@ -43,6 +44,7 @@
                             </div>
                         </a>
                     </article>
+                        @endif
                     @endforeach
                 </div>
             </div>
@@ -53,6 +55,7 @@
                 <h2 class="section__head">Все страны</h2>
                 <div class="clear loop-countries">
                     @foreach($countries as $c)
+                        @if($c->type==0)
                     <article class="loop-country">
                         <a class="loop-country__link match-height" title="{{$c->name}}"
                             href="{{route('front.country.detail',$c->id)}}">
@@ -66,6 +69,7 @@
                             </div>
                         </a>
                     </article>
+                        @endif
                     @endforeach
                 </div>
             </div>

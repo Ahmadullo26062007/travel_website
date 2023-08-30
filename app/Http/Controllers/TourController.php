@@ -78,7 +78,7 @@ class TourController extends Controller
             $image_name = uniqid() . $file->getClientOriginalName();
             $i = new Image(['name' => $image_name]);
             $t->images()->save($i);
-            $file->move(public_path('../images'), $image_name);
+            $file->move(public_path('images'), $image_name);
         }
         return redirect()->route('tours.index');
     }
@@ -139,12 +139,12 @@ class TourController extends Controller
                 'visa' => $request->visa,]);
         }
         if ($request->image && $tour->image) {
-            unlink(public_path("../images/$tour->image"));
+            unlink(public_path("images/$tour->image"));
             $data = $request->all();
             $file = $request->file('image');
             $image_name = uniqid() . $file->getClientOriginalName();
             $data['image'] = $image_name;
-            $file->move(public_path('../images/'), $image_name);
+            $file->move(public_path('images/'), $image_name);
             $tour->update([
                 'image' => $data['image']
             ]);
@@ -154,7 +154,7 @@ class TourController extends Controller
                 $file = $request->file('image');
                 $image_name = uniqid() . $file->getClientOriginalName();
                 $data['image'] = $image_name;
-                $file->move(public_path('../images/'), $image_name);
+                $file->move(public_path('images/'), $image_name);
                 $tour->update([
                     'image' => $data['image']
                 ]);
@@ -167,7 +167,7 @@ class TourController extends Controller
                 $image_name = uniqid() . $file->getClientOriginalName();
                 $i = new Image(['name' => $image_name]);
                 $tour->images()->save($i);
-                $file->move(public_path('../images'), $image_name);
+                $file->move(public_path('images'), $image_name);
             }
         } else {
             if ($request->images && !$tour->images) {
@@ -176,7 +176,7 @@ class TourController extends Controller
                     $image_name = uniqid() . $file->getClientOriginalName();
                     $i = new Image(['name' => $image_name]);
                     $tour->images()->save($i);
-                    $file->move(public_path('../images'), $image_name);
+                    $file->move(public_path('images'), $image_name);
                 }
             }
         }

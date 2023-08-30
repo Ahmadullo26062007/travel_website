@@ -61,7 +61,7 @@
                             href="{{route('front.country.detail',$c->id)}}">
 
                             <div class="loop-country__content">
-                                <img class="loop-country__flag"
+                                <img class="loop-country__flag" width="300px" height="200px"
                                     src="{{asset('laravel/public/countries/'.$c->flag)}}"
                                     alt="{{$c->name}} флаг">
 

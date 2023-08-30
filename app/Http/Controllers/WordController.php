@@ -12,7 +12,7 @@ class WordController extends Controller
      */
     public function index()
     {
-        $words=Word::all();
+        $words=Word::orderByDesc('id')->get();
         return view('admin.words.index',compact('words'));
     }
 

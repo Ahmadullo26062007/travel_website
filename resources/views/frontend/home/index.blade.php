@@ -166,10 +166,6 @@
                 <div class="align-center">
                     <a href="{{ route('front.hot_tours.index') }}" class="main-tours-wrap__btn">More Tours</a>
                 </div>
-
-
-
-
             </div>
         </section>
     </main>

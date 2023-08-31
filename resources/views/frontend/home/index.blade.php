@@ -12,25 +12,25 @@
                 <div class="container">
                     <div class="clear">
                         <div class="mm-links__item">
-                            <a href="https://kochevnik.kg/tours/" class="mm-links__link"
+                            <a href="{{{ route('front.tours.index') }}}" class="mm-links__link"
                                 style="background-image: url(https://kochevnik.kg/wp-content/uploads/2019/10/1-300x200.jpg)">
                                 <span class="mm-links__head">Туры</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
-                            <a href="https://kochevnik.kg/aviabilety/" class="mm-links__link"
+                            <a href="{{ route('front.tickets.index') }}" class="mm-links__link"
                                 style="background-image: url(https://kochevnik.kg/wp-content/uploads/2019/10/1132-300x196.jpg)">
                                 <span class="mm-links__head">Авиабилеты</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
-                            <a href="https://kochevnik.kg/oformlenie-viz/" class="mm-links__link"
+                            <a href="{{ route('front.visas.index') }}" class="mm-links__link"
                                 style="background-image: url(https://kochevnik.kg/wp-content/uploads/2019/10/visas-300x200.jpg)">
                                 <span class="mm-links__head">Оформление виз</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
-                            <a href="https://kochevnik.kg/rest_type/gorjashhie/" class="mm-links__link"
+                            <a href="{{ route('front.hot_tours.index') }}" class="mm-links__link"
                                 style="background-image: url(https://kochevnik.kg/wp-content/uploads/2020/02/gt-300x187.jpg)">
                                 <span class="mm-links__head">Горящие туры </span>
                             </a>

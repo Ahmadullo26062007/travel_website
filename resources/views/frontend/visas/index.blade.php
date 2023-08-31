@@ -22,8 +22,7 @@
 
 
 
-                    <p>One of the most difficult stages in preparing for a trip abroad is<strong>obtaining a visa..
-                        </strong></p>
+                    <p>One of the most difficult stages in preparing for a trip abroad is obtaining a visa.. </p>
 
 
 

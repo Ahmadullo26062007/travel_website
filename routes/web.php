@@ -107,7 +107,9 @@ Route::get('/eng', function () {
     $l->update([
         'type'=>'2'
     ]);
-    return view('frontend.home.index', compact('categories', 'countries', 'hot_tours'));
+
+    return back();
+//    return view('frontend.home.index', compact('categories', 'countries', 'hot_tours'));
 })->name('english');
 
 
@@ -120,5 +122,6 @@ Route::get('/rus', function () {
     $l->update([
         'type'=>'1'
     ]);
-    return view('frontend.home.index', compact('categories', 'countries', 'hot_tours'));
+    return back();
+//    return view('frontend.home.index', compact('categories', 'countries', 'hot_tours'));
 })->name('russian');

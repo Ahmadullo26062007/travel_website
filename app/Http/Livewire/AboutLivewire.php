@@ -46,7 +46,7 @@ class AboutLivewire extends Component
         'telegram.required' => 'Telegram link Not entered',
         'facebook.required' => 'Facebook link Not entered',
         'description.required' => 'Description Not entered',
-        'whats_app.required' => 'WhatsApp number Not entered'
+        'whats_app.required' => 'WhatsApp number Not entered',
     ];
 
     public function editabout()

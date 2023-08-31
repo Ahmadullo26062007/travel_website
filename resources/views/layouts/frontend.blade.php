@@ -370,13 +370,26 @@
                         </a>
                     </div>
 
-                    <div class="header-mobile__center">
+                    <div class="header-mobile__center d-flex justify-content-center align-items-center">
                         <div class="header-mobile__contacts">
 
                             <a rel="nofollow" href="tel:+{{ $a->phone_number1 }}"
                                 class="icon-link icon-link__phone h-contacts__item header-mobile__phone">{{ $a->phone_number1 }}</a>
                             <a rel="nofollow" href="tel:+{{ $a->phone_number2 }}"
                                 class="icon-link icon-link__phone h-contacts__item header-mobile__phone">{{ $a->phone_number2 }}</a>
+                        </div>
+                        <div class="dropdown" style="border-color: #eff4f8 !important;">
+                            <button style="background:none !important;border-color: #eff4f8 !important;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                @if($l->type==1)
+                                    <img src="{{asset('countries/rus.jpg')}}" width="30" alt="">
+                                @else
+                                    <img src="{{asset('countries/eng.jpg')}}" width="30" alt="">
+                                @endif
+                            </button>
+                            <div class="dropdown-menu text-dark" style="font-size: 18px" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{route('russian')}}">Rus</a>
+                                <a class="dropdown-item" href="{{route('english')}}">Eng</a>
+                            </div>
                         </div>
                     </div>
 
@@ -401,13 +414,7 @@
                             <li class="menu__item"><a href="{{ route('front.contact.index') }}"
                                     class="menu__link">{{word(7)}}</a></li>
 
-                            @if($l->type==1)
-                                <li class="menu__item"><a href="{{route('english')}}"
-                                                          class="menu__link">английский</a></li>
-                            @else
-                                <li class="menu__item"><a href="{{route('russian')}}"
-                                                          class="menu__link">russian</a></li>
-                            @endif
+
 
 
 

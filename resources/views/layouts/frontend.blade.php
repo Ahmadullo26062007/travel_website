@@ -297,24 +297,36 @@
                     </div>
 
                     <div class="header-right">
-                        <div class="header-right__top">
-                            <div class="h-contacts" id="header-contacts">
+                        <div class="header-right__top d-flex justify-content-end">
+                            <div class="h-contacts " id="header-contacts">
 
                                 <a rel="nofollow" href="tel:+{{ $a->phone_number1 }}"
                                     class="icon-link icon-link__phone h-contacts__item">{{ $a->phone_number1 }}</a>
                                 <a rel="nofollow" href="tel:+{{ $a->phone_number2 }}"
                                     class="icon-link icon-link__phone h-contacts__item">{{ $a->phone_number2 }} </a>
 
-                                @if($l->type==1)
-                                    <a rel="nofollo" href="{{route('english')}}" class="btn h-contacts__item h-contacts__btn" >английский</a>
+{{--                                @if($l->type==1)--}}
+{{--                                    <a rel="nofollo" href="{{route('english')}}" class="btn h-contacts__item h-contacts__btn" >английский</a>--}}
 
-                                @else
-                                    <a rel="nofollo" href="{{route('russian')}}" class="btn h-contacts__item h-contacts__btn" >russian</a>
-                                @endif
+{{--                                @else--}}
+{{--                                    <a rel="nofollo" href="{{route('russian')}}" class="btn h-contacts__item h-contacts__btn" >russian</a>--}}
+{{--                                @endif--}}
 
                                 <!-- <button class="h-contacts__item h-contacts__btn js-pop-up-btn" href="#popup-form" data-head="Подбор тура" data-desc="Заполните форму и мы вам перезвоним">Подбор тура</button> -->
                             </div>
-
+                            <div class="dropdown">
+                                <button style="background:none !important;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @if($l->type==1)
+                                        <img src="{{asset('countries/rus.jpg')}}" width="30" alt="">
+                                    @else
+                                          <img src="{{asset('countries/eng.jpg')}}" width="30" alt="">
+                                     @endif
+                                </button>
+                                <div class="dropdown-menu text-dark" style="font-size: 18px" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{route('russian')}}">Rus</a>
+                                    <a class="dropdown-item" href="{{route('english')}}">Eng</a>
+                                </div>
+                            </div>
                             <div class="header-social-links">
                                 <a rel="nofollow" href="{{ $a->facebook }}" title="Мы на Facebook" target="_blank"
                                     class="icon-link social-link icon-link__facebook">Facebook</a>
@@ -686,7 +698,9 @@
         }
     </style>
 
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type='text/javascript'>
         /* <![CDATA[ */
         var wpcf7 = {

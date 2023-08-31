@@ -30,25 +30,25 @@
                     <div class="clear">
                         <div class="mm-links__item">
                             <a href="{{{ route('front.tours.index') }}}" class="mm-links__link"
-                                style="background-image: url(https://kochevnik.kg/wp-content/uploads/2019/10/1-300x200.jpg)">
+                                style="background-image: url({{ asset('images/first_image.jpg') }})">
                                 <span class="mm-links__head">{{Word1(2)}}</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.tickets.index') }}" class="mm-links__link"
-                                style="background-image: url(https://kochevnik.kg/wp-content/uploads/2019/10/1132-300x196.jpg)">
+                                style="background-image: url({{asset('images/second_image.jpg')}})">
                                 <span class="mm-links__head">{{Word1(6)}}</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.visas.index') }}" class="mm-links__link"
-                                style="background-image: url(https://kochevnik.kg/wp-content/uploads/2019/10/visas-300x200.jpg)">
+                                style="background-image: url({{asset('images/third_image.jpg')}})">
                                 <span class="mm-links__head">{{Word1(5)}}</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.hot_tours.index') }}" class="mm-links__link"
-                                style="background-image: url(https://kochevnik.kg/wp-content/uploads/2020/02/gt-300x187.jpg)">
+                                style="background-image: url({{asset('images/fourth_image.jpg')}})">
                                 <span class="mm-links__head">{{Word1(3)}} </span>
                             </a>
                         </div>

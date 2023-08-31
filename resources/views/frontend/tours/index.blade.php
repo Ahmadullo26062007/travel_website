@@ -15,6 +15,13 @@
         }
         return $s;
     }
+   function count_tour(){
+     $c=0;
+     foreach (\App\Models\Tour::all() as $t){
+         $c=$c+1;
+     }
+     return $c;
+   }
 
     @endphp
     <main id="main" class="main sidebar-left" role="main">

@@ -85,7 +85,7 @@
     <div>
         <div class="tour-listing main-tours-wrap" id="tour-listing">
 
-            <p class="count-tours">{{word2(22)}}: <b>556</b></p>
+            <p class="count-tours">{{word2(22)}}: <b>{{count_tour()}}</b></p>
             <div class="articles-wrap main-tours-wrap">
                 @foreach ($tours as $tour)
                     <article class="tour-loop article-loop main-tour">

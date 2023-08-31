@@ -13,6 +13,7 @@ class Country extends Model
         'name',
         'image',
         'flag',
+        'type',
     ];
 
     public function tours()

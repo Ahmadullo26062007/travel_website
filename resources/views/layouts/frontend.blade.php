@@ -1,50 +1,50 @@
 @php
     $a = \App\Models\About::find(1);
+
+    $l=\App\Models\Lenguage::find(1);
+
+
+    function word($id){
+        $l=\App\Models\Lenguage::find(1);
+        $w=\App\Models\Word::find($id);
+
+        if ($l->type==1){
+            $s=$w->language_1;
+        }else{
+            $s=$w->language_2;
+        }
+      return $s;
+    }
 @endphp
 <!Doctype html>
 <html lang="ru-RU" class="no-js">
 
 <head>
-    {{-- Logo --}}
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('logo/logo.ico') }}" />
-
-    {{-- For languaeg --}}
     <meta charset="UTF-8">
-    {{-- For different browser --}}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
     <title>Горящие туры из Бишкека и Алматы</title>
-
-    {{-- I don't know (Delete my be) --}}
     <meta name="yandex-verification" content="295b41ba73fc09c5" />
     <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="mQZKlpnX_tK37Zo_R9is5nQKMDNIzUshjP8j8Q6ucxM" />
+
+
+    <!-- This site is optimized with the Yoast SEO plugin v12.8 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description"
+        content="Горящие туры из Бишкека и Алматы. Каталог горящих туров по всему миру от всех туроператоров Кыргызстана. Бронирование туров онлайн и по телефону." />
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://kochevnik.kg/" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Горящие туры из Бишкека и Алматы" />
-    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <link rel="canonical" href="https://kochevnik.kg/" />
+    <meta property="og:description"
+        content="Горящие туры из Бишкека и Алматы. Каталог горящих туров по всему миру от всех туроператоров Кыргызстана. Бронирование туров онлайн и по телефону." />
     <meta property="og:url" content="https://kochevnik.kg/" />
     <meta property="og:site_name" content="Kochevnik.kg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:description"
         content="Горящие туры из Бишкека и Алматы. Каталог горящих туров по всему миру от всех туроператоров Кыргызстана. Бронирование туров онлайн и по телефону." />
     <meta name="twitter:title" content="Горящие туры из Бишкека и Алматы" />
-
-
-    <!-- Descrpition -->
-    <meta name="description"
-        content="Горящие туры из Бишкека и Алматы. Каталог горящих туров по всему миру от всех туроператоров Кыргызстана. Бронирование туров онлайн и по телефону." />
-    <meta property="og:description"
-        content="Горящие туры из Бишкека и Алматы. Каталог горящих туров по всему миру от всех туроператоров Кыргызстана. Бронирование туров онлайн и по телефону." />
-
-    {{-- Logo may be --}}
-
-    <meta name="msapplication-TileImage" content="{{ asset('logo/logo.ico') }}" />
-
-
-    {{-- Js , css and other links --}}
     <script type='application/ld+json'
             class='yoast-schema-graph yoast-schema-graph--main'>
         {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://kochevnik.kg/#website","url":"https://kochevnik.kg/","name":"Kochevnik.kg","description":"\u0422\u0443\u0440\u0430\u0433\u0435\u043d\u0442\u0441\u0442\u0432\u043e \u0432 \u0411\u0438\u0448\u043a\u0435\u043a\u0435","potentialAction":{"@type":"SearchAction","target":"https://kochevnik.kg/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://kochevnik.kg/#webpage","url":"https://kochevnik.kg/","inLanguage":"ru-RU","name":"\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b \u0438\u0437 \u0411\u0438\u0448\u043a\u0435\u043a\u0430 \u0438 \u0410\u043b\u043c\u0430\u0442\u044b","isPartOf":{"@id":"https://kochevnik.kg/#website"},"datePublished":"2017-11-24T06:57:21+00:00","dateModified":"2020-02-25T05:34:10+00:00","description":"\u0413\u043e\u0440\u044f\u0449\u0438\u0435 \u0442\u0443\u0440\u044b \u0438\u0437 \u0411\u0438\u0448\u043a\u0435\u043a\u0430 \u0438 \u0410\u043b\u043c\u0430\u0442\u044b. \u041a\u0430\u0442\u0430\u043b\u043e\u0433 \u0433\u043e\u0440\u044f\u0449\u0438\u0445 \u0442\u0443\u0440\u043e\u0432 \u043f\u043e \u0432\u0441\u0435\u043c\u0443 \u043c\u0438\u0440\u0443 \u043e\u0442 \u0432\u0441\u0435\u0445 \u0442\u0443\u0440\u043e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u043e\u0432 \u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d\u0430. \u0411\u0440\u043e\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0442\u0443\u0440\u043e\u0432 \u043e\u043d\u043b\u0430\u0439\u043d \u0438 \u043f\u043e \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0443."}]}
@@ -133,8 +133,7 @@
     <link rel='stylesheet' id='contact-form-7-css'
         href='https://kochevnik.kg/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.5'
         media='all' />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <style id='contact-form-7-inline-css' type='text/css'>
         .wpcf7 .wpcf7-recaptcha iframe {
@@ -193,7 +192,8 @@
         sizes="192x192" />
     <link rel="apple-touch-icon-precomposed"
         href="https://kochevnik.kg/wp-content/uploads/2017/07/cropped-kochevnik_label-180x180.png" />
-
+    <meta name="msapplication-TileImage"
+        content="https://kochevnik.kg/wp-content/uploads/2017/07/cropped-kochevnik_label-270x270.png" />
     <style type="text/css" id="wp-custom-css">
         @media only screen and (max-width: 1023px) {
             .intro__form {
@@ -303,10 +303,15 @@
                                 <a rel="nofollow" href="tel:+{{ $a->phone_number1 }}"
                                     class="icon-link icon-link__phone h-contacts__item">{{ $a->phone_number1 }}</a>
                                 <a rel="nofollow" href="tel:+{{ $a->phone_number2 }}"
-                                    class="icon-link icon-link__phone h-contacts__item">{{ $a->phone_number2 }}</a>
+                                    class="icon-link icon-link__phone h-contacts__item">{{ $a->phone_number2 }} </a>
 
+                                @if($l->type==1)
+                                    <a rel="nofollo" href="{{route('english')}}" class="btn h-contacts__item h-contacts__btn" >английский</a>
 
-                                <a rel="nofollow" class="btn h-contacts__item h-contacts__btn">английский</a>
+                                @else
+                                    <a rel="nofollo" href="{{route('russian')}}" class="btn h-contacts__item h-contacts__btn" >russian</a>
+                                @endif
+
                                 <!-- <button class="h-contacts__item h-contacts__btn js-pop-up-btn" href="#popup-form" data-head="Подбор тура" data-desc="Заполните форму и мы вам перезвоним">Подбор тура</button> -->
                             </div>
 
@@ -324,22 +329,21 @@
                             <nav class="nav header-nav" role="navigation">
                                 <ul id="menu-glavnoe-menju" class="menu header-menu">
                                     <li class="menu__item {{ request()->is('/') ? 'active' : '' }}"><a
-                                            href="{{ route('home.index') }}" class="menu__link">Home</a></li>
+                                            href="{{ route('home.index') }}" class="menu__link">{{word(1)}}</a></li>
                                     <li class="menu__item {{ request()->is('tour') ? 'active' : '' }}"><a
-                                            href="{{ route('front.tours.index') }}" class="menu__link">Tours</a></li>
+                                            href="{{ route('front.tours.index') }}" class="menu__link">{{word(2)}}</a></li>
                                     <li class="menu__item {{ request()->is('hot-tours') ? 'active' : '' }}"><a
-                                            href="{{ route('front.hot_tours.index') }}" class="menu__link">Hot
-                                            Tours</a></li>
+                                            href="{{ route('front.hot_tours.index') }}" class="menu__link">{{word(3)}}</a></li>
                                     <li class="menu__item {{ request()->is('/country') ? 'active' : '' }}"><a
                                             href="{{ route('front.countries.index') }}"
-                                            class="menu__link">Countries</a></li>
+                                            class="menu__link">{{word(4)}}</a></li>
                                     <li class="menu__item {{ request()->is('visas') ? 'active' : '' }}"><a
-                                            href="{{ route('front.visas.index') }}" class="menu__link">Visas</a></li>
+                                            href="{{ route('front.visas.index') }}" class="menu__link">{{word(5)}}</a></li>
                                     <li class="menu__item {{ request()->is('tickets') ? 'active' : '' }}"><a
-                                            href="{{ route('front.tickets.index') }}" class="menu__link">Tickets</a>
+                                            href="{{ route('front.tickets.index') }}" class="menu__link">{{word(6)}}</a>
                                     </li>
                                     <li class="menu__item {{ request()->is('contact') ? 'active' : '' }}"><a
-                                            href="{{ route('front.contact.index') }}" class="menu__link">Contact</a>
+                                            href="{{ route('front.contact.index') }}" class="menu__link">{{word(7)}}</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -373,17 +377,29 @@
                         </button>
                         <ul id="menu-menju-dlja-mobilnyh" class="menu mobile-menu">
                             <li class="menu__item"><a href="{{ route('front.tours.index') }}"
-                                    class="menu__link">Tours</a></li>
+                                    class="menu__link">{{word(2)}}</a></li>
                             <li class="menu__item"><a href="{{ route('front.hot_tours.index') }}"
-                                    class="menu__link">Hot Tours</a></li>
+                                    class="menu__link">{{word(3)}}</a></li>
                             <li class="menu__item"><a href="{{ route('front.countries.index') }}"
-                                    class="menu__link">Countries</a></li>
+                                    class="menu__link">{{word(4)}}</a></li>
                             <li class="menu__item"><a href="{{ route('front.visas.index') }}"
-                                    class="menu__link">Visas</a></li>
+                                    class="menu__link">{{word(5)}}</a></li>
                             <li class="menu__item"><a href="{{ route('front.tickets.index') }}"
-                                    class="menu__link">Tickets</a></li>
+                                    class="menu__link">{{word(6)}}</a></li>
                             <li class="menu__item"><a href="{{ route('front.contact.index') }}"
-                                    class="menu__link">Contact</a></li>
+                                    class="menu__link">{{word(7)}}</a></li>
+
+                            @if($l->type==1)
+                                <li class="menu__item"><a href="{{route('english')}}"
+                                                          class="menu__link">английский</a></li>
+                            @else
+                                <li class="menu__item"><a href="{{route('russian')}}"
+                                                          class="menu__link">russian</a></li>
+                            @endif
+
+
+
+
                         </ul>
                     </div>
                 </div>
@@ -396,67 +412,69 @@
         <footer class="footer" role="contentinfo">
             <div class="container">
                 <div class="form form--archive form--footer">
-                    <div class="footer__top">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="footer-about">
-                                    <div class="footer-logo">
-                                        <img class="footer-logo__img" src="{{ asset('images/logo.png') }}"
-                                            alt="logo">
-                                    </div>
-
-                                    <p class="footer__about">
-                                        {{ App\Models\About::find(1)->description }}
-                                    </p>
+                <div class="footer__top">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="footer-about">
+                                <div class="footer-logo">
+                                    <img class="footer-logo__img" src="{{ asset('images/logo.png') }}"
+                                        alt="logo">
                                 </div>
+
+                                <p class="footer__about">Nomad.kg is a travel agency that is trusted with their travels
+                                    more than 7,000 people a year, of which 1,000 are regular customers who entrusted us
+                                    with taking care of
+                                    safe and high-quality flight, and 6,000 people who are sure to visit us
+                                    will apply for planning their next tour, trip or travel.</p>
                             </div>
+                        </div>
 
-                            <div class="col-sm-4">
-                                <h3 class="footer-widget__title">Контакты</h3>
-                                <p><small>Tel</small><br><i class="fa fa-phone" aria-hidden="true"></i> <a
-                                        rel="nofollow"
-                                        href="tel:+{{ $a->phone_number1 }}">{{ $a->phone_number1 }}</a></p>
-                                <p><small>Email</small><br><i class="fa fa-envelope" aria-hidden="true"></i>
-                                    {{ $a->email }}</p>
+                        <div class="col-sm-4">
+                            <h3 class="footer-widget__title">Контакты</h3>
+                            <p><small>Tel</small><br><i class="fa fa-phone" aria-hidden="true"></i> <a rel="nofollow"
+                                    href="tel:+{{ $a->phone_number1 }}">{{ $a->phone_number1 }}</a></p>
+                            <p><small>Email</small><br><i class="fa fa-envelope" aria-hidden="true"></i>
+                                {{ $a->email }}</p>
 
 
-                                <p class="footer__social-text">Follow us on social networks</p>
+                            <p class="footer__social-text">Follow us on social networks</p>
 
-                                <div class="social-links">
-                                    <a rel="nofollow" href="{{ $a->facebook }}" title="Мы на Facebook"
-                                        target="_blank" class="icon-link social-link icon-link__facebook">Facebook</a>
-                                    <a rel="nofollow" href="{{ $a->instagram }}" title="Мы в Instagram"
-                                        target="_blank"
-                                        class="icon-link social-link icon-link__instagram">Instagram</a>
-                                    <a rel="nofollow" href="{{ $a->telegram }}" title="Мы в Одноклассниках"
-                                        target="_blank" class="icon-link social-link icon-link__telegram">Telegram</a>
-
-                                </div>
-                            </div>
-
-                            <div class="col-sm-4">
-                                <div class="footer-partner" style="margin-top: 60px;">
-                                    <span class="footer-partner__head">General representation of the airline
-                                        "Ural
-                                        airlines" in Kyrgyzstan</span>
-
-                                    <img class="footer-partner__logo"
-                                        src="https://j.kg/wp-content/themes/kochevnik/assets/img/ural_airlines_logo.png"
-                                        alt="Уральские авиалинии логотип">
-                                </div>
-
-                                <div class="footer-widget">
-                                </div>
-
+                            <div class="social-links">
+                                <a rel="nofollow" href="{{ $a->facebook }}" title="Мы на Facebook" target="_blank"
+                                    class="icon-link social-link icon-link__facebook">Facebook</a>
+                                <a rel="nofollow" href="{{ $a->instagram }}" title="Мы в Instagram" target="_blank"
+                                    class="icon-link social-link icon-link__instagram">Instagram</a>
+                                <a rel="nofollow" href="{{ $a->telegram }}" title="Мы в Одноклассниках"
+                                    target="_blank" class="icon-link social-link icon-link__telegram">Telegram</a>
 
                             </div>
                         </div>
 
-                        <p><a href="https://tegay.net" target="_blank" class="tegay-link"
-                                style="margin: 30px 0 0;text-transform:uppercase;font-size:9px;padding:6px 0 3px;text-align:right;">Создание
-                                сайта TEGAY.NET</a>
-                        </p>
+                        <div class="col-sm-4">
+                            <div class="footer-partner" style="margin-top: 60px;">
+                                <span class="footer-partner__head">General representation of the airline
+                                    "Ural
+                                    airlines" in Kyrgyzstan</span>
+
+                                <img class="footer-partner__logo"
+                                    src="https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/ural_airlines_logo.png"
+                                    alt="Уральские авиалинии логотип">
+                            </div>
+
+                            <div class="footer-widget">
+                            </div>
+
+
+                        </div>
                     </div>
+
+                    <p class="copyright">&copy; 2011 - 2023 Kochevnik.kg. Все права защищены. </p>
+
+                    <p><a href="https://tegay.net" target="_blank" class="tegay-link"
+                            style="margin: 30px 0 0;text-transform:uppercase;font-size:9px;padding:6px 0 3px;text-align:right;">Создание
+                            сайта TEGAY.NET</a>
+                    </p>
+                </div>
                 </div>
 
             </div>
@@ -575,9 +593,7 @@
             </span>
         </a>
     </div>
-
     @livewireScripts
-
     <style type="text/css">
         .fixed-btns {
             position: fixed;
@@ -715,7 +731,7 @@
     <script type='text/javascript'
         src='https://www.google.com/recaptcha/api.js?hl=ru_RU&#038;onload=recaptchaCallback&#038;render=explicit&#038;ver=2.0'>
     </script>
-    <script type="text/javascript">
+     <script type="text/javascript">
         var recaptchaWidgets = [];
         var recaptchaCallback = function() {
             var forms = document.getElementsByTagName('form');

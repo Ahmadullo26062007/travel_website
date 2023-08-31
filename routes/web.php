@@ -93,7 +93,32 @@ Route::get('categories/{id}', function ($id) {
 Route::get('login', function () {
     return view('admin.login');
 })->name('login');
+
 Route::get('/logout', function () {
     Auth::logout();
     return view('admin.login');
 })->name('logout');
+
+Route::get('/eng', function () {
+    $categories = Category::orderByDesc('id')->get();
+    $countries = Country::take(12)->get();
+    $hot_tours = Tour::take(4)->orderBy('id', 'desc')->get();
+    $l=\App\Models\Lenguage::find(1);
+    $l->update([
+        'type'=>'2'
+    ]);
+    return view('frontend.home.index', compact('categories', 'countries', 'hot_tours'));
+})->name('english');
+
+
+
+Route::get('/rus', function () {
+    $categories = Category::orderByDesc('id')->get();
+    $countries = Country::take(12)->get();
+    $hot_tours = Tour::take(4)->orderBy('id', 'desc')->get();
+    $l=\App\Models\Lenguage::find(1);
+    $l->update([
+        'type'=>'1'
+    ]);
+    return view('frontend.home.index', compact('categories', 'countries', 'hot_tours'));
+})->name('russian');

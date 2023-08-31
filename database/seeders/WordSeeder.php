@@ -60,6 +60,14 @@ class WordSeeder extends Seeder
            ['language_1'=>'Написать в WhatsApp','language_2'=>'Write to whatsapp'],
            ['language_1'=>'Flights from partner airlines Travel agency "WONDER WORLD"','language_2'=>'Flights from partner airlines Travel agency "WONDER WORLD"'],
            ['language_1'=>'КОНТАКТЫ','language_2'=>'CONTACTS'],
+           ['language_1'=>'ДАТА','language_2'=>'DATE'],
+           ['language_1'=>'ДЛИТЕЛЬНОСТЬ','language_2'=>'DURATION'],
+           ['language_1'=>'СТОИМОСТЬ','language_2'=>'PRICE'],
+           ['language_1'=>'ГОРОД ВЫЛЕТА','language_2'=>'DEPARTURE CITY'],
+           ['language_1'=>'Возможны изменения цен. Актуальные цены уточняйте у менеджеров.','language_2'=>'Price changes are possible. Check with managers for current prices.'],
+           ['language_1'=>'Поделиться','language_2'=>'Share'],
+           ['language_1'=>'Похожие туры','language_2'=>'Similar tours'],
+           ['language_1'=>'ЭКСКУРСИОННЫЙ ТУР','language_2'=>'EXCURSION TOUR'],
         ]);
 
     }

@@ -64,7 +64,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="article__content" style="margin: 60px 0;">
-                            <h1><span style="color: #ff6600;">Hiliki House 3*</span></h1>
+                            <h1><span style="color: #ff6600;">{{$t->title}}</span></h1>
                             <div id="summary" class=""
                                  data-et-mouseenter="customGoal:BUeeZaTaTaBEKMPXLae:1
 customGoal:BUeeHNSPMWdMOdUBMHT:1

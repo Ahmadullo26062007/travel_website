@@ -2,7 +2,7 @@
     <div>
         <div class="sidebar  " id="sidebar">
 
-            <h2 class="sidebar__head"><i class="fa fa-sliders" aria-hidden="true"></i> Фильтр туров</h2>
+            <h2 class="sidebar__head"><i class="fa fa-sliders" aria-hidden="true"></i>{{word2(16)}}</h2>
 
 
             <div class="filter">
@@ -11,7 +11,7 @@
                         <div class="col-md-6">
                             <div class="filter__item" id="filter-country">
 
-                                <span class="filter__label">Страны</span>
+                                <span class="filter__label">{{word2(4)}}</span>
 
                                 <select name="country_id" wire:model="country_id"  class="form-select"  >
                                     <option value="">...</option>
@@ -26,7 +26,7 @@
                         <div class="col-md-6">
                             <div class="filter__item" id="filter-rest">
 
-                                <span class="filter__label">Тип отдыха</span>
+                                <span class="filter__label">{{word2(17)}}</span>
                                 <select name="category_id" wire:model="category_id" class="form-select"  >
                                     <option value="">...</option>
                                 @foreach($categories as $id=>$c)
@@ -42,7 +42,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="filter__item" id="filter-departure">
-                                <span class="filter__label">Город вылета</span>
+                                <span class="filter__label">{{word2(18)}}</span>
                                 <div class="filter__col">
                                     <input class="filter__input" id="filter-departure-14" name="departure"
                                         type="checkbox" value="14">
@@ -74,7 +74,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <a class="btn" style="width: 90%" type="button" wire:click="search" >Найти туры</a>
+                            <a class="btn" style="width: 90%" type="button" wire:click="search" >{{word2(21)}}</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
     <div>
         <div class="tour-listing main-tours-wrap" id="tour-listing">
 
-            <p class="count-tours">Найдено туров: <b>556</b></p>
+            <p class="count-tours">{{word2(22)}}: <b>556</b></p>
             <div class="articles-wrap main-tours-wrap">
                 @foreach ($tours as $tour)
                     <article class="tour-loop article-loop main-tour">

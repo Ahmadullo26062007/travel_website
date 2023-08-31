@@ -1,6 +1,22 @@
 @extends('layouts.frontend')
 
 @section('content')
+    @php
+
+
+        function word4($id){
+               $l=\App\Models\Lenguage::find(1);
+               $w=\App\Models\Word::find($id);
+
+               if ($l->type==1){
+                   $s=$w->language_1;
+               }else{
+                   $s=$w->language_2;
+               }
+               return $s;
+           }
+
+    @endphp
     <main id="main" class="main" role="main">
         <div class="article__header page-tour__header">
             <div class="page-tour__thumb-wrap"
@@ -9,7 +25,7 @@
 
             <div class="page-tour__header-cont">
                 <div class="container">
-                    <h1 class="article__head page-tour__head">Страны</h1>
+                    <h1 class="article__head page-tour__head">{{word4(4)}}</h1>
                 </div>
             </div>
         </div>
@@ -22,7 +38,7 @@
             <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
 
             <div class="section">
-                <h2 class="section__head">Популярные страны</h2>
+                <h2 class="section__head">{{word4(23)}}</h2>
 
                 <div class="clear">
                      @foreach($countries as $c)
@@ -52,7 +68,7 @@
 
 
             <div class="section">
-                <h2 class="section__head">Все страны</h2>
+                <h2 class="section__head">{{word4(24)}}</h2>
                 <div class="clear loop-countries">
                     @foreach($countries as $c)
                         @if($c->type==0)

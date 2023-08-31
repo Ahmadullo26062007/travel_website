@@ -6,7 +6,7 @@
         </p>
     </div>
 
-    <h2 class="article__subhead">Туры</h2>
+    <h2 class="article__subhead">{{word3(2)}}</h2>
 
     <div class="articles-wrap main-tours-wrap">
         @foreach($tours as $t)
@@ -44,7 +44,7 @@
 
 
     <div class="cat-list-wrap">
-        <h3 class="section__desc">Типы отдыха</h3>
+        <h3 class="section__desc">{{word3(17)}}</h3>
         <ul class="cat-list cat-list--rest">
                @foreach($categories as $c)
             <li class="cat-list__item">

@@ -26,7 +26,7 @@
 
             <div class="page-tour__header-cont">
                 <div class="container">
-                    <h1 class="article__head page-tour__head">{{word2()}}</h1>
+                    <h1 class="article__head page-tour__head">{{word2(2)}}</h1>
                 </div>
             </div>
         </div>

@@ -1,6 +1,22 @@
 @extends('layouts.frontend')
 
 @section('content')
+    @php
+
+
+        function word5($id){
+               $l=\App\Models\Lenguage::find(1);
+               $w=\App\Models\Word::find($id);
+
+               if ($l->type==1){
+                   $s=$w->language_1;
+               }else{
+                   $s=$w->language_2;
+               }
+               return $s;
+           }
+
+    @endphp
     <main id="main" class="main" role="main">
         <article id="post-32938" class="article">
             <div class="article__header page-tour__header">
@@ -10,7 +26,7 @@
 
                 <div class="page-tour__header-cont">
                     <div class="container">
-                        <h1 class="article__head page-tour__head">VISA PROCESSING</h1>
+                        <h1 class="article__head page-tour__head">{{word5(25)}}</h1>
                     </div>
                 </div>
             </div>
@@ -22,36 +38,36 @@
 
 
 
-                    <p>One of the most difficult stages in preparing for a trip abroad is obtaining a visa.. </p>
+                    <p>{{word5(26)}}</p>
 
 
 
-                    <p>When it comes to obtaining a visa, many are faced with a choice: to get a visa on their own or to entrust this matter to professionals? </p>
+                    <p>{{word5(27)}}</p>
 
 
 
-                    <p>If you need help in obtaining a visa, please contact us. You simply provide us with the documents, and we take care of all the worries. Qualified visa support saves you time and effort. If necessary, we will advise you, help with advice and find answers to any of your questions.</p>
+                    <p>{{word5(28)}}</p>
 
 
 
-                    <p>You will significantly reduce the steps to obtaining a visa, increase the chances of obtaining it, save time, get everything you need for your trip in one company.</p>
+                    <p>{{word5(29)}}</p>
 
 
 
-                    <p><strong>The visa fee includes:</strong></p>
+                    <p><strong>{{word5(30)}}</strong></p>
 
 
 
                     <ul>
-                        <li>Filling out the questionnaire</li>
-                        <li>Booking a hotel</li>
-                        <li>Flight booking</li>
-                        <li>Submission to the VC</li>
-                        <li>Consular fee payment</li>
-                        <li>Visa fee payment</li>
-                        <li>Courier services</li>
-                        <li>Сaccompaniment for fingerprinting</li>
-                        <li>Registration in the VC </li>
+                        <li>{{word5(31)}}</li>
+                        <li>{{word5(32)}}</li>
+                        <li>{{word5(33)}}</li>
+                        <li>{{word5(34)}}</li>
+                        <li>{{word5(35)}}</li>
+                        <li>{{word5(36)}}</li>
+                        <li>{{word5(37)}}</li>
+                        <li>{{word5(38)}}</li>
+                        <li>{{word5(39)}}</li>
                     </ul>
                 </div>
 
@@ -60,9 +76,6 @@
 
                 </div>
                 <div class="visa-block">
-                    <h2 class="visa-block__head">Schengen</h2>
-
-
                     <div class="visa-list clear">
                         @foreach($visas as $visa)
                             @php

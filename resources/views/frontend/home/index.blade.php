@@ -1,6 +1,23 @@
 @extends('layouts.frontend')
 
 @section('content')
+    @php
+
+        $l=\App\Models\Lenguage::find(1);
+
+ function Word1($id){
+        $l=\App\Models\Lenguage::find(1);
+        $w=\App\Models\Word::find($id);
+
+        if ($l->type==1){
+            $s=$w->language_1;
+        }else{
+            $s=$w->language_2;
+        }
+        return $s;
+    }
+
+   @endphp
     <main id="main" class="main" role="main">
         <section class="intro" style="background: #eff4f8">
             <div class="intro__wrap">
@@ -14,25 +31,25 @@
                         <div class="mm-links__item">
                             <a href="{{{ route('front.tours.index') }}}" class="mm-links__link"
                                 style="background-image: url(https://kochevnik.kg/wp-content/uploads/2019/10/1-300x200.jpg)">
-                                <span class="mm-links__head">Туры</span>
+                                <span class="mm-links__head">{{Word1(2)}}</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.tickets.index') }}" class="mm-links__link"
                                 style="background-image: url(https://kochevnik.kg/wp-content/uploads/2019/10/1132-300x196.jpg)">
-                                <span class="mm-links__head">Авиабилеты</span>
+                                <span class="mm-links__head">{{Word1(6)}}</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.visas.index') }}" class="mm-links__link"
                                 style="background-image: url(https://kochevnik.kg/wp-content/uploads/2019/10/visas-300x200.jpg)">
-                                <span class="mm-links__head">Оформление виз</span>
+                                <span class="mm-links__head">{{Word1(5)}}</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.hot_tours.index') }}" class="mm-links__link"
                                 style="background-image: url(https://kochevnik.kg/wp-content/uploads/2020/02/gt-300x187.jpg)">
-                                <span class="mm-links__head">Горящие туры </span>
+                                <span class="mm-links__head">{{Word1(3)}} </span>
                             </a>
                         </div>
                     </div>
@@ -42,9 +59,9 @@
             <div class="intro__form">
                 <div class="container">
                     <div class="form align-center">
-                        <h1>Поиск горящих туров онлайн</h1>
+{{--                        <h1>{{\App\Http\Controllers\Word1Controller::ord(2)}}</h1>--}}
                         <div class="tv-search-form tv-moduleid-181896"></div>
-                        <h2>Большое турагентство - маленькие цены</h2>
+                        <h2>{{Word1(10)}}</h2>
                         <br>
                         <script type="text/javascript" src="//tourvisor.ru/module/init.js"></script>
                     </div>
@@ -54,12 +71,11 @@
 
         <section class="section m-tours">
             <div class="container">
-                <h2 class="section__head">Организуйте себе отдых в теплой стране</h2>
+                <h2 class="section__head">{{Word1(11)}}</h2>
                 <div class="row">
                     <div class="col-md-7">
 
-                        <p class="section__desc">Все хлопоты по выбору тура и комфортному
-                            пребыванию берем на себя</p>
+                        <p class="section__desc">{{Word1(12)}}</p>
                     </div>
 
                     <div class="col-md-5 align-right">
@@ -67,24 +83,22 @@
 
                         <a rel="nofollow"
                             href="https://api.whatsapp.com/send?phone={{ App\Models\About::find(1)->whats_app }}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight"
-                            class="btn btn-primary m-tours__btn" target="_blank">Оставить заявку на подбор
-                            тура</a>
+                            class="btn btn-primary m-tours__btn" target="_blank">{{Word1(20)}}</a>
                     </div>
                 </div>
 
                 @livewire('home-tour-livewire')
 
                 <div class="align-center">
-                    <a href="{{ route('front.tours.index') }}" class="main-tours-wrap__btn">More Tours</a>
+                    <a href="{{ route('front.tours.index') }}" class="main-tours-wrap__btn">{{Word1(13)}}</a>
                 </div>
             </div>
         </section>
 
         <section class="section main-countries">
             <div class="container">
-                <h2 class="section__head">Популярные страны, где чаще всего отдыхают
-                    туристы из Кыргызстана</h2>
-                <h3 class="section__desc">Страны</h3>
+                <h2 class="section__head">{{Word1(14)}}</h2>
+                <h3 class="section__desc">{{Word1(4)}}</h3>
                 <div class="clear">
 
                     @foreach ($countries as $c)
@@ -110,11 +124,11 @@
                 </div>
 
                 <div class="align-right"><a class="main-countries__link btn"
-                        href="{{ route('front.countries.index') }}">Other countries</a></div>
+                        href="{{ route('front.countries.index') }}">{{Word1(19)}}</a></div>
 
 
                 <div class="cat-list-wrap">
-                    <h3 class="section__desc">Categories</h3>
+                    <h3 class="section__desc">{{Word1(15)}}</h3>
                     <ul class="cat-list cat-list--rest">
 
                         @foreach ($categories as $category)
@@ -132,7 +146,7 @@
 
         <section class="section">
             <div class="container">
-                <h2 class="section__head">Горящие туры</h2>
+                <h2 class="section__head">{{Word1(3)}}</h2>
                 <div class="tv-hot-tours tv-moduleid-960016">
                     @foreach ($hot_tours as $t)
                         <article class="tour-loop article-loop main-tour">
@@ -164,7 +178,7 @@
                 </div>
 
                 <div class="align-center">
-                    <a href="{{ route('front.hot_tours.index') }}" class="main-tours-wrap__btn">More Tours</a>
+                    <a href="{{ route('front.hot_tours.index') }}" class="main-tours-wrap__btn">{{Word1(13)}}</a>
                 </div>
             </div>
         </section>

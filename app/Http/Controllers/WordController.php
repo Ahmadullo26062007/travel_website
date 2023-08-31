@@ -15,7 +15,17 @@ class WordController extends Controller
         $words=Word::orderByDesc('id')->get();
         return view('admin.words.index',compact('words'));
     }
+    function word($id){
+        $l=\App\Models\Lenguage::find(1);
+        $w=\App\Models\Word::find($id);
 
+        if ($l->type==1){
+            $s=$w->language_1;
+        }else{
+            $s=$w->language_2;
+        }
+        return $s;
+    }
     /**
      * Show the form for creating a new resource.
      */

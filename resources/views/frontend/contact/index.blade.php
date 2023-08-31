@@ -26,15 +26,18 @@
                 </div>
 
 
-                <div class="c-office">
-                    <h3 class="c-office__city">Бишкек</h3>
+                <div>
 
-                    <p class="c-office__address">пр. Байтик Баатыра 74 </p>
+                    <p class="c-office__address">Киргизская Республика, Баткенская область, Кадамжайский район, село округ Исхак-Полотхан, село Жениш, улица Бай маала, дом 47</p>
 
                     <p>
                         <span class="c-office__phone h-contacts__phone ">
-                            <a href="tel:+996550312949">+996 (550) 312949</a> </span>
+                            <a href="tel:+{{\App\Models\About::find(1)->phone_number1}}">+{{\App\Models\About::find(1)->phone_number1}}</a> </span> <span></span>
+                        <span class="c-office__phone h-contacts__phone ">
+                            <a href="tel:+{{\App\Models\About::find(1)->phone_number2}}">+{{\App\Models\About::find(1)->phone_number2}}</a> </span>
+
                     </p>
+
 
 
                     <div class="c-office__map">
@@ -71,22 +74,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="c-office">
-                    <h3 class="c-office__city">Ош</h3>
 
-                    <p class="c-office__address">пр-т Масалиева, 28/2</p>
-
-                    <p>
-                        <span class="c-office__phone h-contacts__phone ">
-                            <a href="tel:+996323286677">+996 (3232) 8 66 77</a> </span>
-                    </p>
-                    <p>
-                        <span class="c-office__phone h-contacts__phone ">
-                            <a href="tel:+996550086677">+996 (550) 086-677</a> </span>
-                    </p>
-
-
-                </div>
                 <!-- <div class="contacts__map">
                         <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1nS-vaY-6bxIRzDz0gPWuSmQ59hc" width="100%" height="600"></iframe>
                     </div> -->

@@ -27,7 +27,7 @@
     <div class="row col-12 mb-3">
         <div class="col-12">
             <div class="form-group">
-                <label for="">Email</label>
+                <label for="">Email></label>
                 <input type="email" name="email" wire:model="email" class="form-control" value="{{ $about->email }}"
                        placeholder="Email">
             </div>

@@ -52,7 +52,7 @@
                                     <h5 class="card-title mb-0">Price</h5>
 
                                     <div class="card-body">
-                                        <input type="text" name="price" class="form-control" placeholder="Write price">
+                                        <input type="number" name="price" class="form-control" placeholder="Write price">
                                     </div>
                                 </div>
 

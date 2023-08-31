@@ -2,6 +2,19 @@
 @section('content')
     @php
         $a=\App\Models\About::find(1);
+
+        function word6($id){
+               $l=\App\Models\Lenguage::find(1);
+               $w=\App\Models\Word::find($id);
+
+               if ($l->type==1){
+                   $s=$w->language_1;
+               }else{
+                   $s=$w->language_2;
+               }
+               return $s;
+           }
+
     @endphp
     <main id="main" class="main" role="main">
         <article id="post-2" class="article">
@@ -13,7 +26,7 @@
 
                 <div class="page-tour__header-cont">
                     <div class="container">
-                        <h1 class="article__head page-tour__head">Flights</h1>
+                        <h1 class="article__head page-tour__head">{{word6(40)}}</h1>
                     </div>
                 </div>
             </div>
@@ -29,21 +42,20 @@
                          alt="Бронирование билетов по WahtsApp">
 
                     <div class="wa-book__wrap">
-                        <span class="wa-book__head text-danger">24/7 ticket booking via WhatsApp</span>
+                        <span class="wa-book__head text-danger">{{word6(41)}}</span>
 
-                        <span class="wa-book__desc">Write to us in the WhatsApp application to the number <span
-                                class="nowrap"><strong>+{{$a->whats_app}}</strong></span> куда и когда хотите полететь. Мы
-                            найдем оптимальные маршруты для вас в любое время суток.</span>
+                        <span class="wa-book__desc">{{word6(42)}} <span
+                                class="nowrap"><strong>+{{$a->whats_app}}</strong></span> {{word6(43)}}</span>
 
                         <a target="_blank" class="btn btn--whatsapp"
                            href="https://api.whatsapp.com/send?phone={{App\Models\About::find(1)->whats_app}}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight">
-                            <span>Написать в WhatsApp +{{$a->whats_app}}</span>
+                            <span>{{word6(44)}} +{{$a->whats_app}}</span>
                         </a>
                     </div>
                 </div>
 
                 <div class="article__section">
-                    <h2 style="margin-left: 200px;" class="article__subhead">Flights from partner airlines Travel agency "WONDER WORLD"</h2>
+                    <h2 style="margin-left: 200px;" class="article__subhead">{{word6(45)}}</h2>
 
                     <ul class="avia-partners-list">
                         @foreach($tickets as $ticket)

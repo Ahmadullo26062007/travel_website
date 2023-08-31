@@ -3,6 +3,19 @@
 @section('content')
     @php
         $a = \App\Models\About::find(1);
+
+        function word6($id){
+               $l=\App\Models\Lenguage::find(1);
+               $w=\App\Models\Word::find($id);
+
+               if ($l->type==1){
+                   $s=$w->language_1;
+               }else{
+                   $s=$w->language_2;
+               }
+               return $s;
+           }
+
     @endphp
     <main id="main" class="main" role="main">
         <article id="post-33925"
@@ -29,17 +42,17 @@
                 <div class="tour-info">
                     <div class="clear tour-info__wrap">
                         <div class="tour-info__item match-height">
-                            <span class="tour-info__label">Дата</span>
+                            <span class="tour-info__label">{{word6(47)}}</span>
                             <span class="tour-info__val">{{ $t->start_time }} - {{ $t->end_time }}</span>
                         </div>
 
                         <div class="tour-info__item match-height">
-                            <span class="tour-info__label">Длительность</span>
+                            <span class="tour-info__label">{{word6(48)}}</span>
                             <span class="tour-info__val"><b>{{ $t->length }}</b> </span>
                         </div>
 
                         <div class="tour-info__item match-height">
-                            <span class="tour-info__label">Стоимость</span>
+                            <span class="tour-info__label">{{word6(49)}}</span>
                             <span class="tour-info__val">
                                 <strong class="tour-info__val--num">{{ $t->price }}</strong>
 
@@ -47,7 +60,7 @@
                         </div>
 
                         <div class="tour-info__item match-height">
-                            <span class="tour-info__label">Город вылета</span>
+                            <span class="tour-info__label">{{word6(50)}}</span>
                             <span class="tour-info__val"><b>{{ $t->city }}</b></span>
                         </div>
 
@@ -55,7 +68,7 @@
                             <!-- <button href="#popup-form" class="btn btn-primary tour-info__btn js-pop-up-btn" data-head="о. Занзибар | Hiliki House 3*" data-desc="Заполните форму и мы вам перезвоним">Оставить заявку</button> -->
                             <a rel="nofollow" target="_blank"
                                href="https://api.whatsapp.com/send?phone={{App\Models\About::find(1)->whats_app}}&amp;text=Hello Travel agency 'WONDER WORLD'! I want to book a flight"
-                               class="btn btn-primary tour-info__btn">Оставить заявку</a>
+                               class="btn btn-primary tour-info__btn">{{word6(20)}}</a>
                         </div>
                     </div>
                 </div>
@@ -108,11 +121,10 @@ customGoal:BUeeHNSPCaASBaRDSGEXO:2 customGoal:BUeeZdbaBMRbBYWKOBLHXT:2">
                     <div class="col-md-4">
 
 
-                        <p class="tour-info__cap"><span>Возможны изменения цен. Актуальные цены уточняйте у
-                                менеджеров.</span></p>
+                        <p class="tour-info__cap"><span>{{word6(51)}}</span></p>
 
                         <div class="page-tour__sidebar-block">
-                            <p><i class="fa fa-share-alt" aria-hidden="true"></i> <strong>Поделиться</strong></p>
+                            <p><i class="fa fa-share-alt" aria-hidden="true"></i> <strong>{{word6(52)}}</strong></p>
 
                             <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
                             <script src="https://yastatic.net/share2/share.js"></script>
@@ -138,7 +150,7 @@ customGoal:BUeeHNSPCaASBaRDSGEXO:2 customGoal:BUeeZdbaBMRbBYWKOBLHXT:2">
 
 
                 <div class="article__section main-tours-wrap page-tour__related" style="background: none !importent;">
-                    <h2 class="">Похожие туры</h2>
+                    <h2 class="">{{word6(53)}}</h2>
 
 
                     @foreach ($f_t as $tour)
@@ -172,7 +184,7 @@ customGoal:BUeeHNSPCaASBaRDSGEXO:2 customGoal:BUeeZdbaBMRbBYWKOBLHXT:2">
 
                 </div>
                 <div class="align-center">
-                    <a href="{{ route('front.tours.index') }}" class="main-tours-wrap__btn">Посмотреть больше туровы</a>
+                    <a href="{{ route('front.tours.index') }}" class="main-tours-wrap__btn">{{word6(13)}}</a>
                 </div>
 
             </div>

@@ -10,7 +10,7 @@
                             sizes="(max-width: 900px) 100vw, 900px" /> </a>
                 </div>
 
-                <a href="" class="tour-loop__country">
+                <a href="{{route('front.country.detail',$tour->country->id)}}" class="tour-loop__country">
                     {{ $tour->country->name }} </a>
             </div>
 
@@ -30,5 +30,5 @@
     @endforeach
 
 
-    
+
 </div>

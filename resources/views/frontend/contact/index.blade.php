@@ -1,11 +1,26 @@
 @extends('layouts.frontend')
 
 @section('content')
+    @php
+
+        function word6($id){
+               $l=\App\Models\Lenguage::find(1);
+               $w=\App\Models\Word::find($id);
+
+               if ($l->type==1){
+                   $s=$w->language_1;
+               }else{
+                   $s=$w->language_2;
+               }
+               return $s;
+           }
+
+    @endphp
     <main id="main" class="main" role="main">
         <div class="container">
             <article id="post-3328" class="article">
 
-                <h1 class="article__head">Контакты</h1>
+                <h1 class="article__head">{{word6(46)}}</h1>
 
                 <div class="article__content">
                 </div>

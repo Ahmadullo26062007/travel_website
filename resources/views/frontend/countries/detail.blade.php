@@ -1,6 +1,21 @@
 @extends('layouts.frontend')
 
 @section('content')
+    @php
+
+        function word6($id){
+               $l=\App\Models\Lenguage::find(1);
+               $w=\App\Models\Word::find($id);
+
+               if ($l->type==1){
+                   $s=$w->language_1;
+               }else{
+                   $s=$w->language_2;
+               }
+               return $s;
+           }
+
+    @endphp
     <main id="main" class="main" role="main">
 
 
@@ -13,7 +28,7 @@
 
                 <div class="page-tour__header-cont">
                     <div class="container">
-                        <h1 class="article__head page-tour__head">Tours in {{ $country->name }}</h1>
+                        <h1 class="article__head page-tour__head">{{word6(2)}} {{ $country->name }}</h1>
                     </div>
 
                     <nav id="article-nav" class="article__nav">
@@ -30,7 +45,7 @@
                 </div>
 
                 <div class="country-tours" id="country-tours">
-                    <h2 class="article__subhead">Tours </h2>
+                    <h2 class="article__subhead">{{word6(2)}} </h2>
 
                     <div class="articles-wrap main-tours-wrap">
 

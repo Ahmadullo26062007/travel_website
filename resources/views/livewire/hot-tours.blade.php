@@ -18,7 +18,7 @@
                         <img src="{{asset("images/$t->image")}}" class="" alt="" srcset="" sizes="(max-width: 900px) 100vw, 900px" /> </a>
                 </div>
 
-                <a href="" class="tour-loop__country">
+                <a href="{{route('front.country.detail',$t->country->id)}}" class="tour-loop__country">
                     {{$t->country->name}} </a>
             </div>
 
@@ -48,7 +48,7 @@
         <ul class="cat-list cat-list--rest">
                @foreach($categories as $c)
             <li class="cat-list__item">
-                <a href="" class="cat-list__link">
+                <a href="{{ route('categories.detail', $c->id) }}" class="cat-list__link">
                     <span class="cat-list__title">{{$c->name}}</span>
                 </a>
             </li>

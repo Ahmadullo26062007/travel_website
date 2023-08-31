@@ -1,6 +1,20 @@
 @extends('layouts.frontend')
 
 @section('content')
+    @php
+ function Word1($id){
+        $l=\App\Models\Lenguage::find(1);
+        $w=\App\Models\Word::find($id);
+
+        if ($l->type==1){
+            $s=$w->language_1;
+        }else{
+            $s=$w->language_2;
+        }
+        return $s;
+    }
+
+    @endphp
     <main id="main" class="main" role="main">
         <div class="article__header page-tour__header">
             <div class="page-tour__thumb-wrap" style="background-image: url()">
@@ -21,7 +35,7 @@
                 </p>
             </div>
 
-            <h2 class="article__subhead">Tours</h2>
+            <h2 class="article__subhead">{{Word1(2)}}</h2>
 
             <div class="articles-wrap main-tours-wrap">
 
@@ -61,7 +75,7 @@
 
 
             <div class="cat-list-wrap">
-                <h3 class="section__desc">Типы отдыха</h3>
+                <h3 class="section__desc">{{Word1(17)}}</h3>
                 <ul class="cat-list cat-list--rest">
 
                     @foreach ($categories as $category)

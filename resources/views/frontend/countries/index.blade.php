@@ -20,7 +20,7 @@
     <main id="main" class="main" role="main">
         <div class="article__header page-tour__header">
             <div class="page-tour__thumb-wrap"
-                style="background-image: url(https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/countries-bg.jpg)">
+                style="background-image: url({{asset('laravel/public/images/country.jpg')}})">
             </div>
 
             <div class="page-tour__header-cont">

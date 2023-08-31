@@ -50,7 +50,7 @@
                             <li class="avia-partner">
                                 <div class="avia-partner__img-wrap">
                                     <img class="avia-partner__img"
-                                         src="{{asset('images/'.$ticket->image)}}"
+                                         src="{{asset('laravel/public/images/'.$ticket->image)}}"
                                          alt="Логотип - {{$ticket->name}}">
                                 </div>
 

@@ -381,9 +381,9 @@
                         <div class="dropdown" style="border-color: #eff4f8 !important;">
                             <button style="background:none !important;border-color: #eff4f8 !important;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @if($l->type==1)
-                                    <img src="{{asset('countries/rus.jpg')}}" width="30" alt="">
+                                    <img src="{{asset('laravel/public/countries/rus.jpg')}}" width="30" alt="">
                                 @else
-                                    <img src="{{asset('countries/eng.jpg')}}" width="30" alt="">
+                                    <img src="{{asset('laravel/public/countries/eng.jpg')}}" width="30" alt="">
                                 @endif
                             </button>
                             <div class="dropdown-menu text-dark" style="font-size: 18px" aria-labelledby="dropdownMenuButton">

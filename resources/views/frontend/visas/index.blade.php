@@ -83,7 +83,7 @@
 
                                 <div class="visa-list__img-wrap">
                                     <img class="visa-list__img"
-                                         src="{{asset('countries/'.$county->flag)}}"
+                                         src="{{asset('laravel/public/countries/'.$county->flag)}}"
                                          alt="Флаг Швейцарии">
                                 </div>
 

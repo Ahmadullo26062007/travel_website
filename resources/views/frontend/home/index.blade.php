@@ -30,25 +30,25 @@
                     <div class="clear">
                         <div class="mm-links__item">
                             <a href="{{{ route('front.tours.index') }}}" class="mm-links__link"
-                                style="background-image: url({{ asset('images/first_image.jpg') }})">
+                                style="background-image: url({{ asset('laravel/public/images/first_image.jpg') }})">
                                 <span class="mm-links__head">{{Word1(2)}}</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.tickets.index') }}" class="mm-links__link"
-                                style="background-image: url({{asset('images/second_image.jpg')}})">
+                                style="background-image: url({{asset('laravel/public/images/ticket.jpg')}})">
                                 <span class="mm-links__head">{{Word1(6)}}</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.visas.index') }}" class="mm-links__link"
-                                style="background-image: url({{asset('images/third_image.jpg')}})">
+                                style="background-image: url({{asset('laravel/public/images/visa.jpeg')}})">
                                 <span class="mm-links__head">{{Word1(5)}}</span>
                             </a>
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.hot_tours.index') }}" class="mm-links__link"
-                                style="background-image: url({{asset('images/ .jpg')}})">
+                                style="background-image: url({{asset('laravel/public/images/hot_tour.jpg')}})">
                                 <span class="mm-links__head">{{Word1(3)}} </span>
                             </a>
                         </div>
@@ -106,13 +106,13 @@
                             <a class="main-country__link" title="Туры в Турцию"
                                 href="{{ route('front.country.detail', $c->id) }}">
                                 <div class="main-country__img-wrap">
-                                    <img src="{{ asset("countries/$c->image") }}" class="main-country__img wp-post-image"
+                                    <img src="{{ asset("laravel/public/countries/$c->image") }}" class="main-country__img wp-post-image"
                                         alt="" />
                                 </div>
 
 
                                 <div class="main-country__content">
-                                    <img class="main-country__flag" src="{{ asset("countries/$c->flag") }}"
+                                    <img class="main-country__flag" src="{{ asset("laravel/public/countries/$c->flag") }}"
                                         alt="Туры в Турцию флаг">
 
                                     <h3 class="main-country__title">{{ $c->name }}</h3>
@@ -153,7 +153,7 @@
                             <div class="tour-loop__top">
                                 <div class="tour-loop__img-wrap">
                                     <a href="{{ route('front.tours.detail', $t->id) }}" title="">
-                                        <img src="{{ asset("images/$t->image") }}" class="" alt=""
+                                        <img src="{{ asset("laravel/public/images/$t->image") }}" class="" alt=""
                                             srcset="" sizes="(max-width: 900px) 100vw, 900px" /> </a>
                                 </div>
 

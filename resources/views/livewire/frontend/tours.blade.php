@@ -1,8 +1,31 @@
 <div>
+    @php
+
+
+        function word3($id){
+               $l=\App\Models\Lenguage::find(1);
+               $w=\App\Models\Word::find($id);
+
+               if ($l->type==1){
+                   $s=$w->language_1;
+               }else{
+                   $s=$w->language_2;
+               }
+               return $s;
+           }
+//          function count_tour(){
+//            $c=0;
+//            foreach (\App\Models\Tour::all() as $t){
+//                $c=$c+1;
+//            }
+//            return $c;
+//          }
+
+    @endphp
     <div>
         <div class="sidebar  " id="sidebar">
 
-            <h2 class="sidebar__head"><i class="fa fa-sliders" aria-hidden="true"></i>{{word2(16)}}</h2>
+            <h2 class="sidebar__head"><i class="fa fa-sliders" aria-hidden="true"></i>{{word3(16)}}</h2>
 
 
             <div class="filter">
@@ -11,7 +34,7 @@
                         <div class="col-md-6">
                             <div class="filter__item" id="filter-country">
 
-                                <span class="filter__label">{{word2(4)}}</span>
+                                <span class="filter__label">{{word3(4)}}</span>
 
                                 <select name="country_id" wire:model="country_id"  class="form-select"  >
                                     <option value="">...</option>
@@ -26,7 +49,7 @@
                         <div class="col-md-6">
                             <div class="filter__item" id="filter-rest">
 
-                                <span class="filter__label">{{word2(17)}}</span>
+                                <span class="filter__label">{{word3(17)}}</span>
                                 <select name="category_id" wire:model="category_id" class="form-select"  >
                                     <option value="">...</option>
                                 @foreach($categories as $id=>$c)
@@ -42,7 +65,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="filter__item" id="filter-departure">
-                                <span class="filter__label">{{word2(18)}}</span>
+                                <span class="filter__label">{{word3(18)}}</span>
                                 <div class="filter__col">
                                     <input class="filter__input" id="filter-departure-14" name="departure"
                                         type="checkbox" value="14">
@@ -74,7 +97,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <a class="btn" style="width: 90%" type="button" wire:click="search" >{{word2(21)}}</a>
+                            <a class="btn" style="width: 90%" type="button" wire:click="search" >{{word3(21)}}</a>
                         </div>
                     </div>
                 </div>
@@ -85,7 +108,7 @@
     <div>
         <div class="tour-listing main-tours-wrap" id="tour-listing">
 
-            <p class="count-tours">{{word2(22)}}: <b>{{count_tour()}}</b></p>
+            <p class="count-tours">{{word3(22)}}: <b>{{count_tour()}}</b></p>
             <div class="articles-wrap main-tours-wrap">
                 @foreach ($tours as $tour)
                     <article class="tour-loop article-loop main-tour">

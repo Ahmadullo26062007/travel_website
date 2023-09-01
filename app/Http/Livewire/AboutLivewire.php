@@ -53,7 +53,7 @@ class AboutLivewire extends Component
     {
         $this->validate();
         if ($this->image!=$this->about->image){
-            $this->image->store('public');
+            $this->image->store('laravel/public');
             $image_name = $this->image->hashName();
             $this->about->update([
                 'phone_number1' => $this->phone_number1,

@@ -16,7 +16,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Username</label>
                                 <input class="form-control form-control-lg" wire:model="username" type="text"
-                                       name="username" placeholder="Enter your username" />
+                                       name="username" placeholder="Enter your username"/>
                                 @error('username')
                                 <span style="color: red">{{ $message }}</span>
                                 @enderror
@@ -24,7 +24,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Password</label>
                                 <input class="form-control form-control-lg" type="password" wire:model="password"
-                                       name="password" placeholder="Enter your password" />
+                                       name="password" placeholder="Enter your password"/>
                                 @error('password')
                                 <span style="color: red">{{ $message }}</span>
                                 @enderror
@@ -36,6 +36,9 @@
                                 <span style="color: red">Такой пользователь не найден</span>
                             @endif
                             <div class="text-center mt-3">
+                                <a class="btn btn-secondary" href="{{route('home.index')}}">Вернуться на
+                                    сайт
+                                </a>
                                 <button type="button" wire:click="login" class="btn btn-lg btn-primary">Войти</button>
                             </div>
                         </form>

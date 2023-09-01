@@ -1,31 +1,31 @@
 @extends('layouts.frontend')
 
 @section('content')
-    @php
 
-
- function word2($id){
-        $l=\App\Models\Lenguage::find(1);
-        $w=\App\Models\Word::find($id);
-
-        if ($l->type==1){
-            $s=$w->language_1;
-        }else{
-            $s=$w->language_2;
-        }
-        return $s;
-    }
-   function count_tour(){
-     $c=0;
-     foreach (\App\Models\Tour::all() as $t){
-         $c=$c+1;
-     }
-     return $c;
-   }
-
-    @endphp
     <main id="main" class="main sidebar-left" role="main">
+        @php
 
+
+            function word2($id){
+                   $l=\App\Models\Lenguage::find(1);
+                   $w=\App\Models\Word::find($id);
+
+                   if ($l->type==1){
+                       $s=$w->language_1;
+                   }else{
+                       $s=$w->language_2;
+                   }
+                   return $s;
+               }
+              function count_tour(){
+                $c=0;
+                foreach (\App\Models\Tour::all() as $t){
+                    $c=$c+1;
+                }
+                return $c;
+              }
+
+        @endphp
         <div class="article__header page-tour__header">
             <div class="page-tour__thumb-wrap"
                 style="background-image: url({{asset('laravel/public/images/tour.jpg')}})">

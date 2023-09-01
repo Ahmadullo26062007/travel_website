@@ -21,7 +21,7 @@
         <article id="post-32938" class="article">
             <div class="article__header page-tour__header">
                 <div class="page-tour__thumb-wrap"
-                    style="background-image: url({{asset('laravel/public/images/visa.jpg')}})">
+                     style="background-image: url({{asset('laravel/public/images/visa.jpg')}})">
                 </div>
 
                 <div class="page-tour__header-cont">
@@ -37,25 +37,19 @@
                     <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
 
 
-
                     <p>{{word5(26)}}</p>
-
 
 
                     <p>{{word5(27)}}</p>
 
 
-
                     <p>{{word5(28)}}</p>
-
 
 
                     <p>{{word5(29)}}</p>
 
 
-
                     <p><strong>{{word5(30)}}</strong></p>
-
 
 
                     <ul>
@@ -82,33 +76,34 @@
                                 $county=\App\Models\Country::find($visa->country_id);
                                 $pricetype=\App\Models\Visa::PRICETYPES[$visa->price_type];
                             @endphp
-                        <div class="visa-list__item match-height">
-                            <span class="visa-list__head">{{$county->name}}</span>
+                            <div class="visa-list__item match-height">
+                                <span class="visa-list__head">{{$county->name}}</span>
 
                                 <span class="visa-list__subhead">Visa processing time - from {{$visa->visa_time}} working days </span>
 
-                            <div class="visa-list__img-wrap">
-                                <img class="visa-list__img"
-                                    src="{{asset('countries/'.$county->flag)}}"
-                                    alt="Флаг Швейцарии">
-                            </div>
+                                <div class="visa-list__img-wrap">
+                                    <img class="visa-list__img"
+                                         src="{{asset('countries/'.$county->flag)}}"
+                                         alt="Флаг Швейцарии">
+                                </div>
 
-                            <span class="visa-list__price">{{$visa->price}} {{$pricetype}}</span>
+                                <span class="visa-list__price">{{$visa->price}} {{$pricetype}}</span>
 
-                            <a rel="nofollow" target="_blank" class="visa-list__btn btn"
-                                href="https://api.whatsapp.com/send/?phone=996222009155&text=Hello+Travel+agency+'WONDER WORLD'">Order</a>
+                                <a rel="nofollow" target="_blank" class="visa-list__btn btn"
+                                   href="https://api.whatsapp.com/send/?phone=996222009155&text=Hello+Travel+agency+'WONDER WORLD'">Order</a>
 
-                            <button class="js-pop-up-btn visa-list__btn visa-list__btn--more"
-                                href="#visa-list__content-{{$visa->id}}">More details</button>
+                                <button class="js-pop-up-btn visa-list__btn visa-list__btn--more"
+                                        href="#visa-list__content-{{$visa->id}}">More details
+                                </button>
 
-                            <div id="visa-list__content-{{$visa->id}}" class="mfp-hide popup">
-                                <div class="popup__wrap">
-                                    <p>List of required documents<br />
-                                    {{$visa->description}}<br>
-                                    </p>
+                                <div id="visa-list__content-{{$visa->id}}" class="mfp-hide popup">
+                                    <div class="popup__wrap">
+                                        <p>List of required documents<br/>
+                                            {{$visa->description}}<br>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
 
                     </div>

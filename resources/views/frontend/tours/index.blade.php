@@ -17,13 +17,7 @@
                    }
                    return $s;
                }
-              function count_tour(){
-                $c=0;
-                foreach (\App\Models\Tour::all() as $t){
-                    $c=$c+1;
-                }
-                return $c;
-              }
+
 
         @endphp
         <div class="article__header page-tour__header">

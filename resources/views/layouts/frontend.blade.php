@@ -483,12 +483,6 @@
                         </div>
                     </div>
 
-                    <p class="copyright">&copy; 2011 - 2023 Kochevnik.kg. Все права защищены. </p>
-
-                    <p><a href="https://tegay.net" target="_blank" class="tegay-link"
-                            style="margin: 30px 0 0;text-transform:uppercase;font-size:9px;padding:6px 0 3px;text-align:right;">Создание
-                            сайта TEGAY.NET</a>
-                    </p>
                 </div>
                 </div>
 

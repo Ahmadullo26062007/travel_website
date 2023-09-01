@@ -24,30 +24,20 @@ class Tours extends Component
     public function search()
     {
         if($this->country_id && $this->category_id){
-           $tours=[];
-           foreach (Tour::all() as $t){
-               if ($t->category_id==$this->category_id && $t->country_id==$this->country_id ){
-                   $tours[]=$t;
-               }
-           }
+           $tours=Tour::where('country_id',$this->country_id)->where('category_id',$this->category_id)->get();
+//              dd($tours);
            $this->tours=$tours;
         }else{
             if($this->country_id && !$this->category_id){
-                $tours=[];
-                foreach (Tour::all() as $t){
-                    if ($t->country_id==$this->country_id ){
-                        $tours[]=$t;
-                    }
-                }
+                $tours=Tour::where('country_id',$this->country_id)->get();
+//                           $this->tours=[];
+//                dd($tours);
                 $this->tours=$tours;
             }else{
                 if(!$this->country_id && $this->category_id){
-                    $tours=[];
-                    foreach (Tour::all() as $t){
-                        if ($t->category_id==$this->category_id ){
-                            $tours[]=$t;
-                        }
-                    }
+                    $tours=Tour::where('category_id',$this->category_id)->get();
+//                                       $this->tours=[];
+//                    dd($tours);
                     $this->tours=$tours;
                 } else{
 

@@ -37,11 +37,11 @@
 
                                 <span class="filter__label">{{word3(4)}}</span>
 
-                                <select name="country_id" wire:model="country_id"  class="form-select"  >
+                                <select name="country_id" wire:model="country_id" class="form-select">
                                     <option value="">...</option>
 
-                                @foreach($countries as $id=>$c)
-                                    <option value="{{$id}}">{{$c}}</option>
+                                    @foreach($countries as $id=>$c)
+                                        <option value="{{$id}}">{{$c}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -51,9 +51,9 @@
                             <div class="filter__item" id="filter-rest">
 
                                 <span class="filter__label">{{word3(17)}}</span>
-                                <select name="category_id" wire:model="category_id" class="form-select"  >
+                                <select name="category_id" wire:model="category_id" class="form-select">
                                     <option value="">...</option>
-                                @foreach($categories as $id=>$c)
+                                    @foreach($categories as $id=>$c)
                                         <option value="{{$id}}">{{$c}}</option>
                                     @endforeach
                                 </select>
@@ -69,7 +69,7 @@
                                 <span class="filter__label">{{word3(18)}}</span>
                                 <div class="filter__col">
                                     <input class="filter__input" id="filter-departure-14" name="departure"
-                                        type="checkbox" value="14">
+                                           type="checkbox" value="14">
                                     <label class="filter__cb-label" for="filter-departure-14">Бишкек</label>
 
                                     <span class="filter__check">
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="filter__col">
                                     <input class="filter__input" id="filter-departure-15" name="departure"
-                                        type="checkbox" value="15">
+                                           type="checkbox" value="15">
                                     <label class="filter__cb-label" for="filter-departure-15">Алматы</label>
 
                                     <span class="filter__check">
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="filter__col">
                                     <input class="filter__input" id="filter-departure-16" name="departure"
-                                        type="checkbox" value="16">
+                                           type="checkbox" value="16">
                                     <label class="filter__cb-label" for="filter-departure-16">Москва</label>
 
                                     <span class="filter__check">
@@ -98,7 +98,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <a class="btn" style="width: 90%" type="button" wire:click="search" >{{word3(21)}}</a>
+                            <a class="btn" style="width: 90%" type="button" wire:click="search">{{word3(21)}}</a>
                         </div>
                     </div>
                 </div>
@@ -117,8 +117,8 @@
                             <div class="tour-loop__img-wrap">
                                 <a href="{{ route('front.tours.detail', $tour->id) }}" title="">
                                     <img src="{{ asset("images/$tour->image") }}"
-                                        class="tour-loop__img article-loop__img wp-post-image" alt=""
-                                        sizes="(max-width: 900px) 100vw, 900px" /> </a>
+                                         class="tour-loop__img article-loop__img wp-post-image" alt=""
+                                         sizes="(max-width: 900px) 100vw, 900px"/> </a>
                             </div>
 
                             <a href="{{route('front.country.detail',$tour->country->id)}}" class="tour-loop__country">

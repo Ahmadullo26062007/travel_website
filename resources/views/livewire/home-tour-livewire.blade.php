@@ -5,7 +5,7 @@
             <div class="tour-loop__top">
                 <div class="tour-loop__img-wrap">
                     <a href="{{ route('front.tours.detail', $tour->id) }}" title="">
-                        <img src="{{ asset("images/$tour->image") }}"
+                        <img src="{{ asset("laravel/public/images/$tour->image") }}"
                             class="tour-loop__img article-loop__img wp-post-image" alt=""
                             sizes="(max-width: 900px) 100vw, 900px" /> </a>
                 </div>

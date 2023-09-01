@@ -7,7 +7,7 @@
                     <div class="card flex-fill">
                         <div class="card-header">
 
-                            <h5 class="card-title">Create category</h5>
+                            <h5 class="card-title">Создать категорию</h5>
                         </div>
 
 
@@ -24,11 +24,11 @@
                             <div class="row">
                                 <div>
 
-                                    <h5 class="card-title mb-0">Name</h5>
+                                    <h5 class="card-title mb-0">Имя</h5>
 
                                     <div class="card-body">
                                         <input type="text" name="name" class="form-control"
-                                               placeholder="Category title">
+                                               placeholder="Название категории">
                                     </div>
                                 </div>
                             </div>

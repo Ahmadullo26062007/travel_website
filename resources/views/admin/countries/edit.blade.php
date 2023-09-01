@@ -7,7 +7,7 @@
                     <div class="card flex-fill">
                         <div class="card-header">
 
-                            <h5 class="card-title">Update Country</h5>
+                            <h5 class="card-title">Обновить страну</h5>
                         </div>
 
 
@@ -23,22 +23,22 @@
                             @csrf
                             <div class="row">
                                 <div>
-                                    <h5 class="card-title mb-0">Name</h5>
+                                    <h5 class="card-title mb-0">Имя</h5>
                                     <div class="card-body">
                                         <input type="text" name="name" class="form-control"
-                                               placeholder="Country name" value="{{$country->name}}">
+                                               placeholder="Имя страны" value="{{$country->name}}">
                                     </div>
                                 </div>
                             </div>
                                 <div class="row">
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Flag choose</h5>
+                                    <h5 class="card-title mb-0">Флаг выбрать</h5>
                                     <div class="card-body">
                                         <input type="file" name="flag" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Image choose</h5>
+                                    <h5 class="card-title mb-0">Выбор изображения</h5>
                                     <div class="card-body">
                                         <input type="file" name="image" class="form-control">
                                     </div>
@@ -46,13 +46,13 @@
                             </div>
                                 <div class="row">
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Previous Flag</h5>
+                                    <h5 class="card-title mb-0">Предыдущий флаг</h5>
                                     <div class="card-body">
                                         <img width="300px" src="{{asset('laravel/public/countries/'.$country->flag)}}" alt="">
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Previous Image</h5>
+                                    <h5 class="card-title mb-0">Предыдущее изображение</h5>
                                     <div class="card-body">
                                         <img width="300px" src="{{asset('laravel/public/countries/'.$country->image)}}" alt="">
                                     </div>
@@ -66,7 +66,7 @@
                                     <path fill-rule="evenodd"
                                           d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
                                 </svg>
-                                Update
+                                Обновлять
                             </button>
                             <a class="btn btn-secondary mt-3" href="{{ route('countries_admin.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -74,7 +74,7 @@
                                     <path fill-rule="evenodd"
                                           d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
                                 </svg>
-                                Back
+                                Назад
                             </a>
                         </form>
                     </div>

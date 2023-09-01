@@ -37,7 +37,6 @@ class TourController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'comfor_description' => 'required',
             'city' => 'required',
             'country_id' => 'required',
             'category_id' => 'required',
@@ -57,7 +56,6 @@ class TourController extends Controller
         $t = Tour::create([
             'title' => $request->title,
             'description' => $request->description,
-            'comfor_description' => $request->comfor_description,
             'city' => $request->city,
             'country_id' => $request->country_id,
             'category_id' => $request->category_id,
@@ -68,11 +66,6 @@ class TourController extends Controller
             'length' => $request->length,
             'image' => $data['image']
         ]);
-        if ($request->visa) {
-            $t->update([
-                'visa_type' => $request->visa_type,
-                'visa' => $request->visa,]);
-        }
         foreach ($request->images as $image) {
             $file = $image;
             $image_name = uniqid() . $file->getClientOriginalName();
@@ -109,7 +102,6 @@ class TourController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'comfor_description' => 'required',
             'city' => 'required',
             'country_id' => 'required',
             'category_id' => 'required',
@@ -122,7 +114,6 @@ class TourController extends Controller
         $tour->update([
             'title' => $request->title,
             'description' => $request->description,
-            'comfor_description' => $request->comfor_description,
             'city' => $request->city,
             'country_id' => $request->country_id,
             'category_id' => $request->category_id,
@@ -133,11 +124,6 @@ class TourController extends Controller
             'length' => $request->length,
         ]);
 
-        if ($request->visa) {
-            $tour->update([
-                'visa_type' => $request->visa_type,
-                'visa' => $request->visa,]);
-        }
         if ($request->image && $tour->image) {
             unlink(public_path("images/$tour->image"));
             $data = $request->all();

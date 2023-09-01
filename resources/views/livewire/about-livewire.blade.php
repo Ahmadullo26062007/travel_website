@@ -3,9 +3,9 @@
 
         <div class="col-4">
             <div class="form-group">
-                <label for="">Phone number 1</label>
+                <label for="">Номер телефона 1</label>
                 <input type="text" wire:model="phone_number1" name="phone_number1"
-                       class="form-control" placeholder="Telefon raqam 1" value="{{ $about->phone_number1 }}">
+                       class="form-control" placeholder="Номер телефона 1" value="{{ $about->phone_number1 }}">
                 @error('phone_number1')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -14,9 +14,9 @@
 
         <div class="col-4">
             <div class="form-group">
-                <label for="">Phone number 2</label>
+                <label for="">Номер телефона 2</label>
                 <input type="text" wire:model="phone_number2" name="phone_number2"
-                       value="{{ $about->phone_number2 }}" class="form-control" placeholder="Telefon raqam 2">
+                       value="{{ $about->phone_number2 }}" class="form-control" placeholder="Номер телефона 2">
                 @error('phone_number2')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -37,9 +37,9 @@
     <div class="row col-12 mb-3">
         <div class="col-12">
             <div class="form-group">
-                <label for="">Email</label>
+                <label for="">Электронная почта</label>
                 <input type="email" name="email" wire:model="email" class="form-control" value="{{ $about->email }}"
-                       placeholder="Email">
+                       placeholder="Электронная почта">
                 @error('email')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -86,7 +86,7 @@
     <div class="row col-12 mb-3">
         <div class="col-4">
             <div class="form-group">
-                <label for="">Description</label>
+                <label for="">Описание</label>
                 <textarea name="description" wire:model="description" class="form-control" id="" cols="30"
                           rows="10">{{ $about->description }}</textarea>
                 @error('description')
@@ -96,7 +96,7 @@
         </div>
 
         <div class="col-4">
-            <label for="">LOGO</label>
+            <label for="">Изображение</label>
             <div class="form-group">
                 {{-- <img src="" alt=""> --}}
                 <img width="300px" src="{{ asset("laravel/public/storage/$about->image") }}">
@@ -104,7 +104,7 @@
         </div>
         <div class="col-4">
             <div class="form-group">
-                <label for="">Image</label>
+                <label for="">Изображение</label>
                 {{-- <img src="" alt=""> --}}
                 <input type="file" name="image" wire:model="image" class="form-control">
                 @error('image')
@@ -114,6 +114,6 @@
         </div>
     </div>
     <div class="form-group">
-        <button type="button" class="btn btn-info" wire:click="editabout">Update</button>
+        <button type="button" class="btn btn-info" wire:click="editabout">Обновлять</button>
     </div>
 </form>

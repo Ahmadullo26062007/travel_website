@@ -3,9 +3,9 @@
         <div class="d-table-cell align-middle">
 
             <div class="text-center mt-4">
-                <h1 class="h2">Welcome back, Admin</h1>
+                <h1 class="h2">С возвращением, Админ</h1>
                 <p class="lead">
-                    Sign in to your account to continue
+                    Войдите в свою учетную запись, чтобы продолжить
                 </p>
             </div>
 
@@ -30,14 +30,13 @@
                                 @enderror
                             </div>
                             @if ($user_yoq)
-                                <span style="color: red">Bunday foydalanuvchi topilmadi</span>
+                                <span style="color: red">Такой пользователь не найден</span>
                             @endif
                             @if ($null)
-                                <span style="color: red">Bunday foydalanuvchi topilmadi</span>
+                                <span style="color: red">Такой пользователь не найден</span>
                             @endif
                             <div class="text-center mt-3">
-                                <button type="button" wire:click="login" class="btn btn-lg btn-primary">Sign
-                                    in</button>
+                                <button type="button" wire:click="login" class="btn btn-lg btn-primary">Войти</button>
                             </div>
                         </form>
                     </div>

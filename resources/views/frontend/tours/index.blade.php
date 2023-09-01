@@ -28,7 +28,7 @@
 
         <div class="article__header page-tour__header">
             <div class="page-tour__thumb-wrap"
-                style="background-image: url(https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/tours-bg.jpg)">
+                style="background-image: url({{asset('laravel/public/images/tour.jpg')}})">
             </div>
 
             <div class="page-tour__header-cont">

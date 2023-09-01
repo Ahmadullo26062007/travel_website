@@ -21,7 +21,7 @@
         <article id="post-32938" class="article">
             <div class="article__header page-tour__header">
                 <div class="page-tour__thumb-wrap"
-                    style="background-image: url(https://kochevnik.kg/wp-content/themes/kochevnik/assets/img/visa-bg.jpg)">
+                    style="background-image: url({{asset('laravel/public/images/visa.jpg')}})">
                 </div>
 
                 <div class="page-tour__header-cont">

@@ -48,7 +48,7 @@
                         </div>
                         <div class="mm-links__item">
                             <a href="{{ route('front.hot_tours.index') }}" class="mm-links__link"
-                                style="background-image: url({{asset('images/fourth_image.jpg')}})">
+                                style="background-image: url({{asset('images/ .jpg')}})">
                                 <span class="mm-links__head">{{Word1(3)}} </span>
                             </a>
                         </div>

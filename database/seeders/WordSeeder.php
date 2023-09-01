@@ -58,7 +58,7 @@ class WordSeeder extends Seeder
             ['language_1' => 'Напишите нам в приложении WhatsApp на номер', 'language_2' => 'Write to us in the WhatsApp application to the number'],
             ['language_1' => 'куда и когда хотите полететь. Мы найдем оптимальные маршруты для вас в любое время суток.', 'language_2' => 'where and when you want to fly. We will find the best routes for you at any time of the day.'],
             ['language_1' => 'Написать в WhatsApp', 'language_2' => 'Write to whatsapp'],
-            ['language_1' => 'Flights from partner airlines Travel agency "WONDER WORLD"', 'language_2' => 'Flights from partner airlines Travel agency "WONDER WORLD"'],
+            ['language_1' => 'Рейсы от авиакомпаний-партнеров Турагенсво "ЧУДЕСНЫЙ МИР"', 'language_2' => 'Flights from partner airlines Travel agency "WONDER WORLD"'],
             ['language_1' => 'КОНТАКТЫ', 'language_2' => 'CONTACTS'],
             ['language_1' => 'ДАТА', 'language_2' => 'DATE'],
             ['language_1' => 'ДЛИТЕЛЬНОСТЬ', 'language_2' => 'DURATION'],

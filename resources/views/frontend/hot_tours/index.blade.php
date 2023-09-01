@@ -19,7 +19,7 @@
     @endphp
     <main id="main" class="main" role="main">
         <div class="article__header page-tour__header">
-            <div class="page-tour__thumb-wrap" style="background-image: url()">
+            <div class="page-tour__thumb-wrap" style="background-image: url({{asset('laravel/public/images/hot_tour.jpg')}})">
             </div>
 
             <div class="page-tour__header-cont">

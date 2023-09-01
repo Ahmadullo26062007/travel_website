@@ -440,11 +440,7 @@
                                         alt="logo">
                                 </div>
 
-                                <p class="footer__about">Nomad.kg is a travel agency that is trusted with their travels
-                                    more than 7,000 people a year, of which 1,000 are regular customers who entrusted us
-                                    with taking care of
-                                    safe and high-quality flight, and 6,000 people who are sure to visit us
-                                    will apply for planning their next tour, trip or travel.</p>
+                                <p class="footer__about">{{ App\Models\About::find(1)->description }}</p>
                             </div>
                         </div>
 

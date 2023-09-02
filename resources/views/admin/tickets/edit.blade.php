@@ -23,15 +23,15 @@
                             @csrf
                             <div class="row">
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Name</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Name</h5>
                                         <input type="text" name="name" class="form-control"
                                                placeholder="Country name" value="{{$ticket->name}}">
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Partner</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Partner</h5>
                                         <select class="form-control" name="general" id="">
                                             <option disabled selected>Select </option>
                                             @foreach(\App\Models\Ticket::GENERAL as $id=> $part)
@@ -41,20 +41,20 @@
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Image choose</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Image choose</h5>
                                         <input type="file" name="image" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Previous Image</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Previous Image</h5>
                                         <img width="300px" src="{{asset('images/'.$ticket->image)}}" alt="">
                                     </div>
                                 </div>
 
                             </div>
-                            <button class="btn btn-primary mt-3" type="submit">
+                            <button class="btn btn-primary mt-3 ms-3 mb-3" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                     <path
@@ -64,7 +64,7 @@
                                 </svg>
                                 Update
                             </button>
-                            <a class="btn btn-secondary mt-3" href="{{ route('ticket.index') }}">
+                            <a class="btn btn-secondary mt-3 mb-3"  href="{{ route('ticket.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-arrow-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"

@@ -55,7 +55,7 @@ Route::get('hot-tours', function () {
 })->name('front.hot_tours.index');
 
 Route::get('country', function () {
-    $countries = \App\Models\Country::orderByDesc()->get();
+    $countries = \App\Models\Country::all();
     return view('frontend.countries.index', compact('countries'));
 })->name('front.countries.index');
 

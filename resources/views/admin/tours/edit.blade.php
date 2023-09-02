@@ -27,9 +27,9 @@
                             <div class="row">
                                 <div class="col-4 ">
 
-                                    <h5 class="card-title mb-0">Название тура</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Название тура</h5>
                                         <input type="text" name="title" class="form-control"
                                                placeholder="Введите название пункта назначения путешествия" value="{{$tour->title}}">
                                     </div>
@@ -37,9 +37,9 @@
 
                                 <div class="col-4 ">
 
-                                    <h5 class="card-title mb-0">Страны</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Страны</h5>
                                         <select class="form-select" name="country_id" id="">
                                             <option disabled selected>Выберите страну</option>
                                             @foreach($countries as $id=> $r)
@@ -51,16 +51,16 @@
                                 </div>
                                 <div class="col-4 ">
 
-                                    <h5 class="card-title mb-0">Название города</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Название города</h5>
                                         <input type="text" name="city" class="form-control"
                                                placeholder="Напишите город" value="{{$tour->city}}">
                                     </div>
                                 </div>
                                 <div class="col-3 ">
-                                    <h5 class="card-title mb-0">Категория</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Категория</h5>
                                         <select class="form-select" name="category_id" id="">
                                             <option disabled selected>выберите категорию</option>
                                             @foreach($categories as $id=> $s)
@@ -73,9 +73,9 @@
 
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Тип цены</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Тип цены</h5>
                                         <select class="form-select" name="price_type" id="">
                                             <option disabled selected>Выберите тип цены</option>
                                             @foreach(\App\Models\Tour::PRICETYPES as $id=> $s)
@@ -87,9 +87,9 @@
                                 </div>
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Цена</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Цена</h5>
                                         <input type="number" name="price" class="form-control"
                                                placeholder="Введите цену, которая будет потрачена на поездку"
                                                value="{{$tour->price}}">
@@ -98,9 +98,9 @@
 
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Непрерывность</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Непрерывность</h5>
                                         <input type="text" name="length" class="form-control"
                                                placeholder="Напишите сколько дней будет поездка"
                                                value="{{$tour->length}}">
@@ -108,18 +108,18 @@
                                 </div>
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Время начала</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Время начала</h5>
                                         <input type="date" name="start_time" class="form-control"
                                                value="{{$tour->start_time}}">
                                     </div>
                                 </div>
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Время окончания</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Время окончания</h5>
                                         <input type="date" name="end_time" class="form-control"
                                                value="{{$tour->end_time}}">
                                     </div>
@@ -127,14 +127,14 @@
 
                                 <div class="col-6 ">
 
-                                    <h5 class="card-title mb-0">Предыдущие изображения</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Предыдущие изображения</h5>
                                         <input type="file" name="images[]" multiple class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="col-12 d-flex">
-                                    <h5 class="card-title mb-0">Изображений</h5>
+                                    <h5 class="card-title mb-1">Изображений</h5>
                                     @foreach($tour->images as $image)
                                         <div class="card-body">
                                             <img src="{{asset('laravel/public/images/'.$image->name)}}" width="100px" height="50"
@@ -143,30 +143,30 @@
                                     @endforeach
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Описание</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Описание</h5>
                                         <textarea class="form-control" name="description" id="" cols="30"
                                                   rows="10">{{$tour->description}}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-6 ">
 
-                                    <h5 class="card-title mb-0">Изображение</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Изображение</h5>
                                         <input type="file" name="image" multiple class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Предыдущее изображение</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Предыдущее изображение</h5>
                                         <img width="300px" src="{{asset('laravel/public/images/'.$tour->image)}}" alt="">
                                     </div>
                                 </div>
                             </div>
 
-                            <button class="btn btn-primary mt-3" type="submit">
+                            <button class="btn btn-primary mt-3 ms-3 mb-3" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                     <path
@@ -176,7 +176,7 @@
                                 </svg>
                                 Обновлять
                             </button>
-                            <a class="btn btn-secondary mt-3" href="{{ route('tours.index') }}">
+                            <a class="btn btn-secondary mt-3 mb-3" href="{{ route('tours.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-arrow-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"

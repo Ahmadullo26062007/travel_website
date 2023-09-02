@@ -26,8 +26,8 @@
                             @csrf
                             <div class="row">
                                 <div class="col-4 ">
-                                    <h5 class="card-title mb-0">Countries</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Countries</h5>
                                         <select class="form-select" name="country_id" id="">
                                             <option disabled selected>Choose Country</option>
                                             @foreach($countries as $id=> $r)
@@ -39,9 +39,9 @@
 
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Price type</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Price type</h5>
                                         <select class="form-select" name="price_type" id="">
                                             <option disabled selected>Choose price type</option>
                                             @foreach(\App\Models\Visa::PRICETYPES as $id=> $s)
@@ -52,34 +52,34 @@
                                 </div>
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Price</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Price</h5>
                                         <input type="number" name="price" value="{{$visa->price}}" class="form-control" placeholder="Write price">
                                     </div>
                                 </div>
 
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Visa processing Time</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Visa processing Time</h5>
                                         <input type="number" name="visa_time" value="{{$visa->visa_time}}" class="form-control" placeholder="Write Visa processing Day">
                                     </div>
                                 </div>
 
                                 <div class="col-12">
 
-                                    <h5 class="card-title mb-0">List of required documents</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">List of required documents</h5>
                                         <textarea class="form-control" name="description" id="" cols="30" rows="10">{{$visa->description}}</textarea>
                                     </div>
                                 </div>
                             </div>
 
 
-                            <button class="btn btn-primary mt-3" type="submit">
+                            <button class="btn btn-primary mt-3 ms-3 mb-3" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                     <path
@@ -89,7 +89,7 @@
                                 </svg>
                                 Update
                             </button>
-                            <a class="btn btn-secondary mt-3" href="{{ route('visa.index') }}">
+                            <a class="btn btn-secondary mt-3 mb-3" href="{{ route('visa.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-arrow-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"

@@ -24,15 +24,15 @@
                             <div class="row">
                                 <div class="col-6 ">
 
-                                    <h5 class="card-title mb-0">Имя</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-3">Имя</h5>
                                         <input type="text" name="name" class="form-control"
                                                placeholder="Название категории" value="{{$category->name}}">
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary mt-3" type="submit">
+                            <button class="btn btn-primary mt-3 ms-3 mb-3" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                     <path
@@ -42,7 +42,7 @@
                                 </svg>
                                 Обновлять
                             </button>
-                            <a class="btn btn-secondary mt-3" href="{{ route('category.index') }}">
+                            <a class="btn btn-secondary mt-3 mb-3" href="{{ route('category.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-arrow-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"

@@ -71,21 +71,19 @@
                 <h2 class="section__head">{{ word4(24) }}</h2>
                 <div class="clear loop-countries">
                     @foreach ($countries as $c)
-                        @if ($c->type == 0)
-                            <article class="loop-country">
-                                <a class="loop-country__link match-height" title="{{ $c->name }}"
-                                    href="{{ route('front.country.detail', $c->id) }}">
+                        <article class="loop-country">
+                            <a class="loop-country__link match-height" title="{{ $c->name }}"
+                                href="{{ route('front.country.detail', $c->id) }}">
 
-                                    <div class="loop-country__content">
-                                        <img class="loop-country__flag"
-                                            src="{{ asset('laravel/public/countries/' . $c->flag) }}"
-                                            alt="{{ $c->name }} флаг">
+                                <div class="loop-country__content">
+                                    <img class="loop-country__flag"
+                                        src="{{ asset('laravel/public/countries/' . $c->flag) }}"
+                                        alt="{{ $c->name }} флаг">
 
-                                        <h3 class="loop-country__title">{{ $c->name }}</h3>
-                                    </div>
-                                </a>
-                            </article>
-                        @endif
+                                    <h3 class="loop-country__title">{{ $c->name }}</h3>
+                                </div>
+                            </a>
+                        </article>
                     @endforeach
                 </div>
             </div>

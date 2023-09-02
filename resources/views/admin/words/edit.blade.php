@@ -23,23 +23,23 @@
                             @csrf
                             <div class="row">
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Русский</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Русский</h5>
                                         <input type="text" name="language_1" class="form-control"
                                                placeholder="Русский" value="{{$word->language_1}}">
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <h5 class="card-title mb-0">Английский</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Английский</h5>
                                         <input type="text" name="language_2" class="form-control"
                                                placeholder="Английский" value="{{$word->language_2}}">
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary mt-3" type="submit">
+                            <button class="btn btn-primary mt-3 ms-3 mb-3" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                     <path
@@ -49,7 +49,7 @@
                                 </svg>
                                 Update
                             </button>
-                            <a class="btn btn-secondary mt-3" href="{{ route('word.index') }}">
+                            <a class="btn btn-secondary mt-3 mb-3" href="{{ route('word.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-arrow-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"

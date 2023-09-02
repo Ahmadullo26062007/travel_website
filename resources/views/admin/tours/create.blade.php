@@ -24,9 +24,9 @@
                             <div class="row">
                                 <div class="col-4 ">
 
-                                    <h5 class="card-title mb-0">Название тура</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Название тура</h5>
                                         <input type="text" name="title" class="form-control"
                                                placeholder="Название тура">
                                     </div>
@@ -34,9 +34,9 @@
 
                                 <div class="col-4 ">
 
-                                    <h5 class="card-title mb-0">Countries</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Countries</h5>
                                         <select class="form-select" name="country_id" id="">
                                             <option disabled selected>Выберите страну</option>
                                             @foreach($countries as $id=> $r)
@@ -47,16 +47,16 @@
                                 </div>
                                 <div class="col-4 ">
 
-                                    <h5 class="card-title mb-0">Название города</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Название города</h5>
                                         <input type="text" name="city" class="form-control"
                                                placeholder="Напишите город">
                                     </div>
                                 </div>
                                 <div class="col-3 ">
-                                    <h5 class="card-title mb-0">Категория</h5>
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Категория</h5>
                                         <select class="form-select" name="category_id" id="">
                                             <option disabled selected>выберите категорию</option>
                                             @foreach($categories as $id=> $s)
@@ -68,9 +68,9 @@
 
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Тип цены</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Тип цены</h5>
                                         <select class="form-select" name="price_type" id="">
                                             <option disabled selected>Выберите тип цены</option>
                                             @foreach(\App\Models\Tour::PRICETYPES as $id=> $s)
@@ -81,66 +81,66 @@
                                 </div>
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Цена</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Цена</h5>
                                         <input type="number" name="price" class="form-control" placeholder="Введите цену, которая будет потрачена на поездку">
                                     </div>
                                 </div>
 
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Непрерывность</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Непрерывность</h5>
                                         <input type="text" name="length" class="form-control" placeholder="Напишите сколько дней будет поездка">
                                     </div>
                                 </div>
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Время начала</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Время начала</h5>
                                         <input type="date" name="start_time" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-3">
 
-                                    <h5 class="card-title mb-0">Время окончания</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Время окончания</h5>
                                         <input type="date" name="end_time" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="col-3 ">
 
-                                    <h5 class="card-title mb-0">Изображений</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Изображений</h5>
                                         <input type="file" name="images[]" multiple class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="col-3 ">
 
-                                    <h5 class="card-title mb-0">Изображение</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Изображение</h5>
                                         <input type="file" name="image" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-6">
 
-                                    <h5 class="card-title mb-0">Описание</h5>
-
+                                    
                                     <div class="card-body">
+                                        <h5 class="card-title mb-1">Описание</h5>
                                         <textarea class="form-control" name="description" id="" cols="30"
                                                   rows="10"></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-primary mt-3" type="submit">
+                            <button class="btn btn-primary mt-3 ms-3 mb-3" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                     <path
@@ -150,7 +150,7 @@
                                 </svg>
                                 Создавать
                             </button>
-                            <a class="btn btn-secondary mt-3" href="{{ route('tours.index') }}">
+                            <a class="btn btn-secondary mt-3 mb-3" href="{{ route('tours.index') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                      class="bi bi-arrow-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd"

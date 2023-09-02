@@ -23,7 +23,7 @@
 
 
             <div class="article__header page-tour__header">
-                <div class="page-tour__thumb-wrap" style="background-image: url({{ asset("images/$t->image") }})">
+                <div class="page-tour__thumb-wrap" style="background-image: url({{ asset("laravel/public/images/$t->image") }})">
                 </div>
 
                 <div class="page-tour__header-cont">
@@ -106,7 +106,7 @@ customGoal:BUeeHNSPCaASBaRDSGEXO:2 customGoal:BUeeZdbaBMRbBYWKOBLHXT:2">
                             </div>
                             <p>
                                 @foreach ($t->images as $i)
-                                    <img class="wp-image-33926 aligncenter" src="{{ asset("images/$i->name") }}"
+                                    <img class="wp-image-33926 aligncenter" src="{{ asset("laravel/public/images/$i->name") }}"
                                          alt="" width="500" height="333"/>
                                 @endforeach
                             </p>
@@ -158,7 +158,7 @@ customGoal:BUeeHNSPCaASBaRDSGEXO:2 customGoal:BUeeZdbaBMRbBYWKOBLHXT:2">
                             <div class="tour-loop__top">
                                 <div class="tour-loop__img-wrap">
                                     <a href="{{ route('front.tours.detail', $tour->id) }}" title="">
-                                        <img src="{{ asset("images/$tour->image") }}"
+                                        <img src="{{ asset("laravel/public/images/$tour->image") }}"
                                              class="tour-loop__img article-loop__img wp-post-image" alt=""
                                              sizes="(max-width: 900px) 100vw, 900px"/> </a>
                                 </div>

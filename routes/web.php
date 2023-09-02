@@ -20,9 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/admin', function () {
-        return view('admin.index');
-    })->name('admin.index');
+    Route::get('/admin', [AboutController::class,'index'])->name('admin.index');
 
     Route::resource('about', AboutController::class);
     Route::resource('countries_admin', \App\Http\Controllers\CountryController::class);

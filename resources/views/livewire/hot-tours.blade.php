@@ -15,7 +15,7 @@
                 <div class="tour-loop__top">
                     <div class="tour-loop__img-wrap">
                         <a href="{{route('front.tours.detail',$t->id)}}" title="">
-                            <img src="{{asset("images/$t->image")}}" class="" alt="" srcset=""
+                            <img src="{{asset("laravel/public/images/$t->image")}}" class="" alt="" srcset=""
                                  sizes="(max-width: 900px) 100vw, 900px"/> </a>
                     </div>
 

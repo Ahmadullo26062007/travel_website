@@ -60,7 +60,7 @@ class TourController extends Controller
             'country_id' => $request->country_id,
             'category_id' => $request->category_id,
             'price' => $request->price,
-            'price_type' => $request->visa_type,
+            'price_type' => $request->price_type,
             'start_time' => $request->start_time,
             'end_time' => $request->end_time,
             'length' => $request->length,

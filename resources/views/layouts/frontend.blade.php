@@ -315,7 +315,7 @@
                                 <!-- <button class="h-contacts__item h-contacts__btn js-pop-up-btn" href="#popup-form" data-head="Подбор тура" data-desc="Заполните форму и мы вам перезвоним">Подбор тура</button> -->
                             </div>
                             <div class="dropdown">
-                                <button style="outline:none ; background:none !important;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button style="outline:none !important; background:none !important;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     @if($l->type==1)
                                         <img src="{{asset('laravel/public/countries/rus.jpg')}}" width="30" alt="">
                                     @else
